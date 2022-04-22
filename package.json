@@ -1,0 +1,18 @@
+{
+  "name": "bitel-bet",
+  "version": "1.0.0",
+  "description": "Bitel Bet Front-end",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp watch"
+  },
+  "author": "germansalamancav@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.9",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.50.1"
+  }
+}
