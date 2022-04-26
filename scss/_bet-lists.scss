@@ -1,0 +1,137 @@
+@import 'variables';
+
+ul.bet-list{
+  list-style: none;
+  padding: 0;
+}
+ul.bet-list-main{
+  .bet-item{
+    margin-bottom: 1.8rem;
+  }
+  header.bet-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: .4rem;
+    .bet-title{
+      font-size: 12px;
+      margin: 0;
+      color: white;
+      font-weight: 500;
+    }
+    .bet-status{
+      font-size: 12px;
+      font-weight: 500;
+      color: white;
+    }
+  }
+  .bet-options{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    border-color: transparent;
+    border-radius: 6px;
+    box-sizing:content-box;
+  }
+  button.bet-team{
+    $skew: 30deg;
+    background: linear-gradient($teal, #00a5b1);
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+    transform: skew(-$skew);
+    min-height: 58px;
+    .content{
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transform: skew($skew);
+    }
+    .name{
+      margin: 0;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 14px;
+      color: white;
+    }
+    .value{
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+      background-color: $white;
+      padding: .15rem .5rem;
+      border-radius: 1rem;
+      min-width: 50px;
+      font-weight: 700;
+      color: $dark-grey-blue;
+      font-size: 15px;
+    }
+    &:first-child{
+      margin: 0 0 0 -2rem;
+      margin-right: .15rem;
+      .content{
+        padding: .4rem .6rem .4rem 2.2rem;
+        .value{
+          margin: 0 0 0 .4rem;
+        }
+      }
+    }
+    &:last-child{
+      margin: 0 -2rem 0 0;
+      margin-left: .15rem;
+      .content{
+        padding: .4rem 2.3rem .4rem .4rem;
+        .name{
+          text-align: right;
+        }
+        .value{
+          margin: 0 .4rem 0 0;
+        }
+      }
+    }
+  }
+  // BET STATUS
+  .bet-item{
+    &.status-closing{
+      header.bet-heading{
+        .bet-status{
+          color: $warning;
+        }
+      }
+      .bet-options{
+        padding-bottom: 1px;
+        border-color: $yellow;
+      }
+      button.bet-team{
+        border-color: $yellow;
+      }
+    }
+    &.status-closed{
+      header.bet-heading{
+        .bet-status{
+          color: $error;
+        }
+      }
+      button.bet-team{
+        background: rgba($blue-grey, .3);
+        pointer-events: none;
+      }
+    }
+    &:not(.status-closed){
+      button.bet-team{
+        &:hover{
+          filter: brightness(113%);
+        }
+      }
+    }
+  }
+  button.bet-team{
+    &.selected{
+      background: radial-gradient(#d166ff, #a436ff);
+    }
+  }
+}

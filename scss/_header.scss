@@ -1,0 +1,50 @@
+@import 'variables';
+
+#header{
+  padding: .53rem .6rem;
+  background-image: radial-gradient(circle at 50% 0, $metallic-blue, rgba(0, 0, 0, 0) 29%);
+  @media (min-width: $md){
+    padding: .8rem 1rem;
+  }
+  .header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  figure.logo{
+    margin: 0;
+    width: 80px;
+    @media (min-width: $md){
+      width: 94px;
+    }
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+}
+#menu-toggler{
+  width: 44px;
+  height: 44px;
+  background: url(/img/icon-toggler.svg) no-repeat;
+  background-size: 22px;
+  background-position: center;
+  cursor: pointer;
+  &:hover{
+    filter: brightness(10); 
+  }
+}
+.user-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  .user-icon{
+    width: 18px;
+    height: 30px;
+    background: url(/img/icon-user.svg) no-repeat;
+    background-size: 18px;
+    background-position: center;
+  }
+}

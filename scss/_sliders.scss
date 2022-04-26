@@ -1,0 +1,22 @@
+@import 'variables';
+
+.slider{
+  .slide{
+    overflow: hidden;
+    border-radius: 0 0 46px 46px;
+    & > a{
+      display: block;
+      & > img{
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+.slider-promo{
+  max-width: 800px;
+  margin: 0 auto;
+  .slick-dots{
+    bottom: -2.5rem;
+  }
+}
