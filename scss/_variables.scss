@@ -1,9 +1,8 @@
 // Colors
-$primary: red;
-$secondary: blue;
 $yellow: #fff200;
 $maize: #efd146;
 $teal: #06e8d2;
+$deep-teal: #00a5b1;
 $red: #ff5454;
 $lavender: #d166ff;
 $dark: #2a3248;
@@ -15,6 +14,9 @@ $text: white;
 $warning: $maize;
 $error: $red;
 
+$primary: $red;
+$secondary: $dark;
+
 // Breakpoints
 $xs: 576px;
 $sm: 576px;
@@ -24,6 +26,7 @@ $xl: 1200px;
  
 // borer radius
 $br-lg: 20px;
+$br-md: 10px;
 
 // Fonts
 $font-family: 'Exo 2', sans-serif;

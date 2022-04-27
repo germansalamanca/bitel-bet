@@ -1,0 +1,42 @@
+@import 'variables';
+
+.popup-overlay{
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.popup{
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //overflow: hidden;
+  z-index: 50;
+  bottom: 0;
+  padding: 1rem;
+  .btn-close-popup{
+    margin-bottom: 1rem;
+  }
+}
+.popup-box{
+  min-height: 12rem;
+  background-color: $dark;
+  padding: 2rem 1rem 2.5rem;
+  border-radius: $br-lg;
+  max-width: 400px;
+  width: 100%;
+}
+#login{
+  h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: .8rem;
+  }
+  .logo-bitel{
+    display: block;
+    margin: 0 0 1rem;
+    filter: brightness(0) invert(1);
+  }
+}

@@ -29,4 +29,41 @@
       background-color: $white;
     }
   }
+  &.btn-cta-outline{
+    padding: 1rem;
+    color: $yellow;
+    &:hover{
+      color: $white;
+    }
+  }
+}
+
+.btn-close-popup{
+  font-size: 1rem;
+  $button-size: 2.4em;
+  width: $button-size;
+  height: $button-size;
+  background: white;
+  border-radius: 50px;
+  position: relative;
+  transform: rotate(45deg);
+  &:after, &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 1.2em;
+    top: .6em;
+    left: calc($button-size / 2 - 1px);
+    background: $deep-teal;
+    transition: all ease .4s;
+  }
+  &:after{
+    transform: rotate(90deg);
+  }
+  &:hover{
+    &:after, &:before{
+      background-color: $dark;
+    }
+  }
 }
