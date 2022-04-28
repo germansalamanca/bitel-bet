@@ -43,7 +43,11 @@
     }
   }
 }
+.main-tabs-content{
+  padding: 0 .25rem;
+}
 
+/*---- ESPORTS TABS ---*/
 .esports-tabs{
   display: flex;
   margin-bottom: 1.4rem;
@@ -106,6 +110,92 @@
     }
   }
 }
-.main-tabs-content{
-  padding: 0 .25rem;
+
+/*---- FUTBOL TABS ---*/
+.tab-list-slider{
+  position: relative;
+  .more{
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    pointer-events: none;
+    width: 3rem;
+    height: calc(100% - 8px);
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to right, rgba(50, 61, 89, 0), $dark-grey-blue 78%);
+    transition: all ease .4s;
+    .btn{
+      pointer-events: all;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin: 0;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      &:after{
+        content: '';
+        display: block;
+        border: 1px solid white;
+        border-left: none;
+        border-bottom: none;
+        margin-right: 7px;
+        $icon-size: 12px;
+        width: $icon-size;
+        height: $icon-size;
+        transform: rotate(45deg);
+        transition: all ease .4s;
+      }
+      &:hover{
+        &:after{
+          border-color: $yellow;
+        }
+      }
+    }
+  }
+  .options-wrapper{
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 6px;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  button.tab{
+    flex-shrink: 0;
+    position: relative;
+    color: $metallic-blue;
+    font-size: 14px;
+    padding: 1rem .7rem;
+    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid $metallic-blue;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid transparent;
+      bottom: -6px;
+      left: calc(50% - 3px);
+      transition: all ease .4s;
+    }
+    &:focus{
+      outline: none;
+    }
+    &.active{
+      color: $white;
+      border-color: white;
+      &:after{
+        border-top-color: $white;
+      }
+    }
+  }
 }

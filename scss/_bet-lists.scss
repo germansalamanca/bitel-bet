@@ -4,26 +4,83 @@ ul.bet-list{
   list-style: none;
   padding: 0;
 }
-ul.bet-list-main{
+
+/*---- GENERAL ELEMENTS FOR TABS ---*/
+header.bet-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: .4rem;
+  .bet-title{
+    font-size: 12px;
+    margin: 0;
+    color: white;
+    font-weight: 500;
+  }
+  .bet-status{
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+  }
+}
+.bet-item{
+  .value{
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    background-color: $white;
+    padding: .15rem .5rem;
+    border-radius: 1rem;
+    min-width: 50px;
+    font-weight: 700;
+    color: $dark-grey-blue;
+    font-size: 15px;
+  }
+  // Status
+  &.status-closing{
+    header.bet-heading{
+      .bet-status{
+        color: $warning;
+      }
+    }
+    button.bet-team{
+      &:not(.bet-tie){
+        border-color: $yellow;
+      }
+    }
+  }
+  &.status-closed{
+    header.bet-heading{
+      .bet-status{
+        color: $error;
+      }
+    }
+  }
+  &.status-closed{
+    button.bet-team{
+      background: #4d5772;
+      pointer-events: none;
+    }
+  }
+  &:not(.status-closed){
+    button.bet-team{
+      &:hover{
+        filter: brightness(113%);
+      }
+    }
+  }
+  button.bet-team{
+    &.selected{
+      background: radial-gradient(#d166ff, #a436ff);
+    }
+  }
+}
+
+/*---- ESPORTS BET LIST ----*/
+
+ul.bet-list-esports{
   .bet-item{
     margin-bottom: 1.8rem;
-  }
-  header.bet-heading{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: .4rem;
-    .bet-title{
-      font-size: 12px;
-      margin: 0;
-      color: white;
-      font-weight: 500;
-    }
-    .bet-status{
-      font-size: 12px;
-      font-weight: 500;
-      color: white;
-    }
   }
   .bet-options{
     display: flex;
@@ -58,18 +115,6 @@ ul.bet-list-main{
       line-height: 14px;
       color: white;
     }
-    .value{
-      display: flex;
-      justify-content: center;
-      flex-shrink: 0;
-      background-color: $white;
-      padding: .15rem .5rem;
-      border-radius: 1rem;
-      min-width: 50px;
-      font-weight: 700;
-      color: $dark-grey-blue;
-      font-size: 15px;
-    }
     &:first-child{
       margin: 0 0 0 -2rem;
       margin-right: .15rem;
@@ -94,44 +139,104 @@ ul.bet-list-main{
       }
     }
   }
-  // BET STATUS
+  // Esports bet status
   .bet-item{
     &.status-closing{
-      header.bet-heading{
-        .bet-status{
-          color: $warning;
-        }
-      }
       .bet-options{
         padding-bottom: 1px;
         border-color: $yellow;
       }
-      button.bet-team{
-        border-color: $yellow;
-      }
     }
-    &.status-closed{
-      header.bet-heading{
-        .bet-status{
-          color: $error;
-        }
-      }
-      button.bet-team{
-        background: rgba($blue-grey, .3);
-        pointer-events: none;
-      }
-    }
-    &:not(.status-closed){
-      button.bet-team{
-        &:hover{
-          filter: brightness(113%);
-        }
+  }
+}
+
+
+/*---- FUTBOL BET LIST ----*/
+
+ul.bet-list-futbol{
+  .bet-item{
+    margin-bottom: 1.8rem;
+  }
+  header.bet-heading{
+    .league{
+      display: flex;
+      align-items: center;
+      img{
+        width: 17px;
+        flex-shrink: 0;
+        margin-right: .5rem;
       }
     }
   }
+  .bet-options{
+    display: flex;
+    justify-content: space-between;
+  }
   button.bet-team{
-    &.selected{
-      background: radial-gradient(#d166ff, #a436ff);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    background: linear-gradient($teal, #00a5b1);
+    color: $white;
+    font-size: 12px;
+    line-height: 14px;
+    border-radius: 8px;
+    flex-grow: 0;
+    border: 1px solid transparent;
+    &:first-child{
+      margin-right: -1.2rem;
+      text-align: left;
+      align-items: flex-start;
+      padding: .5rem 1.4rem .5rem .6rem;
+      .logo-name{
+        img{
+          margin-right: .4rem;
+        }
+      }
+    }
+    &:last-child{
+      margin-left: -1.2rem;
+      text-align: right;
+      align-items: flex-end;
+      padding: .5rem .6rem .5rem 1.4rem;
+      .logo-name{
+        img{
+          margin-left: .4rem;
+        }
+      }
+    }
+    .logo-name{
+      display: flex;
+      align-items: center;
+      margin-bottom: .7rem;
+      img{
+        width: 20px;
+        display: block;
+      }
+    }
+    .name{
+      margin: 0;
+      max-width: 8rem;
+    }
+  }
+  button.bet-tie{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 87px;
+    border: 3px solid $dark-grey-blue;
+    height: 87px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    z-index: 10;
+    padding: .7rem;
+    .name{
+      text-align: center;
+      margin-bottom: .4rem;
     }
   }
 }

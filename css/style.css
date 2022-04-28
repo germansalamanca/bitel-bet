@@ -118,6 +118,9 @@ button {
   transition: all ease 0.4s;
   font-family: "Exo 2", sans-serif;
 }
+.btn:focus {
+  outline: none;
+}
 
 .btn-cta {
   font-weight: 700;
@@ -298,6 +301,11 @@ button {
   background-image: url(/img/icon-tab-futbol.png);
 }
 
+.main-tabs-content {
+  padding: 0 0.25rem;
+}
+
+/*---- ESPORTS TABS ---*/
 .esports-tabs {
   display: flex;
   margin-bottom: 1.4rem;
@@ -358,8 +366,90 @@ button {
   filter: none;
 }
 
-.main-tabs-content {
-  padding: 0 0.25rem;
+/*---- FUTBOL TABS ---*/
+.tab-list-slider {
+  position: relative;
+}
+.tab-list-slider .more {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  pointer-events: none;
+  width: 3rem;
+  height: calc(100% - 8px);
+  right: 0;
+  top: 0;
+  background-image: linear-gradient(to right, rgba(50, 61, 89, 0), #323d59 78%);
+  transition: all ease 0.4s;
+}
+.tab-list-slider .more .btn {
+  pointer-events: all;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+}
+.tab-list-slider .more .btn:after {
+  content: "";
+  display: block;
+  border: 1px solid white;
+  border-left: none;
+  border-bottom: none;
+  margin-right: 7px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  transition: all ease 0.4s;
+}
+.tab-list-slider .more .btn:hover:after {
+  border-color: #fff200;
+}
+.tab-list-slider .options-wrapper {
+  display: flex;
+  overflow-x: scroll;
+  padding-bottom: 6px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.tab-list-slider .options-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.tab-list-slider button.tab {
+  flex-shrink: 0;
+  position: relative;
+  color: #54648f;
+  font-size: 14px;
+  padding: 1rem 0.7rem;
+  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #54648f;
+}
+.tab-list-slider button.tab:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  bottom: -6px;
+  left: calc(50% - 3px);
+  transition: all ease 0.4s;
+}
+.tab-list-slider button.tab:focus {
+  outline: none;
+}
+.tab-list-slider button.tab.active {
+  color: #fff;
+  border-color: white;
+}
+.tab-list-slider button.tab.active:after {
+  border-top-color: #fff;
 }
 
 ul.bet-list {
@@ -367,60 +457,26 @@ ul.bet-list {
   padding: 0;
 }
 
-ul.bet-list-main .bet-item {
-  margin-bottom: 1.8rem;
-}
-ul.bet-list-main header.bet-heading {
+/*---- GENERAL ELEMENTS FOR TABS ---*/
+header.bet-heading {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 0.4rem;
 }
-ul.bet-list-main header.bet-heading .bet-title {
+header.bet-heading .bet-title {
   font-size: 12px;
   margin: 0;
   color: white;
   font-weight: 500;
 }
-ul.bet-list-main header.bet-heading .bet-status {
+header.bet-heading .bet-status {
   font-size: 12px;
   font-weight: 500;
   color: white;
 }
-ul.bet-list-main .bet-options {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  border-left: 1px solid white;
-  border-right: 1px solid white;
-  border-color: transparent;
-  border-radius: 6px;
-  box-sizing: content-box;
-}
-ul.bet-list-main button.bet-team {
-  background: linear-gradient(#06e8d2, #00a5b1);
-  width: 100%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  position: relative;
-  transform: skew(-30deg);
-  min-height: 58px;
-}
-ul.bet-list-main button.bet-team .content {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transform: skew(30deg);
-}
-ul.bet-list-main button.bet-team .name {
-  margin: 0;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 14px;
-  color: white;
-}
-ul.bet-list-main button.bet-team .value {
+
+.bet-item .value {
   display: flex;
   justify-content: center;
   flex-shrink: 0;
@@ -432,51 +488,170 @@ ul.bet-list-main button.bet-team .value {
   color: #323d59;
   font-size: 15px;
 }
-ul.bet-list-main button.bet-team:first-child {
+.bet-item.status-closing header.bet-heading .bet-status {
+  color: #efd146;
+}
+.bet-item.status-closing button.bet-team:not(.bet-tie) {
+  border-color: #fff200;
+}
+.bet-item.status-closed header.bet-heading .bet-status {
+  color: #ff5454;
+}
+.bet-item.status-closed button.bet-team {
+  background: #4d5772;
+  pointer-events: none;
+}
+.bet-item:not(.status-closed) button.bet-team:hover {
+  filter: brightness(113%);
+}
+.bet-item button.bet-team.selected {
+  background: radial-gradient(#d166ff, #a436ff);
+}
+
+/*---- ESPORTS BET LIST ----*/
+ul.bet-list-esports .bet-item {
+  margin-bottom: 1.8rem;
+}
+ul.bet-list-esports .bet-options {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-color: transparent;
+  border-radius: 6px;
+  box-sizing: content-box;
+}
+ul.bet-list-esports button.bet-team {
+  background: linear-gradient(#06e8d2, #00a5b1);
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  transform: skew(-30deg);
+  min-height: 58px;
+}
+ul.bet-list-esports button.bet-team .content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: skew(30deg);
+}
+ul.bet-list-esports button.bet-team .name {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 14px;
+  color: white;
+}
+ul.bet-list-esports button.bet-team:first-child {
   margin: 0 0 0 -2rem;
   margin-right: 0.15rem;
 }
-ul.bet-list-main button.bet-team:first-child .content {
+ul.bet-list-esports button.bet-team:first-child .content {
   padding: 0.4rem 0.6rem 0.4rem 2.2rem;
 }
-ul.bet-list-main button.bet-team:first-child .content .value {
+ul.bet-list-esports button.bet-team:first-child .content .value {
   margin: 0 0 0 0.4rem;
 }
-ul.bet-list-main button.bet-team:last-child {
+ul.bet-list-esports button.bet-team:last-child {
   margin: 0 -2rem 0 0;
   margin-left: 0.15rem;
 }
-ul.bet-list-main button.bet-team:last-child .content {
+ul.bet-list-esports button.bet-team:last-child .content {
   padding: 0.4rem 2.3rem 0.4rem 0.4rem;
 }
-ul.bet-list-main button.bet-team:last-child .content .name {
+ul.bet-list-esports button.bet-team:last-child .content .name {
   text-align: right;
 }
-ul.bet-list-main button.bet-team:last-child .content .value {
+ul.bet-list-esports button.bet-team:last-child .content .value {
   margin: 0 0.4rem 0 0;
 }
-ul.bet-list-main .bet-item.status-closing header.bet-heading .bet-status {
-  color: #efd146;
-}
-ul.bet-list-main .bet-item.status-closing .bet-options {
+ul.bet-list-esports .bet-item.status-closing .bet-options {
   padding-bottom: 1px;
   border-color: #fff200;
 }
-ul.bet-list-main .bet-item.status-closing button.bet-team {
-  border-color: #fff200;
+
+/*---- FUTBOL BET LIST ----*/
+ul.bet-list-futbol .bet-item {
+  margin-bottom: 1.8rem;
 }
-ul.bet-list-main .bet-item.status-closed header.bet-heading .bet-status {
-  color: #ff5454;
+ul.bet-list-futbol header.bet-heading .league {
+  display: flex;
+  align-items: center;
 }
-ul.bet-list-main .bet-item.status-closed button.bet-team {
-  background: rgba(140, 149, 173, 0.3);
-  pointer-events: none;
+ul.bet-list-futbol header.bet-heading .league img {
+  width: 17px;
+  flex-shrink: 0;
+  margin-right: 0.5rem;
 }
-ul.bet-list-main .bet-item:not(.status-closed) button.bet-team:hover {
-  filter: brightness(113%);
+ul.bet-list-futbol .bet-options {
+  display: flex;
+  justify-content: space-between;
 }
-ul.bet-list-main button.bet-team.selected {
-  background: radial-gradient(#d166ff, #a436ff);
+ul.bet-list-futbol button.bet-team {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  background: linear-gradient(#06e8d2, #00a5b1);
+  color: #fff;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 8px;
+  flex-grow: 0;
+  border: 1px solid transparent;
+}
+ul.bet-list-futbol button.bet-team:first-child {
+  margin-right: -1.2rem;
+  text-align: left;
+  align-items: flex-start;
+  padding: 0.5rem 1.4rem 0.5rem 0.6rem;
+}
+ul.bet-list-futbol button.bet-team:first-child .logo-name img {
+  margin-right: 0.4rem;
+}
+ul.bet-list-futbol button.bet-team:last-child {
+  margin-left: -1.2rem;
+  text-align: right;
+  align-items: flex-end;
+  padding: 0.5rem 0.6rem 0.5rem 1.4rem;
+}
+ul.bet-list-futbol button.bet-team:last-child .logo-name img {
+  margin-left: 0.4rem;
+}
+ul.bet-list-futbol button.bet-team .logo-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+ul.bet-list-futbol button.bet-team .logo-name img {
+  width: 20px;
+  display: block;
+}
+ul.bet-list-futbol button.bet-team .name {
+  margin: 0;
+  max-width: 8rem;
+}
+ul.bet-list-futbol button.bet-tie {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 87px;
+  border: 3px solid #323d59;
+  height: 87px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  z-index: 10;
+  padding: 0.7rem;
+}
+ul.bet-list-futbol button.bet-tie .name {
+  text-align: center;
+  margin-bottom: 0.4rem;
 }
 
 .popup-overlay {

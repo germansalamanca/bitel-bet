@@ -5,6 +5,9 @@
   background-color: transparent;
   transition: all ease .4s;
   font-family: $font-family;
+  &:focus{
+    outline: none;
+  }
 }
 .btn-cta{
   font-weight: 700;
