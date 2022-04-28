@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <title>Bitel Bet</title>
 </head>
-<body class="overlayed">
+<body>
   <div class="page">
     <header id="header">
       <div class="header-content">
@@ -22,7 +22,7 @@
             <img src="/img/logo-bitel-bet.png" alt="Inicio">
           </a>
         </figure>
-        <a href="#" class="user-link btn">
+        <a href="#" class="user-link btn" onclick="openPopup('#login')">
           <div class="user-icon"></div>
         </a>
       </div>
@@ -166,22 +166,24 @@
       </button>
     </section>
   </div><!-- .page -->
-  <div class="overlay popup-overlay">
-    <div id="login" class="popup">
+  <div id="login" class="overlay popup-overlay" onclick="closePopup(this, event)">
+    <div id="login-popup" class="popup">
       <button class="btn btn-close-popup" aria-label="cerrar"></button>
       <div class="popup-box">
-        <h3>Inicia sesión con tu cuenta</h3>
-        <figure class="logo-bitel"><img src="/img/logo-bitel.svg" alt="Bitel"></figure>
-        <form action="" id="login-form" class="form">
-          <input type="text" class="number" placeholder="Número de Bitel" name="number" required>
-          <input type="password" class="password" placeholder="Contraseña" name="psw" required>
-          <p><a href="#">¿Olvidaste tu contraseña?</a></p>
-          <button type="submit" class="btn btn-cta btn-submit">
-            <span class="content">Iniciar sesión</span>
-          </button>
-          <p>¿No tienes cuenta?</p>
+        <div class="content">
+          <h3>Inicia sesión con tu cuenta</h3>
+          <figure class="logo-bitel"><img src="/img/logo-bitel.svg" alt="Bitel"></figure>
+          <form action="" id="login-form" class="form">
+            <input type="text" class="number" placeholder="Número de Bitel" name="number" required>
+            <input type="password" class="password" placeholder="Contraseña" name="psw" required>
+            <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+            <button type="submit" class="btn btn-cta btn-submit">
+              <span class="content">Iniciar sesión</span>
+            </button>
+            <p>¿No tienes cuenta?</p>
+          </form>
           <button type="button" class="btn btn-cta btn-cta-outline btn-register">Registrarte con Bitel ID</button>
-        </form>
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,3 @@
-console.log('ready');
-
 $(document).on('ready', function() {
   $(".slider-promo").slick({
     dots: false,
@@ -17,3 +15,23 @@ $(document).on('ready', function() {
     ]
   });
 });
+
+function openPopup(popupSelector){
+  const popup = document.querySelector(popupSelector)
+  popup.style.display = 'flex'
+  document.querySelector('body').classList.add('overlayed')
+}
+
+function closePopup(element, e){
+  if(typeof element === 'string'){
+    const popup = document.querySelector(element)
+    popup.style.display = 'none'
+    document.querySelector('body').classList.remove('overlayed')
+  }else{
+    const box = element.querySelector('.popup-box')
+    if(! box.contains(e.target)){
+      element.style.display = 'none'
+      document.querySelector('body').classList.remove('overlayed')
+    }
+  }
+}
