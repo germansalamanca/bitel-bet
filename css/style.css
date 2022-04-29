@@ -100,6 +100,7 @@ button {
   height: 100%;
   top: 0;
   z-index: 101;
+  padding: 0.5rem;
 }
 
 .gradient-overlay {
@@ -862,4 +863,110 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 #login-form input.number {
   margin-bottom: 1rem;
+}
+
+ul.menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.menu li a {
+  text-decoration: none;
+}
+
+#main-menu-wrapper {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  padding: 1.3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(32, 47, 68, 0.9);
+  z-index: 100;
+}
+#main-menu-wrapper .btn-close-popup {
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.main-nav {
+  margin-top: 1.6rem;
+}
+
+ul#main-menu {
+  padding-left: 2rem;
+}
+ul#main-menu li {
+  font-size: 1.13rem;
+  font-weight: 700;
+}
+ul#main-menu li a {
+  display: flex;
+  color: #fff;
+  padding: 0.9rem 0.5rem;
+  margin: 0.9rem 0;
+  align-items: center;
+  transition: all ease 0.4s;
+}
+ul#main-menu li a:hover {
+  color: #06e8d2;
+}
+ul#main-menu li a .icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  filter: brightness(0) invert(1);
+  background: url(../img/icon-menu.png) no-repeat;
+  background-size: cover;
+  display: block;
+  margin-right: 0.6rem;
+}
+ul#main-menu li a .icon.icon-menu-bitel {
+  background-position: -3.5rem center;
+}
+ul#main-menu li a .icon.icon-menu-user {
+  background-position: -1.75rem center;
+}
+ul#main-menu li a .icon.icon-menu-premium {
+  background-position: -5.25rem center;
+}
+ul#main-menu li a .icon.icon-menu-coin {
+  background-position: -7rem center;
+}
+ul#main-menu li a .icon.icon-menu-reward {
+  background-position: -8.75rem center;
+}
+ul#main-menu li a .icon.icon-menu-news {
+  background-position: -10.5rem center;
+}
+ul#main-menu li.featured .text {
+  background-image: linear-gradient(to right, #06e8d2, #fff200 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ul#main-menu li.featured .icon {
+  filter: none;
+}
+ul#main-menu li.current {
+  position: relative;
+}
+ul#main-menu li.current:before {
+  content: url("../");
+  display: block;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff200;
+  border-radius: 2rem;
+  left: -12px;
+  top: calc(50% - 6px);
+}
+ul#main-menu li.current a {
+  color: #fff200;
+}
+ul#main-menu li.current .icon {
+  filter: none;
 }

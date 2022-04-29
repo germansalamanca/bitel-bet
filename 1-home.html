@@ -13,10 +13,59 @@
   <title>Bitel Bet</title>
 </head>
 <body>
+  <div class="glass" id="main-menu-wrapper">
+    <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#main-menu-wrapper')"></button>
+    <nav class="main-nav">
+      <ul id="main-menu" class="menu">
+        <li class="current">
+          <a href="#">
+            <span class="icon icon-menu-home"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-user"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-bitel"></span>
+            <span class="text">Qué es Bitel Bet</span>
+          </a>
+        </li>
+        <li class="featured">
+          <a href="#">
+            <span class="icon icon-menu-premium"></span>
+            <span class="text">Vuélvete Premium</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-coin"></span>
+            <span class="text">Comprar monedas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-reward"></span>
+            <span class="text">Recompensas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-news"></span>
+            <span class="text">Noticias</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
   <div class="page">
     <header id="header">
       <div class="header-content">
-        <button id="menu-toggler" class="btn" aria-label="Menú principal"></button>
+        <button id="menu-toggler" class="btn" aria-label="Menú principal" onclick="openPopup('#main-menu-wrapper')"></button>
         <figure class="logo">
           <a href="#">
             <img src="./img/logo-bitel-bet.png" alt="Inicio">

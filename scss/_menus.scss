@@ -1,0 +1,113 @@
+@import 'variables';
+
+ul.menu{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  li{
+    a{
+      text-decoration: none;
+    }
+  }
+}
+#main-menu-wrapper{
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  padding: 1.3rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: rgba(32, 47, 68, 0.9);
+  z-index: 100;
+  .btn-close-popup{
+    align-self: flex-end;
+    flex-shrink: 0;
+  }
+}
+.main-nav{
+  margin-top: 1.6rem;
+}
+ul#main-menu{
+  padding-left: 2rem;
+  li{
+    font-size: 1.13rem;
+    font-weight: 700;
+    a{
+      display: flex;
+      color: $white;
+      padding: .9rem .5rem;
+      margin: .9rem 0;
+      align-items: center;
+      transition: all ease .4s;
+      &:hover{
+        color: $teal;
+      }
+      .icon{
+        $icon-size: 1.75rem;
+        width: $icon-size;
+        height: $icon-size;
+        filter: brightness(0) invert(1);
+        background: url(../img/icon-menu.png) no-repeat;
+        background-size: cover;
+        display: block;
+        margin-right: .6rem;
+        &.icon-menu-bitel{
+          background-position: calc($icon-size * -2) center;
+        }
+        &.icon-menu-user{
+          background-position: -$icon-size center;
+        }
+        &.icon-menu-premium{
+          background-position: calc($icon-size * -3) center;
+        }
+        &.icon-menu-coin{
+          background-position: calc($icon-size * -4) center;
+        }
+        &.icon-menu-reward{
+          background-position: calc($icon-size * -5) center;
+        }
+        &.icon-menu-news{
+          background-position: calc($icon-size * -6) center;
+        }
+      }
+    }
+    // li
+    &.featured{
+      .text{
+        background-image: linear-gradient(to right, $teal, $yellow 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .icon{
+        filter: none;
+      }
+    }
+    &.current{
+      position: relative;
+      &:before{
+        $icon-size: 12px;
+        content: url('../');
+        display: block;
+        position: absolute;
+        width: $icon-size;
+        height: $icon-size;
+        border: 1px solid $yellow;
+        border-radius: 2rem;
+        left: -$icon-size;
+        top: calc(50% - ($icon-size / 2));
+        
+      }
+      a{
+        color: $yellow;
+      }
+      .icon{
+        filter: none;
+      }
+    }
+  }
+
+}
