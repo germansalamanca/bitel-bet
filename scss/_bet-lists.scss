@@ -69,11 +69,6 @@ header.bet-heading{
       }
     }
   }
-  button.bet-team{
-    &.selected{
-      background: radial-gradient(#d166ff, #a436ff);
-    }
-  }
 }
 
 /*---- ESPORTS BET LIST ----*/
@@ -137,6 +132,9 @@ ul.bet-list-esports{
           margin: 0 .4rem 0 0;
         }
       }
+    }
+    &:after{
+      transform: skew(30deg);
     }
   }
   // Esports bet status
@@ -221,6 +219,21 @@ ul.bet-list-futbol{
       margin: 0;
       max-width: 8rem;
     }
+    &.selected{
+      background: radial-gradient(#d166ff, #a436ff);
+      &:after{
+        content: '';
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        background-color: #202f44;
+        background-image: radial-gradient(circle at 0 0, #fff, #a436ff);
+        bottom: -.5rem;
+        left: calc(50% - .5rem);
+        pointer-events: none;
+        border-radius: 1rem;
+      }
+    }
   }
   button.bet-tie{
     display: flex;
@@ -237,6 +250,92 @@ ul.bet-list-futbol{
     .name{
       text-align: center;
       margin-bottom: .4rem;
+    }
+  }
+}
+
+/*---- BET SCORE ----*/
+
+.bet-score{
+  margin-top: -$br-md;
+  background-color: #202f44;
+  color: $white;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  border: 1px dotted $metallic-blue;
+  border-top: none;
+  header{
+    padding: 1.3rem 1rem .6rem 1rem;
+    border-bottom: 1px dotted $metallic-blue;
+    position: relative;
+    &:after{
+      content: '';
+      font-size: .8rem;
+      display: block;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      border: 1px dotted $metallic-blue;
+      border-left: none;
+      border-top: none;
+      bottom: -.6em;
+      left: calc(50% - .5em);
+      transform: rotate(45deg);
+      background-color: #202f44;
+  }
+    p{
+      font-weight: 500;
+      margin: 0;
+      font-size: .75rem;
+      .ammount{
+        color: $yellow;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-left: .3rem;
+        &:after{
+          content: url(../);
+          display:inline-block;
+          position: relative;
+          bottom: -0.14rem;
+          left: .32rem;
+          width: .9375rem;
+          height: .9375rem;
+          background-color: $yellow;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+  .content{
+    padding: .9rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (min-width: $sm){
+      justify-content: space-around;
+    }
+    p{
+      font-weight: 300;
+      font-size: .6875rem;
+      margin: 0;
+      padding: 0 .5rem;
+      max-width: 200px;
+      @media (min-width: $md){
+        max-width: 210px;
+      }
+    }
+    input[type=text]{
+      flex-shrink: 0;
+      color: $white;
+      max-width: 3rem;
+      font-size: 16px;
+      font-weight: 700;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      padding: .3rem;
+      border-radius: $br-sm;
+      border: none;
+      background-color: $metallic-blue;
     }
   }
 }

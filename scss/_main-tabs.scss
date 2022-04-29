@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $white;
+    background-color: #54648f;
     height: 30px;
     color: $dark;
     font-weight: 700;
@@ -22,11 +22,12 @@
     border-radius: 1rem;
     padding: 0 1rem;
     width: calc(50% - .1rem);
+    border: 1px solid transparent;
     &:hover{
-      background-color: $yellow;
+      background-color: lighten(#54648f, 10%);
     }
     &.active{
-      background-color: #54648f;
+      background-color: $white;
     }
     .icon{
       margin-right: .4rem;
@@ -62,8 +63,8 @@
     position: relative;
     &:hover{
       .icon{
-        filter: invert(0) brightness(150);
-        opacity: 1;
+        filter: invert(0) brightness(150) saturete(0);
+        opacity: .5;
       }
     }
     &:after{
@@ -189,6 +190,9 @@
     }
     &:focus{
       outline: none;
+    }
+    &:hover{
+      color: $teal;
     }
     &.active{
       color: $white;

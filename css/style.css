@@ -272,7 +272,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff;
+  background-color: #54648f;
   height: 30px;
   color: #2a3248;
   font-weight: 700;
@@ -280,12 +280,13 @@ button {
   border-radius: 1rem;
   padding: 0 1rem;
   width: calc(50% - 0.1rem);
+  border: 1px solid transparent;
 }
 .main-tabs button.tab:hover {
-  background-color: #fff200;
+  background-color: #6d7da9;
 }
 .main-tabs button.tab.active {
-  background-color: #54648f;
+  background-color: #fff;
 }
 .main-tabs button.tab .icon {
   margin-right: 0.4rem;
@@ -320,8 +321,8 @@ button {
   position: relative;
 }
 .esports-tabs button.tab:hover .icon {
-  filter: invert(0) brightness(150);
-  opacity: 1;
+  filter: invert(0) brightness(150) saturete(0);
+  opacity: 0.5;
 }
 .esports-tabs button.tab:after {
   content: "";
@@ -444,6 +445,9 @@ button {
 .tab-list-slider button.tab:focus {
   outline: none;
 }
+.tab-list-slider button.tab:hover {
+  color: #06e8d2;
+}
 .tab-list-slider button.tab.active {
   color: #fff;
   border-color: white;
@@ -503,9 +507,6 @@ header.bet-heading .bet-status {
 }
 .bet-item:not(.status-closed) button.bet-team:hover {
   filter: brightness(113%);
-}
-.bet-item button.bet-team.selected {
-  background: radial-gradient(#d166ff, #a436ff);
 }
 
 /*---- ESPORTS BET LIST ----*/
@@ -567,6 +568,9 @@ ul.bet-list-esports button.bet-team:last-child .content .name {
 }
 ul.bet-list-esports button.bet-team:last-child .content .value {
   margin: 0 0.4rem 0 0;
+}
+ul.bet-list-esports button.bet-team:after {
+  transform: skew(30deg);
 }
 ul.bet-list-esports .bet-item.status-closing .bet-options {
   padding-bottom: 1px;
@@ -636,6 +640,21 @@ ul.bet-list-futbol button.bet-team .name {
   margin: 0;
   max-width: 8rem;
 }
+ul.bet-list-futbol button.bet-team.selected {
+  background: radial-gradient(#d166ff, #a436ff);
+}
+ul.bet-list-futbol button.bet-team.selected:after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  background-color: #202f44;
+  background-image: radial-gradient(circle at 0 0, #fff, #a436ff);
+  bottom: -0.5rem;
+  left: calc(50% - 0.5rem);
+  pointer-events: none;
+  border-radius: 1rem;
+}
 ul.bet-list-futbol button.bet-tie {
   display: flex;
   justify-content: center;
@@ -652,6 +671,95 @@ ul.bet-list-futbol button.bet-tie {
 ul.bet-list-futbol button.bet-tie .name {
   text-align: center;
   margin-bottom: 0.4rem;
+}
+
+/*---- BET SCORE ----*/
+.bet-score {
+  margin-top: -10px;
+  background-color: #202f44;
+  color: #fff;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  border: 1px dotted #54648f;
+  border-top: none;
+}
+.bet-score header {
+  padding: 1.3rem 1rem 0.6rem 1rem;
+  border-bottom: 1px dotted #54648f;
+  position: relative;
+}
+.bet-score header:after {
+  content: "";
+  font-size: 0.8rem;
+  display: block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border: 1px dotted #54648f;
+  border-left: none;
+  border-top: none;
+  bottom: -0.6em;
+  left: calc(50% - 0.5em);
+  transform: rotate(45deg);
+  background-color: #202f44;
+}
+.bet-score header p {
+  font-weight: 500;
+  margin: 0;
+  font-size: 0.75rem;
+}
+.bet-score header p .ammount {
+  color: #fff200;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-left: 0.3rem;
+}
+.bet-score header p .ammount:after {
+  content: url(../);
+  display: inline-block;
+  position: relative;
+  bottom: -0.14rem;
+  left: 0.32rem;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color: #fff200;
+  border-radius: 1rem;
+}
+.bet-score .content {
+  padding: 0.9rem 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .bet-score .content {
+    justify-content: space-around;
+  }
+}
+.bet-score .content p {
+  font-weight: 300;
+  font-size: 0.6875rem;
+  margin: 0;
+  padding: 0 0.5rem;
+  max-width: 200px;
+}
+@media (min-width: 768px) {
+  .bet-score .content p {
+    max-width: 210px;
+  }
+}
+.bet-score .content input[type=text] {
+  flex-shrink: 0;
+  color: #fff;
+  max-width: 3rem;
+  font-size: 16px;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #54648f;
 }
 
 .popup-overlay {
