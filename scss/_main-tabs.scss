@@ -36,10 +36,10 @@
       background-repeat: no-repeat;
     }
     .icon-esports{
-      background-image: url(/img/icon-tab-esports.png);
+      background-image: url(../img/icon-tab-esports.png);
     }
     .icon-futbol{
-      background-image: url(/img/icon-tab-futbol.png);
+      background-image: url(../img/icon-tab-futbol.png);
     }
   }
 }
@@ -80,7 +80,7 @@
     .icon{
       width: $icon-size;
       height: $icon-size;
-      background: url(/img/logos-esports.png) no-repeat;
+      background: url(../img/logos-esports.png) no-repeat;
       background-size: cover;
       opacity: .25;
       transition: all ease .4s;
