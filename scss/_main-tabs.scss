@@ -46,6 +46,10 @@
 }
 .main-tabs-content{
   padding: 0 .25rem;
+  display: none;
+  &.active{
+    display: block;
+  }
 }
 
 /*---- ESPORTS TABS ---*/

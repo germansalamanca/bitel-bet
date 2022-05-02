@@ -305,6 +305,10 @@ button {
 
 .main-tabs-content {
   padding: 0 0.25rem;
+  display: none;
+}
+.main-tabs-content.active {
+  display: block;
 }
 
 /*---- ESPORTS TABS ---*/

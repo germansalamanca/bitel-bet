@@ -99,16 +99,16 @@
       <div class="container">
         <div class="main-tabs-wrapper pb-5">
           <div class="main-tabs">
-            <button class="tab btn active">
+            <button class="tab btn main-tabs-group active" onclick="showTabContent(this, '#esports', 'main-tabs-group')">
               <span class="icon icon-esports"></span>
               <span class="text btn">Esports</span>
             </button>
-            <button class="tab btn">
+            <button class="tab btn main-tabs-group" onclick="showTabContent(this, '#futbol', 'main-tabs-group')">
               <span class="icon icon-futbol"></span>
               <span class="text btn">Fútbol</span>
             </button>
           </div>
-          <div id="esports" class="main-tabs-content">
+          <div id="esports" class="tab-content main-tabs-content main-tabs-group active">
             <div class="esports-tabs">
               <button class="tab btn active" aria-label="Name of te esport 1">
                 <span class="icon icon-1"></span>
@@ -203,7 +203,7 @@
               </ul>
             </div>
           </div><!-- #esports -->
-          <div id="futbol" class="main-tabs-content">
+          <div id="futbol" class="tab-content main-tabs-content main-tabs-group">
             <div class="futbol-tabs tab-list-slider">
               <div class="options-wrapper">
                 <button class="tab btn active">Eventos de hoy</button>

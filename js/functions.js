@@ -35,3 +35,19 @@ function closePopup(element, e){
     }
   }
 }
+
+function showTabContent(tabButton, tabContentSelector, tabsGroupClass){
+  if(!tabButton.classList.contains('active')){
+    const tabButtons = document.querySelectorAll(`.tab.${tabsGroupClass}`)
+    for(let button of Object.values(tabButtons)){
+      button.classList.remove('active')
+      tabButton.classList.add('active')
+    }
+    const tabContent = document.querySelector(tabContentSelector)
+    const contents = document.querySelectorAll(`.tab-content.${tabsGroupClass}`)
+    for(let content of Object.values(contents)){
+      content.classList.remove('active')
+      tabContent.classList.add('active')
+    }
+  }
+}
