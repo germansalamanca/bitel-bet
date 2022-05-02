@@ -1,0 +1,44 @@
+@import 'variables';
+
+#page-que-es-bitel{
+  font-style: italic;
+  p, ul{
+    font-size: 0.94rem;
+    line-height: 1.5rem;
+  }
+  p{
+    text-align: center;
+  }
+}
+section#que-es-bitel{
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+// Section Cómo funciona
+
+#como-funciona{
+  padding-bottom: 3rem;
+}
+.slider-como-funciona{
+  .step-figure{
+    max-width: 265px;
+    margin: 0 auto 2rem;
+  }
+  .number{
+    width: 3.125rem;
+    height: 3.125rem;
+    margin: 0 auto 1.4rem;
+  }
+  .subtitle{
+    font-weight: 500;
+    margin-bottom: 1.3rem;
+  }
+  p{
+    max-width: 16.25rem;
+    @media (min-width: $md){
+      max-width: 20rem;
+    }
+    margin: 0 auto;
+  }
+}

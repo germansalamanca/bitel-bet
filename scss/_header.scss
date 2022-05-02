@@ -6,6 +6,9 @@
   @media (min-width: $md){
     padding: .8rem 1rem;
   }
+  &.header-transparent{
+    background: none;
+  }
   .header-content{
     display: flex;
     justify-content: space-between;

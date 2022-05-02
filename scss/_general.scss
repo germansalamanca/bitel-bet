@@ -18,19 +18,89 @@ body{
 p{
   font-family: 'Exo 2', sans-serif;
 }
+
+figure{
+  margin: 0;
+}
+img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+}
+
+/*---- TITLES -----*/
 h1, h2, h3, h4, h5, h6{
   font-family: $font-family;
+  text-align: center;
 }
+.featured-title{
+  background-image: linear-gradient(to right, $teal, $yellow 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 0 0 2rem;
+  &.framed{
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    span{
+      background-image: linear-gradient(to right, $teal, $yellow 100%);
+      border: 1px solid white;
+      border-top: none;
+      border-left: none;
+      padding: 0 1rem 1rem;
+      background: url(../img/bg-featured-title.svg) no-repeat;
+      background-position: right bottom;
+      background-image: linear-gradient(to right, $teal, $yellow 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+.subtitle{
+  color: yellow;
+  font-style: italic;
+  font-size: 1.31rem;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+}
+
+ul.list-bitel{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li{
+    display: flex;
+    margin-bottom: .8rem;
+    &:before{
+      content: url(../img/icon-bitel-coin.svg);
+      filter: brightness(0) invert(1);
+      position: relative;
+      top: .2rem;
+      font-style: normal;
+      width: 1.75rem;
+      height: 1.75rem;
+      margin-right: .8rem;
+    }
+  }
+}
+
 button{
   cursor: pointer;
   font-family: $font-family;
 }
 
+
+/*---- LAYOUT -----*/
+
 .page{
   background-color: $dark;
+  color: $white;
 }
 
-// LAYOUT
 .hide{
   display: none !important;
 }
@@ -42,6 +112,12 @@ button{
   max-width: $md;
   margin: 0 auto;
   padding: 0 .7rem;
+  &.container-alt{
+    max-width: 312px;
+    @media (min-width: $md){
+      max-width: $sm;
+    }
+  }
 }
 
 .mb-1{
@@ -73,6 +149,25 @@ button{
 .pb-6{
   padding-bottom: 6rem !important;
 }
+.pt-1{
+  padding-top: 1rem !important;
+}
+.pt-2{
+  padding-top: 2rem !important;
+  display: block;
+}
+.pt-3{
+  padding-top: 3rem !important;
+}
+.pt-4{
+  padding-top: 4rem !important;
+}
+.pt-5{
+  padding-top: 5rem !important;
+}
+.pt-6{
+  padding-top: 6rem !important;
+}
 
 // CTA 
 .cta-fixed{
@@ -83,7 +178,7 @@ button{
   width: 100%;
 }
 
-// OVERLAY
+// overlay
 .overlay{
   background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
