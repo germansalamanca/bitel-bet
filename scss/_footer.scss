@@ -4,11 +4,17 @@
   .content{
     border-top: 1px solid #54648f;
     padding: 1rem 0;
+    @media (min-width: $md){
+      display:flex;
+    }
   }
   .top{
     display: flex;
     justify-content: flex-start;
     padding-bottom: 1.3rem;
+    @media (min-width: $md){
+      margin-right: 3rem;
+    }
   }
   .footer-logo{
     flex-shrink: 0;
@@ -73,6 +79,9 @@ ul.social-menu{
       }
       &.icon-yt{
         background-image: url(../img/social-icon-yt.svg);
+      }
+      &:hover{
+        opacity: .5;
       }
     }
   }

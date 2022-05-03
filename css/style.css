@@ -368,10 +368,20 @@ button {
   border-top: 1px solid #54648f;
   padding: 1rem 0;
 }
+@media (min-width: 768px) {
+  #footer .content {
+    display: flex;
+  }
+}
 #footer .top {
   display: flex;
   justify-content: flex-start;
   padding-bottom: 1.3rem;
+}
+@media (min-width: 768px) {
+  #footer .top {
+    margin-right: 3rem;
+  }
 }
 #footer .footer-logo {
   flex-shrink: 0;
@@ -438,6 +448,9 @@ ul.social-menu li a.icon-ig {
 ul.social-menu li a.icon-yt {
   background-image: url(../img/social-icon-yt.svg);
 }
+ul.social-menu li a:hover {
+  opacity: 0.5;
+}
 
 .slider .slide {
   overflow: hidden;
@@ -457,6 +470,79 @@ ul.social-menu li a.icon-yt {
 }
 .slider-promo .slick-dots {
   bottom: -2.5rem;
+}
+
+.slider-ring .slick-arrow, .slider-circle .slick-arrow {
+  z-index: 6;
+  left: calc(100% - 1.5rem);
+}
+.slider-ring .slick-arrow:before, .slider-circle .slick-arrow:before {
+  content: "";
+  background-color: red;
+  width: 2.375rem;
+  height: 38px;
+  display: inline-block;
+  position: relative;
+  transition: all ease 0.4s;
+  background: url(../img/btn-arrow-slider.png) no-repeat;
+  background-size: cover;
+}
+.slider-ring .slick-arrow.slick-prev, .slider-circle .slick-arrow.slick-prev {
+  left: 0.1rem;
+  transform: scaleX(-1);
+}
+
+.slider-ring {
+  max-width: 17rem;
+  margin: 0 auto;
+  padding-bottom: 1.4rem;
+}
+.slider-ring .step-figure {
+  margin: 0 auto 2rem;
+}
+.slider-ring .number {
+  width: 3.125rem;
+  height: 3.125rem;
+  margin: 0 auto 1.4rem;
+}
+.slider-ring .subtitle {
+  font-weight: 500;
+  margin-bottom: 1.3rem;
+}
+.slider-ring p {
+  max-width: 16.25rem;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .slider-ring p {
+    max-width: 20rem;
+  }
+}
+.slider-ring .slick-arrow {
+  top: 7.8rem;
+}
+.slider-ring .slick-arrow.slick-prev {
+  top: 7.1rem;
+}
+
+.slider-circle {
+  max-width: 240px;
+  margin: 0 auto;
+}
+.slider-circle .slide-content {
+  padding: 0 0 1.5rem;
+  max-width: 15rem;
+}
+.slider-circle figure {
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+}
+.slider-circle .slick-arrow {
+  top: 7rem;
+}
+.slider-circle .slick-arrow.slick-prev {
+  top: 6.38rem;
 }
 
 .main-tabs-wrapper {
@@ -1193,6 +1279,9 @@ ul#main-menu li.current .icon {
   width: 100%;
   font-weight: 700;
 }
+#page-que-es-bitel .slider-circle {
+  margin-bottom: 2.6rem;
+}
 
 section#que-es-bitel {
   padding: 2.4rem 0 3rem;
@@ -1202,31 +1291,8 @@ section#como-funciona {
   padding: 2rem 0 2rem;
 }
 
-.slider-rings .step-figure {
-  max-width: 265px;
-  margin: 0 auto 2rem;
-}
-.slider-rings .number {
-  width: 3.125rem;
-  height: 3.125rem;
-  margin: 0 auto 1.4rem;
-}
-.slider-rings .subtitle {
-  font-weight: 500;
-  margin-bottom: 1.3rem;
-}
-.slider-rings p {
-  max-width: 16.25rem;
-  margin: 0 auto;
-}
-@media (min-width: 768px) {
-  .slider-rings p {
-    max-width: 20rem;
-  }
-}
-
 section#vuelvete-premium {
-  padding: 3rem 0 4rem;
+  padding: 3rem 0 5rem;
 }
 section#vuelvete-premium h2 {
   margin-bottom: 1.2rem;
@@ -1241,15 +1307,6 @@ section#vuelvete-premium p.coin-text {
 }
 section#vuelvete-premium p.coin-text .icon-bitel-coin-2 {
   margin: 0 -0.3rem;
-}
-
-.slider-circles figure {
-  width: 15rem;
-  height: 15rem;
-  border-radius: 100%;
-  overflow: hidden;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
-  margin: 1rem auto 2rem;
 }
 
 section#comprar-monedas {

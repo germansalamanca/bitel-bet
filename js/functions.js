@@ -14,6 +14,20 @@ $(document).on('ready', function() {
       }
     ]
   });
+  $(".slider-ring").slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+  });
+  $(".slider-circle").slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: true,
+  });
 });
 
 function openPopup(popupSelector){
@@ -51,3 +65,4 @@ function showTabContent(tabButton, tabContentSelector, tabsGroupClass){
     }
   }
 }
+
