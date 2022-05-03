@@ -134,6 +134,10 @@ button {
   margin-bottom: 1rem !important;
 }
 
+.mb-1-5 {
+  margin-bottom: 1.5rem !important;
+}
+
 .mb-2 {
   margin-bottom: 2rem !important;
   display: block;
@@ -141,6 +145,22 @@ button {
 
 .mb-3 {
   margin-bottom: 3rem !important;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
+}
+
+.mt-1-5 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-2 {
+  margin-top: 2rem !important;
+}
+
+.mt-3 {
+  margin-top: 3rem !important;
 }
 
 .pb-1 {
@@ -1089,11 +1109,12 @@ ul.bet-list-futbol button.bet-tie .name {
 
 .popup-overlay {
   overflow-y: scroll;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   opacity: 1;
   transition: all ease 0.5s;
+  padding: 0 1.1rem;
 }
 .popup-overlay.active {
   opacity: 1;
@@ -1105,7 +1126,7 @@ ul.bet-list-futbol button.bet-tie .name {
   z-index: 50;
   height: 100%;
   margin-top: 100%;
-  padding: 2rem 0 2rem;
+  padding: 1.2rem 0 1.2rem;
 }
 .popup .btn-close-popup {
   margin-bottom: 1rem;
@@ -1117,12 +1138,13 @@ ul.bet-list-futbol button.bet-tie .name {
   background: #2a3248 url(../img/bg-popup.png) no-repeat;
   background-size: contain;
   background-position: center bottom;
-  padding: 2rem 1rem 2.5rem;
+  padding: 2.7rem 1.3rem 2.5rem;
   border-radius: 20px;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
+  /*---- INFO POPUPS ----*/
 }
 .popup-box:before {
   pointer-events: none;
@@ -1137,7 +1159,34 @@ ul.bet-list-futbol button.bet-tie .name {
   background-size: contain;
   background-position: center top;
 }
+.popup-box .content figure.popup-icon {
+  max-width: 50px;
+  margin: 0 auto;
+}
+.popup-box .content figure.popup-icon .popup-icon-top {
+  margin-bottom: 10rem;
+}
+.popup-box .content .title {
+  color: #fff200;
+  font-style: italic;
+  font-size: 1.25rem;
+  margin-bottom: 0;
+}
+.popup-box .content .text {
+  font-style: italic;
+  font-weight: 500;
+}
+.popup-box .content small {
+  font-style: italic;
+}
+.popup-box .btn-cta {
+  max-width: 260px;
+  width: 100%;
+}
 
+#login .popup-box {
+  padding: 2rem 1rem 2.5rem;
+}
 #login .content {
   max-width: 250px;
   margin: 0 auto;

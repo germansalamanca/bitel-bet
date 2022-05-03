@@ -2,11 +2,12 @@
 
 .popup-overlay{
   overflow-y: scroll;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: flex-end;
   opacity: 1;
   transition: all ease .5s;
+  padding: 0 1.1rem;
   &.active{
     opacity: 1;
   }
@@ -17,7 +18,7 @@
   z-index: 50;
   height: 100%;
   margin-top: 100%;
-  padding: 2rem 0 2rem;
+  padding: 1.2rem 0 1.2rem;
   .btn-close-popup{
     margin-bottom: 1rem;
   }
@@ -28,9 +29,9 @@
   background: $dark url(../img/bg-popup.png) no-repeat;
   background-size: contain;
   background-position: center bottom;
-  padding: 2rem 1rem 2.5rem;
+  padding: 2.7rem 1.3rem 2.5rem;
   border-radius: $br-lg;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -47,8 +48,39 @@
     background-size: contain;
     background-position: center top;
   }
+  /*---- INFO POPUPS ----*/
+  .content{
+    figure.popup-icon{
+      max-width: 50px;
+      margin: 0 auto;
+      .popup-icon-top{
+        margin-bottom: 10rem;
+      }
+    }
+    .title{
+      color: $yellow;
+      font-style: italic;
+      font-size: 1.25rem;
+      margin-bottom: 0;
+    }
+    .text{
+      font-style: italic;
+      font-weight: 500;
+    }
+    small{
+      font-style: italic;
+    }
+  }
+  .btn-cta{
+    max-width: 260px;
+    width: 100%;
+  }
 }
+
 #login{
+  .popup-box{
+    padding: 2rem 1rem 2.5rem;
+  }
   .content{
     max-width: 250px;
     margin: 0 auto;
