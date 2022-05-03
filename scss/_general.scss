@@ -14,7 +14,13 @@ body{
     overflow: hidden;
   }
 }
-
+a{
+  text-decoration: none;
+  transition: all ease .4s;
+  &:hover{
+    color: $teal;
+  }
+}
 p{
   font-family: 'Exo 2', sans-serif;
 }
@@ -26,6 +32,10 @@ img{
   display: block;
   max-width: 100%;
   width: 100%;
+}
+
+.text-center{
+  text-align: center;
 }
 
 /*---- TITLES -----*/
@@ -41,17 +51,16 @@ h1, h2, h3, h4, h5, h6{
   font-size: 1.5rem;
   font-style: italic;
   margin: 0 0 2rem;
+
   &.framed{
-    background-image: none;
-    display: flex;
-    justify-content: center;
+    background: url(../img/bg-featured-title.png) no-repeat;
+    background-position: right bottom;
+    display: inline-block;
     span{
-      background-image: linear-gradient(to right, $teal, $yellow 100%);
-      border: 1px solid white;
+      display: inline-block;
       border-top: none;
       border-left: none;
-      padding: 0 1rem 1rem;
-      background: url(../img/bg-featured-title.svg) no-repeat;
+      padding: 0 1.3rem 1.3rem;
       background-position: right bottom;
       background-image: linear-gradient(to right, $teal, $yellow 100%);
       -webkit-background-clip: text;
@@ -64,7 +73,6 @@ h1, h2, h3, h4, h5, h6{
   color: yellow;
   font-style: italic;
   font-size: 1.31rem;
-  max-width: 300px;
   margin: 0 auto 1rem;
 }
 
@@ -95,18 +103,13 @@ button{
 
 
 /*---- LAYOUT -----*/
-
-.page{
-  background-color: $dark;
-  color: $white;
-}
-
 .hide{
   display: none !important;
 }
 .page{
-  background-color: darken($dark, 8%);
+  background-color: $dark;
   min-height: 100vh;
+  color: $white;
 }
 .container{
   max-width: $md;

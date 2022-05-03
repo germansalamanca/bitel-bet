@@ -1,0 +1,79 @@
+@import 'variables';
+#footer{
+  padding: 0 1rem;
+  .content{
+    border-top: 1px solid #54648f;
+    padding: 1rem 0;
+  }
+  .top{
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 1.3rem;
+  }
+  .footer-logo{
+    flex-shrink: 0;
+    width: 3.25rem;
+    margin-right: 4.3rem;
+    a{
+      display: block;
+      filter: brightness(0) invert(1);
+      transition-duration: .2;
+      &:hover{
+       filter: none;
+      }
+    }
+    img{
+      display: block;
+    }
+  }
+  .arrow-link{
+    color: $white;
+    text-decoration: none;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: bold;
+    &:before{
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: .4em;
+      height: .4em;
+      border: 1.5px solid $white;
+      border-left: none;
+      border-bottom: none;
+      margin-right: .4em;
+      transform: rotate(45deg);
+      bottom: .06em;
+      transition: all ease .4s;
+    }
+    &:hover{
+      color: $teal;
+      &:before{
+        border-color: $teal;
+      }
+    }
+  }
+}
+ul.social-menu{
+  display: flex;
+  li{
+    &:not(:last-child){
+      margin-right: 1.2rem;
+    }
+    a{
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-position: center;
+      &.icon-fb{
+        background-image: url(../img/social-icon-fb.svg);
+      }
+      &.icon-ig{
+        background-image: url(../img/social-icon-ig.svg);
+      }
+      &.icon-yt{
+        background-image: url(../img/social-icon-yt.svg);
+      }
+    }
+  }
+}

@@ -15,6 +15,14 @@ body.overlayed {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+  transition: all ease 0.4s;
+}
+a:hover {
+  color: #06e8d2;
+}
+
 p {
   font-family: "Exo 2", sans-serif;
 }
@@ -27,6 +35,10 @@ img {
   display: block;
   max-width: 100%;
   width: 100%;
+}
+
+.text-center {
+  text-align: center;
 }
 
 /*---- TITLES -----*/
@@ -45,17 +57,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 2rem;
 }
 .featured-title.framed {
-  background-image: none;
-  display: flex;
-  justify-content: center;
+  background: url(../img/bg-featured-title.png) no-repeat;
+  background-position: right bottom;
+  display: inline-block;
 }
 .featured-title.framed span {
-  background-image: linear-gradient(to right, #06e8d2, #fff200 100%);
-  border: 1px solid white;
+  display: inline-block;
   border-top: none;
   border-left: none;
-  padding: 0 1rem 1rem;
-  background: url(../img/bg-featured-title.svg) no-repeat;
+  padding: 0 1.3rem 1.3rem;
   background-position: right bottom;
   background-image: linear-gradient(to right, #06e8d2, #fff200 100%);
   -webkit-background-clip: text;
@@ -67,7 +77,6 @@ h1, h2, h3, h4, h5, h6 {
   color: yellow;
   font-style: italic;
   font-size: 1.31rem;
-  max-width: 300px;
   margin: 0 auto 1rem;
 }
 
@@ -97,18 +106,14 @@ button {
 }
 
 /*---- LAYOUT -----*/
-.page {
-  background-color: #2a3248;
-  color: #fff;
-}
-
 .hide {
   display: none !important;
 }
 
 .page {
-  background-color: #1b202e;
+  background-color: #2a3248;
   min-height: 100vh;
+  color: #fff;
 }
 
 .container {
@@ -214,6 +219,19 @@ button {
   bottom: 0;
   z-index: 40;
   pointer-events: none;
+}
+
+.icon {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.icon.icon-bitel-coin-2 {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  top: 1.2rem;
+  background-image: url(../img/icon-bitel-coin-2.svg);
 }
 
 .btn {
@@ -341,6 +359,84 @@ button {
   background: url(../img/icon-user.svg) no-repeat;
   background-size: 18px;
   background-position: center;
+}
+
+#footer {
+  padding: 0 1rem;
+}
+#footer .content {
+  border-top: 1px solid #54648f;
+  padding: 1rem 0;
+}
+#footer .top {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 1.3rem;
+}
+#footer .footer-logo {
+  flex-shrink: 0;
+  width: 3.25rem;
+  margin-right: 4.3rem;
+}
+#footer .footer-logo a {
+  display: block;
+  filter: brightness(0) invert(1);
+  transition-duration: 0.2;
+}
+#footer .footer-logo a:hover {
+  filter: none;
+}
+#footer .footer-logo img {
+  display: block;
+}
+#footer .arrow-link {
+  color: #fff;
+  text-decoration: none;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: bold;
+}
+#footer .arrow-link:before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 0.4em;
+  height: 0.4em;
+  border: 1.5px solid #fff;
+  border-left: none;
+  border-bottom: none;
+  margin-right: 0.4em;
+  transform: rotate(45deg);
+  bottom: 0.06em;
+  transition: all ease 0.4s;
+}
+#footer .arrow-link:hover {
+  color: #06e8d2;
+}
+#footer .arrow-link:hover:before {
+  border-color: #06e8d2;
+}
+
+ul.social-menu {
+  display: flex;
+}
+ul.social-menu li:not(:last-child) {
+  margin-right: 1.2rem;
+}
+ul.social-menu li a {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-position: center;
+}
+ul.social-menu li a.icon-fb {
+  background-image: url(../img/social-icon-fb.svg);
+}
+ul.social-menu li a.icon-ig {
+  background-image: url(../img/social-icon-ig.svg);
+}
+ul.social-menu li a.icon-yt {
+  background-image: url(../img/social-icon-yt.svg);
 }
 
 .slider .slide {
@@ -935,8 +1031,9 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 #login .logo-bitel {
   display: block;
-  margin: 0 0 1rem;
+  margin: 0 auto 1.5rem;
   filter: brightness(0) invert(1);
+  width: 4.9375rem;
 }
 #login .btn-register {
   width: 100%;
@@ -1091,35 +1188,95 @@ ul#main-menu li.current .icon {
 #page-que-es-bitel p {
   text-align: center;
 }
+#page-que-es-bitel .btn-cta {
+  max-width: 15.63rem;
+  width: 100%;
+  font-weight: 700;
+}
 
 section#que-es-bitel {
-  padding-top: 1rem;
-  margin-bottom: 3rem;
+  padding: 2.4rem 0 3rem;
 }
 
-#como-funciona {
-  padding-bottom: 3rem;
+section#como-funciona {
+  padding: 2rem 0 2rem;
 }
 
-.slider-como-funciona .step-figure {
+.slider-rings .step-figure {
   max-width: 265px;
   margin: 0 auto 2rem;
 }
-.slider-como-funciona .number {
+.slider-rings .number {
   width: 3.125rem;
   height: 3.125rem;
   margin: 0 auto 1.4rem;
 }
-.slider-como-funciona .subtitle {
+.slider-rings .subtitle {
   font-weight: 500;
   margin-bottom: 1.3rem;
 }
-.slider-como-funciona p {
+.slider-rings p {
   max-width: 16.25rem;
   margin: 0 auto;
 }
 @media (min-width: 768px) {
-  .slider-como-funciona p {
+  .slider-rings p {
     max-width: 20rem;
   }
+}
+
+section#vuelvete-premium {
+  padding: 3rem 0 4rem;
+}
+section#vuelvete-premium h2 {
+  margin-bottom: 1.2rem;
+}
+section#vuelvete-premium h3.subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+section#vuelvete-premium p.coin-text {
+  margin: 0 0 2rem;
+}
+section#vuelvete-premium p.coin-text .icon-bitel-coin-2 {
+  margin: 0 -0.3rem;
+}
+
+.slider-circles figure {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+  margin: 1rem auto 2rem;
+}
+
+section#comprar-monedas {
+  padding: 0 0 5rem;
+}
+section#comprar-monedas h2 {
+  margin-bottom: 2.4rem;
+}
+section#comprar-monedas h3.subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+section#canjear-monedas {
+  padding: 0 0 3rem;
+}
+section#canjear-monedas figure {
+  margin-bottom: 2.4rem;
+}
+section#canjear-monedas figure img {
+  margin-bottom: -1em;
+}
+section#canjear-monedas figure figcaption {
+  font-size: 13px;
+}
+section#canjear-monedas p {
+  margin: 0 auto;
+  max-width: 20rem;
 }

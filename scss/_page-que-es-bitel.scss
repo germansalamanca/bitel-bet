@@ -9,18 +9,22 @@
   p{
     text-align: center;
   }
+  .btn-cta{
+    max-width: 15.63rem;
+    width: 100%;
+    font-weight: 700;
+  }
 }
 section#que-es-bitel{
-  padding-top: 1rem;
-  margin-bottom: 3rem;
+  padding: 2.4rem 0 3rem;
 }
 
 // Section Cómo funciona
 
-#como-funciona{
-  padding-bottom: 3rem;
+section#como-funciona{
+  padding: 2rem 0 2rem;
 }
-.slider-como-funciona{
+.slider-rings{
   .step-figure{
     max-width: 265px;
     margin: 0 auto 2rem;
@@ -40,5 +44,62 @@ section#que-es-bitel{
       max-width: 20rem;
     }
     margin: 0 auto;
+  }
+}
+
+section#vuelvete-premium{
+  padding: 3rem 0 4rem;
+  h2{
+    margin-bottom: 1.2rem;
+  }
+  h3.subtitle{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  p.coin-text{
+    margin: 0 0 2rem; 
+    .icon-bitel-coin-2{
+      margin: 0 -.3rem;
+    }
+  }
+}
+.slider-circles{
+  figure{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.25);
+    margin: 1rem auto 2rem;
+  }
+}
+
+section#comprar-monedas{
+  padding: 0 0 5rem;
+  h2{
+    margin-bottom: 2.4rem;
+  }
+  h3.subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+}
+
+section#canjear-monedas{
+  padding: 0 0 3rem;
+  figure{
+    margin-bottom: 2.4rem;
+    img{
+      margin-bottom: -1em;
+    }
+    figcaption{
+      font-size: 13px;
+    }
+  }
+  p{
+    margin: 0 auto;
+    max-width: 20rem;
   }
 }
