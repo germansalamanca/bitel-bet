@@ -44,10 +44,24 @@
   width: 44px;
   height: 44px;
   .user-icon{
-    width: 18px;
-    height: 30px;
-    background: url(../img/icon-user.svg) no-repeat;
-    background-size: 18px;
+    width: 28px;
+    height: 28px;
+    background: url(../img/icon-user-not-logged.svg) no-repeat;
+    background-size: contain;
     background-position: center;
+    transition: all ease .4s;
+    &.user-free{
+      background-image: url(../img/icon-user-free.svg);
+      width: 22px;
+      height: 20px;
+    }
+    &.user-premium{
+      background-image: url(../img/icon-user-premium.svg);
+      width: 22px;
+      height: 20px;
+    }
+    &:hover{
+      transform: scale(1.1);
+    }
   }
 }

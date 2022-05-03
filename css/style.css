@@ -354,11 +354,25 @@ button {
   height: 44px;
 }
 .user-link .user-icon {
-  width: 18px;
-  height: 30px;
-  background: url(../img/icon-user.svg) no-repeat;
-  background-size: 18px;
+  width: 28px;
+  height: 28px;
+  background: url(../img/icon-user-not-logged.svg) no-repeat;
+  background-size: contain;
   background-position: center;
+  transition: all ease 0.4s;
+}
+.user-link .user-icon.user-free {
+  background-image: url(../img/icon-user-free.svg);
+  width: 22px;
+  height: 20px;
+}
+.user-link .user-icon.user-premium {
+  background-image: url(../img/icon-user-premium.svg);
+  width: 22px;
+  height: 20px;
+}
+.user-link .user-icon:hover {
+  transform: scale(1.1);
 }
 
 #footer {
