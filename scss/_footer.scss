@@ -3,7 +3,7 @@
   padding: 0 1rem;
   .content{
     border-top: 1px solid #54648f;
-    padding: 1rem 0;
+    padding: 1.5rem 0 1.7rem;
     @media (min-width: $md){
       display:flex;
     }
@@ -84,5 +84,22 @@ ul.social-menu{
         opacity: .5;
       }
     }
+  }
+}
+#btn-btt{
+  position: fixed;
+  bottom: 2.5rem;
+  right: 0.6rem;
+  z-index: 10;
+  width: 3.7rem;
+  height: 3.7rem;
+  background: url(../img/btn-btt.svg) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  opacity: 1;
+  transition: all ease .5s;
+  &:hover{
+    height: 4.1rem;
+    filter: brightness(113%);
   }
 }
