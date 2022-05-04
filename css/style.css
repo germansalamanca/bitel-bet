@@ -449,9 +449,10 @@ button {
   height: 44px;
 }
 .user-link .user-icon {
-  width: 28px;
-  height: 28px;
-  background: url(../img/icon-user-not-logged.svg) no-repeat;
+  background-image: url(../img/icon-user.svg);
+  width: 22px;
+  height: 20px;
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   transition: all ease 0.4s;
@@ -462,9 +463,9 @@ button {
   height: 20px;
 }
 .user-link .user-icon.user-premium {
+  width: 28px;
+  height: 28px;
   background-image: url(../img/icon-user-premium.svg);
-  width: 22px;
-  height: 20px;
 }
 .user-link .user-icon:hover {
   transform: scale(1.1);
