@@ -257,6 +257,21 @@ button {
   background-image: url(../img/icon-bitel-coin-2.svg);
 }
 
+.with-coin {
+  position: relative;
+}
+.with-coin:after {
+  content: "";
+  width: 1.17em;
+  height: 1.17rem;
+  background: url(../img/icon-bitel-coin-3.svg) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  position: relative;
+  top: 0.29em;
+  margin-left: 0.4em;
+}
+
 .btn {
   border: none;
   background-color: transparent;
@@ -1190,7 +1205,7 @@ ul.bet-list-futbol button.bet-tie .name {
   justify-content: flex-end;
   opacity: 1;
   transition: all ease 0.5s;
-  padding: 0 1.1rem;
+  padding: 0 1rem;
 }
 .popup-overlay.active {
   opacity: 1;
@@ -1214,7 +1229,7 @@ ul.bet-list-futbol button.bet-tie .name {
   background: #2a3248 url(../img/bg-popup.png) no-repeat;
   background-size: contain;
   background-position: center bottom;
-  padding: 2.7rem 1.3rem 2.5rem;
+  padding: 2.7rem 1.2rem 2.5rem;
   border-radius: 20px;
   max-width: 450px;
   width: 100%;
@@ -1258,6 +1273,49 @@ ul.bet-list-futbol button.bet-tie .name {
 .popup-box .btn-cta {
   max-width: 260px;
   width: 100%;
+}
+.popup-box .options.two {
+  display: flex;
+}
+.popup-box .options.two .btn-cta {
+  min-width: auto;
+}
+.popup-box .options.two .btn-cta:first-child {
+  margin-right: 0.6rem;
+}
+
+.table-purchase-info {
+  display: flex;
+  background-color: #1f2535;
+  border: 1px solid #54648f;
+  border-radius: 10px;
+  font-style: italic;
+  text-align: left;
+  font-size: 14px;
+}
+.table-purchase-info .left {
+  padding: 1rem 0.4rem 1rem 0.7rem;
+  border-right: 1px solid #54648f;
+  width: 50%;
+}
+.table-purchase-info .right {
+  padding: 1rem 0.7rem;
+  width: 50%;
+}
+.table-purchase-info .heading {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  letter-spacing: -0.005em;
+}
+.table-purchase-info .name {
+  font-weight: 800;
+}
+.table-purchase-info .price {
+  font-weight: 800;
+  color: #fff200;
 }
 
 #login .popup-box {

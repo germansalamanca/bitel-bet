@@ -7,7 +7,7 @@
   justify-content: flex-end;
   opacity: 1;
   transition: all ease .5s;
-  padding: 0 1.1rem;
+  padding: 0 1rem;
   &.active{
     opacity: 1;
   }
@@ -29,7 +29,7 @@
   background: $dark url(../img/bg-popup.png) no-repeat;
   background-size: contain;
   background-position: center bottom;
-  padding: 2.7rem 1.3rem 2.5rem;
+  padding: 2.7rem 1.2rem 2.5rem;
   border-radius: $br-lg;
   max-width: 450px;
   width: 100%;
@@ -74,6 +74,50 @@
   .btn-cta{
     max-width: 260px;
     width: 100%;
+  }
+  .options{
+    &.two{
+      display: flex;
+      .btn-cta{
+        min-width: auto;
+        &:first-child{
+          margin-right: .6rem;
+        }
+      }
+    }
+  }
+}
+.table-purchase-info{
+  display: flex;
+  background-color: #1f2535;
+  border: 1px solid $metallic-blue;
+  border-radius: $br-md;
+  font-style: italic;
+  text-align: left;
+  font-size: 14px;
+  .left{
+    padding: 1rem .4rem 1rem .7rem;
+    border-right: 1px solid $metallic-blue;
+    width: 50%;
+  }
+  .right{
+    padding: 1rem .7rem;
+    width: 50%;
+  }
+  .heading{
+    margin: 0;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: .3rem;
+    text-align: left;
+    letter-spacing: -.005em;
+  }
+  .name{
+    font-weight: 800;
+  }
+  .price{
+    font-weight: 800;
+    color: $yellow;
   }
 }
 
