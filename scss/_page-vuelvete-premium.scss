@@ -1,0 +1,17 @@
+@import'variables';
+
+#vuelvete-premium{
+  .buttons{
+    position: relative;
+    right: .35rem;
+  }
+  .btn-plan{
+    margin: 0 auto 2rem;
+  }
+  small{
+    max-width: 280px;
+    display: block;
+    text-align: center;
+    margin: 2rem auto 0;
+  }
+}

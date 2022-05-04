@@ -40,7 +40,6 @@
     }
   }
 }
-
 .btn-close-popup{
   font-size: 1rem;
   $button-size: 2.4em;
@@ -67,6 +66,80 @@
   &:hover{
     &:after, &:before{
       background-color: $dark;
+    }
+  }
+}
+.btn-plan{
+  color: $white;
+  display: flex;
+  width: 300px;
+  height: 80px;
+  align-items: center;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-image: url(../img/btn-plan-day.png);
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+  &:after{
+    content:  '';
+    background: url(../img/icon-arrow-circle.png) no-repeat;
+    background-size: cover;
+    width: 1.2rem;
+    height: 1.2rem;
+    right: 0rem;
+    top: calc(50% - 0.6rem);
+    display: block;
+    position: absolute;
+    transition: all ease .3s;
+  }
+  .left{
+    width:70%;
+    padding-left: 1.6rem;
+    font-weight: 500;
+  }
+  .right{
+    padding-left: .5rem;
+    width: 30%;
+  }
+  .title{
+    text-align: left;
+    margin: 0;
+    font-weight: 800;
+    font-style: italic;
+  }
+  .ammount{
+    font-size: .9375rem;
+    strong{
+      &:after{
+        content: url(../img/icon-bitel-coin-2.svg);
+        display: inline-block;
+        position: relative;
+        bottom: -.95rem;
+        margin: -1.1rem -.28rem 0 -.3rem;
+      }
+    }
+
+  }
+  .price{
+    font-weight: 800;
+    font-size: 1rem;
+    color: $yellow;
+  }
+  .inc{
+    font-size: .9em;
+  }
+  &.plan-week{
+    background-image: url(../img/btn-plan-week.png);
+  }
+  &.plan-month{
+    background-image: url(../img/btn-plan-month.png);
+  }
+  &:hover{
+    filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.25)) brightness(110%);
+    color: $white;
+    &:after{
+      right: -.5rem;
     }
   }
 }

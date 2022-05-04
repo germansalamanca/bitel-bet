@@ -110,6 +110,9 @@ button{
   background-color: $dark;
   min-height: 100vh;
   color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .container{
   max-width: $md;

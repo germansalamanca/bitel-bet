@@ -114,6 +114,9 @@ button {
   background-color: #2a3248;
   min-height: 100vh;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container {
@@ -321,6 +324,78 @@ button {
 }
 .btn-close-popup:hover:after, .btn-close-popup:hover:before {
   background-color: #2a3248;
+}
+
+.btn-plan {
+  color: #fff;
+  display: flex;
+  width: 300px;
+  height: 80px;
+  align-items: center;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-image: url(../img/btn-plan-day.png);
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+.btn-plan:after {
+  content: "";
+  background: url(../img/icon-arrow-circle.png) no-repeat;
+  background-size: cover;
+  width: 1.2rem;
+  height: 1.2rem;
+  right: 0rem;
+  top: calc(50% - 0.6rem);
+  display: block;
+  position: absolute;
+  transition: all ease 0.3s;
+}
+.btn-plan .left {
+  width: 70%;
+  padding-left: 1.6rem;
+  font-weight: 500;
+}
+.btn-plan .right {
+  padding-left: 0.5rem;
+  width: 30%;
+}
+.btn-plan .title {
+  text-align: left;
+  margin: 0;
+  font-weight: 800;
+  font-style: italic;
+}
+.btn-plan .ammount {
+  font-size: 0.9375rem;
+}
+.btn-plan .ammount strong:after {
+  content: url(../img/icon-bitel-coin-2.svg);
+  display: inline-block;
+  position: relative;
+  bottom: -0.95rem;
+  margin: -1.1rem -0.28rem 0 -0.3rem;
+}
+.btn-plan .price {
+  font-weight: 800;
+  font-size: 1rem;
+  color: #fff200;
+}
+.btn-plan .inc {
+  font-size: 0.9em;
+}
+.btn-plan.plan-week {
+  background-image: url(../img/btn-plan-week.png);
+}
+.btn-plan.plan-month {
+  background-image: url(../img/btn-plan-month.png);
+}
+.btn-plan:hover {
+  filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.25)) brightness(110%);
+  color: #fff;
+}
+.btn-plan:hover:after {
+  right: -0.5rem;
 }
 
 #header {
@@ -1417,4 +1492,18 @@ section#canjear-monedas figure figcaption {
 section#canjear-monedas p {
   margin: 0 auto;
   max-width: 20rem;
+}
+
+#vuelvete-premium .buttons {
+  position: relative;
+  right: 0.35rem;
+}
+#vuelvete-premium .btn-plan {
+  margin: 0 auto 2rem;
+}
+#vuelvete-premium small {
+  max-width: 280px;
+  display: block;
+  text-align: center;
+  margin: 2rem auto 0;
 }
