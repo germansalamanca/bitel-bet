@@ -1109,7 +1109,7 @@ ul.bet-list-futbol button.bet-tie .name {
 
 .popup-overlay {
   overflow-y: scroll;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-end;
   opacity: 1;
