@@ -111,7 +111,6 @@ button {
 }
 
 .page {
-  background-color: #2a3248;
   background: #2a3248 url(../img/bg-page-top.png) no-repeat;
   background-position: center top;
   background-size: 100% auto;
@@ -149,6 +148,24 @@ button {
     background-position: center top;
     background-image: url(../img/bg-page-top.png);
   }
+}
+
+.bitel-bg {
+  background: #2a3248 url(../img/bg-page-top.png) no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+.bitel-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../img/bg-page-bottom.png) no-repeat;
+  background-position: center calc(100% + 25px);
+  background-size: 100%;
+  bottom: 0;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .container {
@@ -443,6 +460,32 @@ button {
 }
 .btn-plan:hover:after {
   right: -0.5rem;
+}
+
+.btn-next-step {
+  display: block;
+  padding: 0.8rem 4rem 0.8rem 5rem;
+  color: #fff;
+  width: 300px;
+  height: 83px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  background-image: url(../img/btn-next-step-1.png);
+  background-size: cover;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+.btn-next-step.step-2 {
+  background-image: url(../img/btn-next-step-2.png);
+}
+.btn-next-step.step-3 {
+  background-image: url(../img/btn-next-step-3.png);
+}
+.btn-next-step:hover {
+  filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.25)) brightness(110%);
+  color: #fff;
 }
 
 #header {
@@ -1371,6 +1414,53 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 #login .btn-register {
   width: 100%;
+}
+
+/*---- MODALS ----*/
+.modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  font-style: italic;
+  width: 100%;
+  height: 100%;
+  background-color: #2a3248;
+  z-index: 50;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .modal:after {
+    display: none;
+  }
+}
+.modal .btn-close-popup {
+  align-self: flex-end;
+}
+.modal .title {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+.modal .content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+#welcome .logo {
+  max-width: 100px;
+  margin: 0 auto 2rem;
+}
+#welcome p {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+#welcome .buttons {
+  max-width: 300px;
+  margin: 0 auto;
+}
+#welcome .buttons .btn-next-step {
+  margin-bottom: 1.3rem;
 }
 
 .form ::placeholder {
