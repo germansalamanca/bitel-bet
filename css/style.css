@@ -488,6 +488,95 @@ button {
   color: #fff;
 }
 
+.btn-buy-pack {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-image: url(../img/btn-buy-pack.png);
+  background-size: cover;
+  width: 295px;
+  height: 60px;
+  padding: 0.3rem 2rem 0.3rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 2rem;
+  position: relative;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+.btn-buy-pack:after {
+  content: "";
+  background: url(../img/icon-arrow-circle.png) no-repeat;
+  background-size: cover;
+  width: 1.2rem;
+  height: 1.2rem;
+  right: 0;
+  top: calc(50% - 0.6rem);
+  display: block;
+  position: absolute;
+  transition: all ease 0.3s;
+}
+.btn-buy-pack .oval {
+  border-radius: 4rem;
+  width: 100%;
+  display: block;
+}
+.btn-buy-pack .left {
+  display: flex;
+  width: 50%;
+}
+.btn-buy-pack .left .oval {
+  border: 1px solid #202f44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.9rem;
+}
+.btn-buy-pack .left .name {
+  color: #202f44;
+}
+.btn-buy-pack .left .price {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4em;
+  background-image: radial-gradient(circle at 100% 0, #435c79, #202f44);
+  text-align: center;
+  width: 2.1em;
+  height: 2.1em;
+  color: #fff200;
+}
+.btn-buy-pack .center {
+  margin: 0 0.5rem;
+  font-size: 20px;
+  color: #202f44;
+}
+.btn-buy-pack .right {
+  width: 50%;
+}
+.btn-buy-pack .right .oval {
+  max-width: 100px;
+  background-image: radial-gradient(circle at 100% 0, #435c79, #202f44);
+  padding: 0.5em 0.7em 0.5em 1.2em;
+}
+.btn-buy-pack .right .ammount {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.btn-buy-pack .right .ammount:after {
+  top: 0.13rem;
+}
+.btn-buy-pack:hover {
+  filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.25)) brightness(110%);
+  color: #fff;
+}
+.btn-buy-pack:hover:after {
+  right: -0.5rem;
+}
+
 #header {
   padding: 0.53rem 0.6rem;
   background-image: radial-gradient(circle at 50% 0, #54648f, rgba(0, 0, 0, 0) 29%);
@@ -1460,6 +1549,23 @@ ul.bet-list-futbol button.bet-tie .name {
   margin: 0 auto;
 }
 #welcome .buttons .btn-next-step {
+  margin-bottom: 1.3rem;
+}
+
+#buy-coins .title {
+  color: #fff200;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+#buy-coins p {
+  text-align: center;
+  margin-bottom: 1.4rem;
+}
+#buy-coins .buttons {
+  max-width: 300px;
+  margin: 0 auto;
+}
+#buy-coins .buttons .btn-next-step {
   margin-bottom: 1.3rem;
 }
 

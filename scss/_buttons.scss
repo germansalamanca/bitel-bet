@@ -168,3 +168,91 @@
     color: $white;
   }
 }
+.btn-buy-pack{
+  display: flex;
+  align-items: center;
+  color: $white;
+  background-image: url(../img/btn-buy-pack.png);
+  background-size: cover;
+  width: 295px;
+  height: 60px;
+  padding: .3rem 2rem .3rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 800;
+  font-style: normal;
+  margin-bottom: 2rem;
+  position: relative;
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.25));
+  position: relative;
+  &:after{
+    content:  '';
+    background: url(../img/icon-arrow-circle.png) no-repeat;
+    background-size: cover;
+    width: 1.2rem;
+    height: 1.2rem;
+    right: 0;
+    top: calc(50% - 0.6rem);
+    display: block;
+    position: absolute;
+    transition: all ease .3s;
+  }
+  .oval{
+    border-radius: 4rem;
+    width: 100%;
+    display: block;
+  }
+  .left{
+    display: flex;
+    width: 50%;
+    .oval{
+      border: 1px solid #202f44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: .9rem;
+    }
+    .name{
+      color: #202f44;
+    }
+    .price{
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4em;
+      background-image: radial-gradient(circle at 100% 0, #435c79, #202f44);
+      text-align: center;
+      width: 2.1em;
+      height: 2.1em;
+      color: $yellow;
+    }
+  }
+  .center{
+    margin: 0 .5rem;
+    font-size: 20px;
+    color: #202f44;
+  }
+  .right{
+    width: 50%;
+    .oval{
+      max-width: 100px;
+      background-image: radial-gradient(circle at 100% 0, #435c79, #202f44);
+      padding: .5em 0.7em .5em 1.2em;
+    }
+    .ammount{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      &:after{
+        top: .13rem;
+      }
+    }
+  }
+  &:hover{
+    filter: drop-shadow(0 20px 10px rgba(0, 0, 0, 0.25)) brightness(110%);
+    color: $white;
+    &:after{
+      right: -.5rem;
+    }
+  }
+}
