@@ -147,6 +147,7 @@ button{
   background: $dark url(../img/bg-page-top.png) no-repeat;
   background-position: center top;
   background-size: 100% auto;
+  position: relative; //
   &:after{
     content: '';
     width: 100%;
@@ -157,7 +158,7 @@ button{
     background-size: 100%;
     bottom: 0;
     z-index: -1;
-    pointer-events: none;
+    //pointer-events: none;
   }
 }
 .container{
