@@ -130,6 +130,11 @@ table.user-info{
   }
   .buttons{
     margin-bottom: 1rem;
+    h4{
+      color: $teal;
+      font-size: .875rem;
+      font-style: normal;
+    }
     .btn{
       max-width: 100%;
       width: 100%;

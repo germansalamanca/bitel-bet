@@ -370,6 +370,14 @@ button {
   color: #fff;
   border-color: #fff;
 }
+.btn-cta.btn-cta-fill {
+  padding: 1rem;
+  background-color: #fff200;
+  color: #202f44;
+}
+.btn-cta.btn-cta-fill:hover {
+  background-color: #fff;
+}
 .btn-cta.btn-cta-icon .text {
   position: relative;
   left: 1.2rem;
@@ -393,6 +401,12 @@ button {
   background-image: url(../img/icon-emoji-eyes.png);
   width: 1.9rem;
   left: -2.6rem;
+}
+.btn-cta.btn-cta-icon.btn-icon-premium .text:before {
+  background-image: url(../img/icon-crown-premium.svg);
+  width: 1.5rem;
+  height: 1.5rem;
+  left: -2.3rem;
 }
 
 .btn-close-popup {
@@ -1989,6 +2003,11 @@ table.user-info td.suscription a {
 }
 #user-profile .buttons {
   margin-bottom: 1rem;
+}
+#user-profile .buttons h4 {
+  color: #06e8d2;
+  font-size: 0.875rem;
+  font-style: normal;
 }
 #user-profile .buttons .btn {
   max-width: 100%;

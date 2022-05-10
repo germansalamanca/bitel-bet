@@ -47,6 +47,14 @@
       }
     }
   }
+  &.btn-cta-fill{
+    padding: 1rem;
+    background-color: $yellow;
+    color: $darker-grey-blue;
+    &:hover{
+      background-color: $white;
+    }
+  }
   &.btn-cta-icon{
     .text{
       position: relative;
@@ -77,6 +85,16 @@
           background-image: url(../img/icon-emoji-eyes.png);
           width: 1.9rem;
           left: -2.6rem;
+        }
+      }
+    }
+    &.btn-icon-premium{
+      .text{
+        &:before{
+          background-image: url(../img/icon-crown-premium.svg);
+          width: 1.5rem;
+          height: 1.5rem;
+          left: -2.3rem;
         }
       }
     }
