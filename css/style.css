@@ -1731,6 +1731,7 @@ ul.menu li a {
   backdrop-filter: blur(5px);
   background-color: rgba(32, 47, 68, 0.9);
   z-index: 100;
+  overflow-y: scroll;
 }
 #main-menu-wrapper .btn-close-popup {
   align-self: flex-end;
@@ -1785,6 +1786,9 @@ ul#main-menu li a .icon.icon-menu-reward {
 }
 ul#main-menu li a .icon.icon-menu-news {
   background-position: -10.5rem center;
+}
+ul#main-menu li a .icon.icon-menu-calendar {
+  background-position: -12.25rem center;
 }
 ul#main-menu li.featured .text {
   background-image: linear-gradient(to right, #06e8d2, #fff200 100%);

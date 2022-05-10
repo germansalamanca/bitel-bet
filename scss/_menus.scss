@@ -22,6 +22,7 @@ ul.menu{
   backdrop-filter: blur(5px);
   background-color: rgba(32, 47, 68, 0.9);
   z-index: 100;
+  overflow-y: scroll;
   .btn-close-popup{
     align-self: flex-end;
     flex-shrink: 0;
@@ -71,6 +72,9 @@ ul#main-menu{
         }
         &.icon-menu-news{
           background-position: calc($icon-size * -6) center;
+        }
+        &.icon-menu-calendar{
+          background-position: calc($icon-size * -7) center;
         }
       }
     }
