@@ -362,6 +362,38 @@ button {
 .btn-cta.btn-cta-outline:hover {
   color: #fff;
 }
+.btn-cta.btn-cta-outline.btn-teal {
+  border-color: #06e8d2;
+  color: #06e8d2;
+}
+.btn-cta.btn-cta-outline.btn-teal:hover {
+  color: #fff;
+  border-color: #fff;
+}
+.btn-cta.btn-cta-icon .text {
+  position: relative;
+  left: 1.2rem;
+}
+.btn-cta.btn-cta-icon .text:before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  left: -2.2rem;
+  top: -0.1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.btn-cta.btn-cta-icon.btn-icon-coin .text:before {
+  background-image: url(../img/icon-bitel-coin-3.svg);
+}
+.btn-cta.btn-cta-icon.btn-icon-view .text:before {
+  background-image: url(../img/icon-emoji-eyes.png);
+  width: 1.9rem;
+  left: -2.6rem;
+}
 
 .btn-close-popup {
   font-size: 1rem;
@@ -371,6 +403,7 @@ button {
   border-radius: 50px;
   position: relative;
   transform: rotate(45deg);
+  flex-shrink: 0;
 }
 .btn-close-popup:after, .btn-close-popup:before {
   content: "";
@@ -651,6 +684,7 @@ button {
 }
 
 .page-footer {
+  bottom: 0;
   padding: 0 1rem;
 }
 .page-footer .content {
@@ -1506,16 +1540,24 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 
 /*---- MODALS ----*/
+.modal-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  overflow-y: scroll;
+}
+
 .modal {
+  z-index: 50;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: relative;
   font-style: italic;
   width: 100%;
   height: 100%;
-  background-color: #2a3248;
-  z-index: 50;
   padding: 1rem;
+  min-height: 100%;
 }
 @media (min-width: 768px) {
   .modal:after {
@@ -1530,10 +1572,36 @@ ul.bet-list-futbol button.bet-tie .name {
   font-size: 1rem;
   margin: 0 0 1.5rem 0;
 }
-.modal .content {
+.modal > .content {
   max-width: 400px;
   margin: 0 auto;
   padding-top: 3rem;
+  height: 100%;
+}
+.modal .content-wrapper {
+  min-height: calc(100vh - 4rem);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal .content-wrapper > .content {
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+.modal.has-footer {
+  padding: 0;
+  padding-bottom: 0;
+  height: max-content;
+}
+.modal.has-footer .btn-close-popup {
+  margin-right: 0.7rem;
+  margin-top: 0.7rem;
+}
+.modal.has-footer:after {
+  bottom: 0;
+  background-position: center calc(100% - 8.4rem);
 }
 
 #welcome .logo {
@@ -1794,4 +1862,161 @@ section#canjear-monedas p {
   display: block;
   text-align: center;
   margin: 2rem auto 0;
+}
+
+figure.profile-picture {
+  width: 4.6875rem;
+  height: 4.6875rem;
+  border-radius: 4rem;
+  background: #fff url(../img/default-user.svg) no-repeat;
+  background-size: cover;
+  border: 3px solid #fff;
+  margin: 0 auto;
+  position: relative;
+}
+figure.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+figure.profile-picture .btn-change-picture {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fff url(../img/icon-picture.svg) no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.2rem;
+  transition: all ease 0.25s;
+}
+figure.profile-picture .btn-change-picture:hover {
+  transform: scale(1.2);
+}
+
+table.user-info {
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+table.user-info th, table.user-info td {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  vertical-align: top;
+}
+table.user-info th {
+  font-weight: 400;
+  text-align: left;
+  padding-right: 1.8rem;
+}
+table.user-info td.suscription {
+  color: #06e8d2;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+table.user-info td.suscription a {
+  display: block;
+  text-decoration: underline;
+  color: #ff5454;
+  font-size: 0.75rem;
+}
+
+.user-coins {
+  text-align: center;
+  background: #252c40;
+  text-align: center;
+  font-style: normal;
+  border: 1px dotted #54648f;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+.user-coins .coins-title {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin: 0 0 0.3rem;
+}
+.user-coins .ammount {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff200;
+}
+.user-coins .ammount:after {
+  top: 0.07rem;
+  width: 0.8em;
+  height: 0.8em;
+}
+.user-coins > .content {
+  padding: 0.4rem 0 3rem;
+  max-width: 200px;
+}
+.user-coins:after {
+  content: "";
+  font-size: 0.5rem;
+  display: block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border: 1px dotted #54648f;
+  border-left: none;
+  border-top: none;
+  top: -0.6em;
+  left: calc(50% - 0.5em);
+  transform: rotate(45deg);
+  background-color: #2a3248;
+}
+
+#user-profile .content-wrapper > .content {
+  max-width: 260px;
+  width: 100%;
+}
+#user-profile .title {
+  color: #fff200;
+  font-size: 20px;
+  font-weight: 500;
+}
+#user-profile .user-name {
+  font-style: normal;
+  font-size: 1.125rem;
+}
+#user-profile table.user-info {
+  margin-bottom: 1rem;
+}
+#user-profile .user-coins {
+  margin-bottom: 2rem;
+}
+#user-profile .buttons {
+  margin-bottom: 1rem;
+}
+#user-profile .buttons .btn {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 1.8rem;
+}
+#user-profile .logout {
+  margin-bottom: 2rem;
+}
+#user-profile .logout a {
+  color: #ff5454;
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.user-profile-premium figure.profile-picture {
+  border-color: #fff200;
+}
+.user-profile-premium figure.profile-picture:before {
+  content: "";
+  width: 1.56rem;
+  height: 1.56rem;
+  left: calc(50% - 0.78rem);
+  top: calc(-1.56rem / 2);
+  display: block;
+  background: #fff url(../img/icon-user-premium.svg);
+  position: absolute;
+  border-radius: 2rem;
 }

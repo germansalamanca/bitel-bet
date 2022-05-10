@@ -1,0 +1,166 @@
+@import 'variables';
+
+figure.profile-picture{
+  width: 4.6875rem;
+  height: 4.6875rem;
+  border-radius: 4rem;
+  background: $white url(../img/default-user.svg) no-repeat;
+  background-size: cover;
+  border: 3px solid $white;
+  margin: 0 auto;
+  position: relative;
+  img{
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .btn-change-picture{
+    width: 1.5rem;
+    height: 1.5rem;
+    background: $white url(../img/icon-picture.svg) no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    right: -.1rem;
+    bottom: -.2rem;
+    transition: all ease .25s;
+    &:hover{
+      transform: scale(1.2);
+    }
+  }
+}
+
+table.user-info{
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: .875rem;
+  th, td{
+    padding-top: .4rem;
+    padding-bottom: .4rem;
+    vertical-align: top;
+  }
+  th{
+    font-weight: 400;
+    text-align: left;
+    padding-right: 1.8rem;
+  }
+  td{
+    &.suscription{
+      color: $teal;
+      font-size: .875rem;
+      font-weight: 700;
+      a{
+        display: block;
+        text-decoration: underline;
+        color: $error;
+        font-size: .75rem;
+      }
+    }
+  }
+}
+
+.user-coins{
+  text-align: center;
+  background: #252c40;
+  text-align: center;
+  font-style: normal;
+  border: 1px dotted $metallic-blue;
+  border-radius: $br-md;
+  padding: 1rem;
+  position: relative;
+  .coins-title{
+    font-size: .875rem;
+    font-weight: 400;
+    margin: 0 0 .3rem;
+  }
+  .ammount{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $yellow;
+    &:after{
+      top: .07rem;
+      width: .8em;
+      height: .8em;
+    }
+  }
+    & > .content{
+    padding: 0.4rem 0 3rem;
+    max-width: 200px;
+  }
+  &:after{
+    content: '';
+    font-size: .5rem;
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    border: 1px dotted $metallic-blue;
+    border-left: none;
+    border-top: none;
+    top: -.6em;
+    left: calc(50% - .5em);
+    transform: rotate(45deg);
+    background-color: $dark;
+  }
+}
+
+#user-profile{
+  .content-wrapper{
+    & > .content{
+      max-width: 260px;
+      width: 100%;
+    }
+  }
+  .title{
+    color: $yellow;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .user-name{
+    font-style: normal;
+    font-size: 1.125rem;
+  }
+  table.user-info{
+    margin-bottom: 1rem;
+  }
+  .user-coins{
+    margin-bottom: 2rem;
+  }
+  .buttons{
+    margin-bottom: 1rem;
+    .btn{
+      max-width: 100%;
+      width: 100%;
+      margin-bottom: 1.8rem;
+    }
+  }
+  .logout{
+    margin-bottom: 2rem;
+    a{
+      color: $error;
+      font-style: normal;
+      font-size: .75rem;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}
+.user-profile-premium{
+  figure.profile-picture{
+    border-color: $yellow;
+    &:before{
+      $icon-size: 1.56rem;
+      content: '';
+      width: $icon-size;
+      height: $icon-size;
+      left: calc(50% - ($icon-size / 2));
+      top: calc(-#{$icon-size} / 2);
+      display: block;
+      background: $white url(../img/icon-user-premium.svg);
+      position: absolute;
+      border-radius: 2rem;
+    }
+  }
+}

@@ -38,6 +38,48 @@
     &:hover{
       color: $white;
     }
+    &.btn-teal{
+      border-color: $teal;
+      color: $teal;
+      &:hover{
+        color: $white;
+        border-color: $white;
+      }
+    }
+  }
+  &.btn-cta-icon{
+    .text{
+      position: relative;
+      left: 1.2rem;
+      &:before{
+        content: '';
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        display: inline-block;
+        left: -2.2rem;
+        top: -.1rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+    &.btn-icon-coin{
+      .text{
+        &:before{
+          background-image: url(../img/icon-bitel-coin-3.svg);
+        }
+      }
+    }
+    &.btn-icon-view{
+      .text{
+        &:before{
+          background-image: url(../img/icon-emoji-eyes.png);
+          width: 1.9rem;
+          left: -2.6rem;
+        }
+      }
+    }
   }
 }
 .btn-close-popup{
@@ -49,6 +91,7 @@
   border-radius: 50px;
   position: relative;
   transform: rotate(45deg);
+  flex-shrink: 0;
   &:after, &:before{
     content: '';
     display: block;
