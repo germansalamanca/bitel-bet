@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -174,11 +175,11 @@ button {
   padding: 0 0.7rem;
 }
 .container.container-alt {
-  max-width: 312px;
+  max-width: 320px;
 }
 @media (min-width: 768px) {
   .container.container-alt {
-    max-width: 576px;
+    max-width: 768px;
   }
 }
 
@@ -267,10 +268,19 @@ button {
 
 .cta-fixed {
   position: fixed;
-  padding: 0rem 0 1rem;
+  padding: 0rem 1rem 1rem;
   z-index: 50;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cta-fixed .btn-cta {
+  min-width: 150px;
+  width: 100%;
+  max-width: 216px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
 
 .overlay {
@@ -291,6 +301,14 @@ button {
   bottom: 0;
   z-index: 40;
   pointer-events: none;
+}
+
+.grid {
+  display: grid;
+}
+.grid.rewards-grid {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1.3rem;
 }
 
 .icon {
@@ -1017,6 +1035,50 @@ ul.social-menu li a:hover {
 }
 
 /*---- FUTBOL TABS ---*/
+.tab-list {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.tab-list .options-wrapper {
+  display: flex;
+  padding-bottom: 6px;
+}
+.tab-list button.tab {
+  flex-shrink: 0;
+  position: relative;
+  color: #54648f;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1rem 0.7rem;
+  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #54648f;
+}
+.tab-list button.tab:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid transparent;
+  bottom: -6px;
+  left: calc(50% - 3px);
+  transition: all ease 0.4s;
+}
+.tab-list button.tab:focus {
+  outline: none;
+}
+.tab-list button.tab:hover {
+  color: #06e8d2;
+}
+.tab-list button.tab.active {
+  color: #fff;
+  border-color: white;
+}
+.tab-list button.tab.active:after {
+  border-top-color: #fff;
+}
+
 .tab-list-slider {
   position: relative;
 }
@@ -1059,9 +1121,7 @@ ul.social-menu li a:hover {
   border-color: #fff200;
 }
 .tab-list-slider .options-wrapper {
-  display: flex;
   overflow-x: scroll;
-  padding-bottom: 6px;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -1069,40 +1129,6 @@ ul.social-menu li a:hover {
 }
 .tab-list-slider .options-wrapper::-webkit-scrollbar {
   display: none;
-}
-.tab-list-slider button.tab {
-  flex-shrink: 0;
-  position: relative;
-  color: #54648f;
-  font-size: 14px;
-  padding: 1rem 0.7rem;
-  border-bottom: 1px solid transparent;
-  border-bottom: 1px solid #54648f;
-}
-.tab-list-slider button.tab:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid transparent;
-  bottom: -6px;
-  left: calc(50% - 3px);
-  transition: all ease 0.4s;
-}
-.tab-list-slider button.tab:focus {
-  outline: none;
-}
-.tab-list-slider button.tab:hover {
-  color: #06e8d2;
-}
-.tab-list-slider button.tab.active {
-  color: #fff;
-  border-color: white;
-}
-.tab-list-slider button.tab.active:after {
-  border-top-color: #fff;
 }
 
 ul.bet-list {
@@ -1790,94 +1816,6 @@ ul#main-menu li.current .icon {
   filter: none;
 }
 
-#page-que-es-bitel {
-  font-style: italic;
-}
-#page-que-es-bitel p, #page-que-es-bitel ul {
-  font-size: 0.94rem;
-  line-height: 1.5rem;
-}
-#page-que-es-bitel p {
-  text-align: center;
-}
-#page-que-es-bitel .btn-cta {
-  max-width: 15.63rem;
-  width: 100%;
-  font-weight: 700;
-}
-#page-que-es-bitel .slider-circle {
-  margin-bottom: 2.6rem;
-}
-
-section#que-es-bitel {
-  padding: 2.4rem 0 3rem;
-}
-
-section#como-funciona {
-  padding: 2rem 0 2rem;
-}
-
-section#vuelvete-premium {
-  padding: 3rem 0 5rem;
-}
-section#vuelvete-premium h2 {
-  margin-bottom: 1.2rem;
-}
-section#vuelvete-premium h3.subtitle {
-  font-weight: 500;
-  font-size: 1rem;
-  margin-bottom: 0;
-}
-section#vuelvete-premium p.coin-text {
-  margin: 0 0 2rem;
-}
-section#vuelvete-premium p.coin-text .icon-bitel-coin-2 {
-  margin: 0 -0.3rem;
-}
-
-section#comprar-monedas {
-  padding: 0 0 5rem;
-}
-section#comprar-monedas h2 {
-  margin-bottom: 2.4rem;
-}
-section#comprar-monedas h3.subtitle {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
-
-section#canjear-monedas {
-  padding: 0 0 3rem;
-}
-section#canjear-monedas figure {
-  margin-bottom: 2.4rem;
-}
-section#canjear-monedas figure img {
-  margin-bottom: -1em;
-}
-section#canjear-monedas figure figcaption {
-  font-size: 13px;
-}
-section#canjear-monedas p {
-  margin: 0 auto;
-  max-width: 20rem;
-}
-
-#vuelvete-premium .buttons {
-  position: relative;
-  right: 0.35rem;
-}
-#vuelvete-premium .btn-plan {
-  margin: 0 auto 2rem;
-}
-#vuelvete-premium small {
-  max-width: 280px;
-  display: block;
-  text-align: center;
-  margin: 2rem auto 0;
-}
-
 figure.profile-picture {
   width: 4.6875rem;
   height: 4.6875rem;
@@ -2038,4 +1976,172 @@ table.user-info td.suscription a {
   background: #fff url(../img/icon-user-premium.svg);
   position: absolute;
   border-radius: 2rem;
+}
+
+#page-que-es-bitel {
+  font-style: italic;
+}
+#page-que-es-bitel p, #page-que-es-bitel ul {
+  font-size: 0.94rem;
+  line-height: 1.5rem;
+}
+#page-que-es-bitel p {
+  text-align: center;
+}
+#page-que-es-bitel .btn-cta {
+  max-width: 15.63rem;
+  width: 100%;
+  font-weight: 700;
+}
+#page-que-es-bitel .slider-circle {
+  margin-bottom: 2.6rem;
+}
+
+section#que-es-bitel {
+  padding: 2.4rem 0 3rem;
+}
+
+section#como-funciona {
+  padding: 2rem 0 2rem;
+}
+
+section#vuelvete-premium {
+  padding: 3rem 0 5rem;
+}
+section#vuelvete-premium h2 {
+  margin-bottom: 1.2rem;
+}
+section#vuelvete-premium h3.subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+section#vuelvete-premium p.coin-text {
+  margin: 0 0 2rem;
+}
+section#vuelvete-premium p.coin-text .icon-bitel-coin-2 {
+  margin: 0 -0.3rem;
+}
+
+section#comprar-monedas {
+  padding: 0 0 5rem;
+}
+section#comprar-monedas h2 {
+  margin-bottom: 2.4rem;
+}
+section#comprar-monedas h3.subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+section#canjear-monedas {
+  padding: 0 0 3rem;
+}
+section#canjear-monedas figure {
+  margin-bottom: 2.4rem;
+}
+section#canjear-monedas figure img {
+  margin-bottom: -1em;
+}
+section#canjear-monedas figure figcaption {
+  font-size: 13px;
+}
+section#canjear-monedas p {
+  margin: 0 auto;
+  max-width: 20rem;
+}
+
+#vuelvete-premium .buttons {
+  position: relative;
+  right: 0.35rem;
+}
+#vuelvete-premium .btn-plan {
+  margin: 0 auto 2rem;
+}
+#vuelvete-premium small {
+  max-width: 280px;
+  display: block;
+  text-align: center;
+  margin: 2rem auto 0;
+}
+
+section#recompensas {
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+}
+section#recompensas .tab-list {
+  margin-bottom: 1.5rem;
+}
+section#recompensas button.tab {
+  padding: 0.9rem 0.3rem;
+  flex-grow: 1;
+}
+.card-reward {
+  background-color: #1f2535;
+  border-radius: 10px;
+  display: block;
+  height: 232px;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .card-reward {
+    height: 300px;
+  }
+}
+.card-reward:before {
+  content: "Imágenes referenciales";
+  color: white;
+  position: absolute;
+  display: block;
+  font-size: 0.68rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  top: 2rem;
+  left: 0.7rem;
+}
+.card-reward figure {
+  display: block;
+  height: 100%;
+  padding: 1.5rem;
+}
+.card-reward figure img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.card-reward .title-bar {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.card-reward .price {
+  background: url(../img/bg-price.svg) no-repeat;
+  background-size: containe;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 4.375rem;
+  height: 4.375rem;
+  top: 0.6rem;
+  right: 0.6rem;
+  color: #202f44;
+}
+.card-reward .price .ammount {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.card-reward .price .coins {
+  font-size: 10px;
+  font-weight: 500;
 }

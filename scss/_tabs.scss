@@ -118,6 +118,49 @@
 }
 
 /*---- FUTBOL TABS ---*/
+.tab-list{
+  max-width: 500px;
+  margin: 0 auto;
+  .options-wrapper{
+    display: flex;
+    padding-bottom: 6px;
+  }
+  button.tab{
+    flex-shrink: 0;
+    position: relative;
+    color: $metallic-blue;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 1rem .7rem;
+    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid $metallic-blue;
+    &:after{
+      content: '';
+      position: absolute;
+      width: 0; 
+      height: 0; 
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid transparent;
+      bottom: -6px;
+      left: calc(50% - 3px);
+      transition: all ease .4s;
+    }
+    &:focus{
+      outline: none;
+    }
+    &:hover{
+      color: $teal;
+    }
+    &.active{
+      color: $white;
+      border-color: white;
+      &:after{
+        border-top-color: $white;
+      }
+    }
+  }
+}
 .tab-list-slider{
   position: relative;
   .more{
@@ -162,49 +205,13 @@
     }
   }
   .options-wrapper{
-    display: flex;
     overflow-x: scroll;
-    padding-bottom: 6px;
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
     &::-webkit-scrollbar {
       display: none;
-    }
-  }
-  button.tab{
-    flex-shrink: 0;
-    position: relative;
-    color: $metallic-blue;
-    font-size: 14px;
-    padding: 1rem .7rem;
-    border-bottom: 1px solid transparent;
-    border-bottom: 1px solid $metallic-blue;
-    &:after{
-      content: '';
-      position: absolute;
-      width: 0; 
-      height: 0; 
-      border-left: 6px solid transparent;
-      border-right: 6px solid transparent;
-      border-top: 6px solid transparent;
-      bottom: -6px;
-      left: calc(50% - 3px);
-      transition: all ease .4s;
-    }
-    &:focus{
-      outline: none;
-    }
-    &:hover{
-      color: $teal;
-    }
-    &.active{
-      color: $white;
-      border-color: white;
-      &:after{
-        border-top-color: $white;
-      }
     }
   }
 }

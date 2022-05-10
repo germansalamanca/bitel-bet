@@ -1,0 +1,85 @@
+@import 'variables';
+
+section#recompensas{
+  padding-top: 2rem;
+  padding-bottom: 7rem;
+  .container-alt{
+  }
+  .tab-list{
+    margin-bottom: 1.5rem;
+  }
+  button.tab{
+    padding: .9rem .3rem;
+    flex-grow: 1;
+  }
+  .rewards-grid{
+
+  }
+}
+
+.card-reward{
+  background-color: #1f2535;
+  border-radius: $br-md;
+  display: block;
+  height: 232px;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: $md){
+    height: 300px;
+  }
+  &:before{
+    content: 'Imágenes referenciales';
+    color: white;
+    position: absolute;
+    display: block;
+    font-size: .68rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    top: 2rem;
+    left: .7rem;
+  }
+  figure{
+    display: block;
+    height: 100%;
+    padding: 1.5rem;
+    img{
+      display: block;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .title-bar{
+    background: rgba(0, 0, 0, 0.8);
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .price{
+    background: url(../img/bg-price.svg) no-repeat;
+    background-size: containe;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 4.375rem;
+    height: 4.375rem;
+    top: .6rem;
+    right: .6rem;
+    color: $darker-grey-blue;
+    .ammount{
+      font-size: .9rem;
+      font-weight: 700;
+    }
+    .coins{
+      font-size: 10px;
+      font-weight: 500;
+    }
+  }
+}

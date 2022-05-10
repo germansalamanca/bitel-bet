@@ -166,9 +166,9 @@ button{
   margin: 0 auto;
   padding: 0 .7rem;
   &.container-alt{
-    max-width: 312px;
+    max-width: 320px;
     @media (min-width: $md){
-      max-width: $sm;
+      max-width: $md;
     }
   }
 }
@@ -241,10 +241,19 @@ button{
 // CTA 
 .cta-fixed{
   position: fixed;
-  padding: 0rem 0 1rem;
+  padding: 0rem 1rem 1rem;
   z-index: 50;
   bottom: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  .btn-cta{
+    min-width: 150px;
+    width: 100%;
+    max-width: 216px;
+    margin-left: .3rem;
+    margin-right: .3rem;
+  }
 }
 
 // overlay
@@ -266,4 +275,10 @@ button{
   z-index: 40;
   pointer-events: none;
 }
-
+.grid{
+  display: grid;
+  &.rewards-grid{
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 1.3rem;
+  }
+}
