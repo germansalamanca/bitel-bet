@@ -34,7 +34,6 @@
 }
 
 .game-info{
-  background-color: $dark;
   border: 1px solid $metallic-blue;
   border-radius: $br-md;
   padding: .9rem .9rem .5rem;
@@ -95,7 +94,7 @@
 
 .your-bet-values{
   display: flex;
-  background-color: $dark;
+  background-color: #1f2535;
   border: 1px solid $metallic-blue;
   border-radius: $br-md;
   font-style: normal;

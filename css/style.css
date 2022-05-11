@@ -1250,7 +1250,6 @@ ul.social-menu li a:hover {
 }
 
 .game-info {
-  background-color: #2a3248;
   border: 1px solid #54648f;
   border-radius: 10px;
   padding: 0.9rem 0.9rem 0.5rem;
@@ -1311,7 +1310,7 @@ ul.social-menu li a:hover {
 
 .your-bet-values {
   display: flex;
-  background-color: #2a3248;
+  background-color: #1f2535;
   border: 1px solid #54648f;
   border-radius: 10px;
   font-style: normal;
