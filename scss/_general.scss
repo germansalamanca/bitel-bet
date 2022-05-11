@@ -161,6 +161,11 @@ button{
     //pointer-events: none;
   }
 }
+.bitel-bg-topglow{
+  background: $dark url(../img/bg-hl-popup.png) no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
 .container{
   max-width: $md;
   margin: 0 auto;

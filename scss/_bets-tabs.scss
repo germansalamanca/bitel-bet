@@ -1,0 +1,145 @@
+@import 'variables';
+
+#bets.modal-wrapper{
+  .btn-close-popup{
+    margin-bottom: .1rem;
+  }
+  .modal{
+    & > .content{
+      padding-top: 0;
+      padding-bottom: 5.5rem;
+    }
+  }
+}
+#bets-tabs{
+  button.tab{
+    padding-top: 0;
+    width: 50%;
+  }
+}
+.bets-tabs-content{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
+.bets-tabs-content{
+  padding: .8rem .2rem;
+  .gradient-overlay{
+    left: 0;
+  }
+  .cta-fixed{
+    left: 0;
+  }
+}
+
+.game-info{
+  background-color: $dark;
+  border: 1px solid $metallic-blue;
+  border-radius: $br-md;
+  padding: .9rem .9rem .5rem;
+  font-style: normal;
+  margin-bottom: 1.3rem;
+  header{
+    display: flex;
+    padding: .9rem 0 .7rem;
+    justify-content: space-between;
+    align-items: center;
+    .logoname{
+      color: #687eb9;
+      display: flex;
+      align-items: center;
+      .logo{
+        width: 1.4375rem;
+        height: 1.4375rem;
+        flex-shrink: 0;
+        margin-right: .8rem;
+      }
+      .name{
+        margin: 0;
+        text-align: left;
+        font-size: .8125rem;
+        .league{
+          font-size: .6875rem;
+          font-weight: 500;
+          display: block;
+        }
+      }
+    }
+    .btn-remove{
+      flex-shrink: 0;
+    }
+  }
+  section{
+    border-top: 1px dotted $metallic-blue;
+    font-size: 15px;
+    position: relative;
+    &.tip:after{
+      font-size: .8rem;
+      left: 2.5rem;
+    }
+  }
+  section.winner{
+    padding: 1rem 0 .7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    .tag{
+      color: $teal;
+      display: block;
+      font-weight: 500;
+    }
+  }
+}
+
+.your-bet-values{
+  display: flex;
+  background-color: $dark;
+  border: 1px solid $metallic-blue;
+  border-radius: $br-md;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 1.3rem;
+  text-align: center;
+  & > div{
+    padding: 1rem .9rem 1.2rem;
+    width: 50%;
+    .number{
+      font-weight: 700;
+    }
+  }
+  .left{
+    border-right: 1px dotted $metallic-blue;
+    .number{
+      font-size: 1rem;
+      background: $metallic-blue;
+      border-radius: $br-sm;
+      display: block;
+      padding: .4rem .3rem;
+      max-width: 50px;
+      margin: .4rem auto 0;
+      &:after{
+        position: absolute;
+        width: 0.94rem;
+        height: 0.94rem;
+        top: .5em;
+        margin-left: 1.2rem;
+      }
+    }
+  }
+  .right{
+    .number{
+      display: block;
+      color: $yellow;
+      font-size: 1.25rem;
+      margin-top: .7rem;
+      &:after{
+        width: 0.94rem;
+        height: 0.94rem;
+        top: 0;
+      }
+    }
+  }
+}

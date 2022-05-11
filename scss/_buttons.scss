@@ -129,6 +129,9 @@
       background-color: $dark;
     }
   }
+  &.sm{
+    font-size: .7rem;
+  }
 }
 .btn-plan{
   color: $white;
@@ -315,5 +318,15 @@
     &:after{
       right: -.5rem;
     }
+  }
+}
+.btn-remove{
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: url(../img/btn-remove.svg) no-repeat;
+  background-size: contain;
+  &:hover{
+    transform: scale(1.2);
   }
 }

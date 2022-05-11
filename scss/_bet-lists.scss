@@ -24,18 +24,7 @@ header.bet-heading{
   }
 }
 .bet-item{
-  .value{
-    display: flex;
-    justify-content: center;
-    flex-shrink: 0;
-    background-color: $white;
-    padding: .15rem .5rem;
-    border-radius: 1rem;
-    min-width: 50px;
-    font-weight: 700;
-    color: $dark-grey-blue;
-    font-size: 15px;
-  }
+
   // Status
   &.status-closing{
     header.bet-heading{

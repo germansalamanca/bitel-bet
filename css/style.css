@@ -169,6 +169,12 @@ button {
   z-index: -1;
 }
 
+.bitel-bg-topglow {
+  background: #2a3248 url(../img/bg-hl-popup.png) no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
+
 .container {
   max-width: 768px;
   margin: 0 auto;
@@ -454,6 +460,9 @@ button {
 .btn-close-popup:hover:after, .btn-close-popup:hover:before {
   background-color: #2a3248;
 }
+.btn-close-popup.sm {
+  font-size: 0.7rem;
+}
 
 .btn-plan {
   color: #fff;
@@ -640,6 +649,85 @@ button {
 }
 .btn-buy-pack:hover:after {
   right: -0.5rem;
+}
+
+.btn-remove {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  background: url(../img/btn-remove.svg) no-repeat;
+  background-size: contain;
+}
+.btn-remove:hover {
+  transform: scale(1.2);
+}
+
+.bet-value {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: #fff;
+  padding: 0.15rem 0.5rem;
+  border-radius: 1rem;
+  min-width: 50px;
+  font-weight: 700;
+  color: #323d59;
+  font-size: 15px;
+  text-align: center;
+}
+.bet-value span {
+  display: flex;
+  align-items: center;
+}
+.bet-value span:after {
+  content: "";
+  width: 0.9rem;
+  height: 0.9rem;
+  display: inline-block;
+  border: 1px solid #2a3248;
+  border-radius: 1rem;
+  margin-left: 0.2rem;
+  margin-right: -0.25rem;
+}
+
+.tip:after {
+  content: "";
+  font-size: 0.5rem;
+  display: block;
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  border: 1px dotted #54648f;
+  border-left: none;
+  border-top: none;
+  top: calc(-0.5em - 1px);
+  left: calc(50% - 0.5em);
+  transform: rotate(45deg);
+  background-color: #2a3248;
+}
+
+.notice {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.4rem 1rem 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-align: center;
+  font-style: normal;
+}
+.notice .with-coin:after {
+  margin: 0 0.4em 0 0.3em;
+  top: 0.5em;
+}
+.notice .text {
+  margin-bottom: 0.4rem;
+}
+.notice a {
+  font-size: 13px;
+  color: #06e8d2;
+  text-decoration: underline;
+}
+.notice a:hover {
+  color: #fff;
 }
 
 #header {
@@ -1131,6 +1219,145 @@ ul.social-menu li a:hover {
   display: none;
 }
 
+#bets.modal-wrapper .btn-close-popup {
+  margin-bottom: 0.1rem;
+}
+#bets.modal-wrapper .modal > .content {
+  padding-top: 0;
+  padding-bottom: 5.5rem;
+}
+
+#bets-tabs button.tab {
+  padding-top: 0;
+  width: 50%;
+}
+
+.bets-tabs-content {
+  display: none;
+}
+.bets-tabs-content.active {
+  display: block;
+}
+
+.bets-tabs-content {
+  padding: 0.8rem 0.2rem;
+}
+.bets-tabs-content .gradient-overlay {
+  left: 0;
+}
+.bets-tabs-content .cta-fixed {
+  left: 0;
+}
+
+.game-info {
+  background-color: #2a3248;
+  border: 1px solid #54648f;
+  border-radius: 10px;
+  padding: 0.9rem 0.9rem 0.5rem;
+  font-style: normal;
+  margin-bottom: 1.3rem;
+}
+.game-info header {
+  display: flex;
+  padding: 0.9rem 0 0.7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-info header .logoname {
+  color: #687eb9;
+  display: flex;
+  align-items: center;
+}
+.game-info header .logoname .logo {
+  width: 1.4375rem;
+  height: 1.4375rem;
+  flex-shrink: 0;
+  margin-right: 0.8rem;
+}
+.game-info header .logoname .name {
+  margin: 0;
+  text-align: left;
+  font-size: 0.8125rem;
+}
+.game-info header .logoname .name .league {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  display: block;
+}
+.game-info header .btn-remove {
+  flex-shrink: 0;
+}
+.game-info section {
+  border-top: 1px dotted #54648f;
+  font-size: 15px;
+  position: relative;
+}
+.game-info section.tip:after {
+  font-size: 0.8rem;
+  left: 2.5rem;
+}
+.game-info section.winner {
+  padding: 1rem 0 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+.game-info section.winner .tag {
+  color: #06e8d2;
+  display: block;
+  font-weight: 500;
+}
+
+.your-bet-values {
+  display: flex;
+  background-color: #2a3248;
+  border: 1px solid #54648f;
+  border-radius: 10px;
+  font-style: normal;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 1.3rem;
+  text-align: center;
+}
+.your-bet-values > div {
+  padding: 1rem 0.9rem 1.2rem;
+  width: 50%;
+}
+.your-bet-values > div .number {
+  font-weight: 700;
+}
+.your-bet-values .left {
+  border-right: 1px dotted #54648f;
+}
+.your-bet-values .left .number {
+  font-size: 1rem;
+  background: #54648f;
+  border-radius: 5px;
+  display: block;
+  padding: 0.4rem 0.3rem;
+  max-width: 50px;
+  margin: 0.4rem auto 0;
+}
+.your-bet-values .left .number:after {
+  position: absolute;
+  width: 0.94rem;
+  height: 0.94rem;
+  top: 0.5em;
+  margin-left: 1.2rem;
+}
+.your-bet-values .right .number {
+  display: block;
+  color: #fff200;
+  font-size: 1.25rem;
+  margin-top: 0.7rem;
+}
+.your-bet-values .right .number:after {
+  width: 0.94rem;
+  height: 0.94rem;
+  top: 0;
+}
+
 ul.bet-list {
   list-style: none;
   padding: 0;
@@ -1155,18 +1382,6 @@ header.bet-heading .bet-status {
   color: white;
 }
 
-.bet-item .value {
-  display: flex;
-  justify-content: center;
-  flex-shrink: 0;
-  background-color: #fff;
-  padding: 0.15rem 0.5rem;
-  border-radius: 1rem;
-  min-width: 50px;
-  font-weight: 700;
-  color: #323d59;
-  font-size: 15px;
-}
 .bet-item.status-closing header.bet-heading .bet-status {
   color: #efd146;
 }
@@ -1615,12 +1830,13 @@ ul.bet-list-futbol button.bet-tie .name {
   margin: 0 0 1.5rem 0;
 }
 .modal > .content {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding-top: 3rem;
   padding-left: 1rem;
   padding-right: 1rem;
   height: 100%;
+  width: 100%;
 }
 .modal .content-wrapper {
   min-height: calc(100vh - 4rem);
@@ -1630,9 +1846,10 @@ ul.bet-list-futbol button.bet-tie .name {
   justify-content: space-between;
 }
 .modal .content-wrapper > .content {
-  max-width: 400px;
+  max-width: 500px;
   margin: 0 auto;
   padding-bottom: 2rem;
+  width: 100%;
 }
 .modal.has-footer {
   padding: 0;
@@ -1912,22 +2129,6 @@ table.user-info td.suscription a {
   padding: 0.4rem 0 3rem;
   max-width: 200px;
 }
-.user-coins:after {
-  content: "";
-  font-size: 0.5rem;
-  display: block;
-  width: 1em;
-  height: 1em;
-  position: absolute;
-  border: 1px dotted #54648f;
-  border-left: none;
-  border-top: none;
-  top: -0.6em;
-  left: calc(50% - 0.5em);
-  transform: rotate(45deg);
-  background-color: #2a3248;
-}
-
 #user-profile .content-wrapper > .content {
   max-width: 260px;
   width: 100%;
