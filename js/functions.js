@@ -30,22 +30,46 @@ $(document).on('ready', function() {
   });
 });
 
-function openPopup(popupSelector){
+function openPopup(popupSelector, display = 'flex'){
   const popup = document.querySelector(popupSelector)
-  popup.style.display = 'flex'
+  popup.style.display = display
   document.querySelector('body').classList.add('overlayed')
+  setTimeout(()=>{
+    popup.classList.add('active')
+    popup.style.opacity = 1;
+  }, 10)
 }
 
 function closePopup(element, e){
+  // If the function receives a string selector like '#main-menu-wrapper'
   if(typeof element === 'string'){
     const popup = document.querySelector(element)
-    popup.style.display = 'none'
+    //popup.style.display = 'none'
     document.querySelector('body').classList.remove('overlayed')
+    popup.classList.remove('active')
+    popup.style.opacity = 0
+    // setTimeout(()=>{
+    //   console.log('is: ' + popup.style.opacity)
+    // }, 100)
+    let interval = setInterval(()=>{
+      console.log(window.getComputedStyle(popup).opacity)
+      if(window.getComputedStyle(popup).opacity <= 0){
+        popup.style.display = 'none'
+        clearInterval(interval)
+      }
+    }, 10)
   }else{
     const box = element.querySelector('.popup-box')
+    // On click outside the popup
     if(! box.contains(e.target)){
-      element.style.display = 'none'
       document.querySelector('body').classList.remove('overlayed')
+      element.style.opacity = 0
+      let interval = setInterval(()=>{
+        if(window.getComputedStyle(element).opacity <= 0){
+          element.style.display = 'none'
+          clearInterval(interval)
+        }
+      }, 10)
     }
   }
 }
