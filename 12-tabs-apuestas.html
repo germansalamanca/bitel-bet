@@ -36,11 +36,11 @@
         <div class="content">
           <div id="bets-tabs" class="tab-list">
             <div class="options-wrapper">
-              <button class="tab btn bets-tabs-group active" onclick="showTabContent(this, '#all-bets', 'bets-tabs-group')">Apuestas</button>
-              <button class="tab btn bets-tabs-group" onclick="showTabContent(this, '#your-bets', 'bets-tabs-group')">Tus Apuestas</button>
+              <button class="tab btn bets-tabs-group" onclick="showTabContent(this, '#all-bets', 'bets-tabs-group')">Apuestas</button>
+              <button class="tab btn bets-tabs-group active" onclick="showTabContent(this, '#your-bets', 'bets-tabs-group')">Tus Apuestas</button>
             </div>
           </div>
-          <div id="all-bets" class="tab-content bets-tabs-content bets-tabs-group active">
+          <div id="all-bets" class="tab-content bets-tabs-content bets-tabs-group">
             <div class="game-info">
               <header>
                 <div class="logoname">
@@ -89,8 +89,71 @@
               </button>
             </section>
           </div><!-- .tab-content.#all-bets -->
-          <div id="your-bets" class="tab-content bets-tabs-content bets-tabs-group">
-            <p>Tus Apuestas</p>
+          <div id="your-bets" class="tab-content bets-tabs-content bets-tabs-group active">
+            <div id="your-bets-inner-tabs" class="tabs-block">
+              <button class="tab btn bets-inner-tabs-group active" onclick="showTabContent(this, '#pending-bets', 'bets-inner-tabs-group')">Pendientes</button>
+              <button class="tab btn bets-inner-tabs-group" onclick="showTabContent(this, '#closed-bets', 'bets-inner-tabs-group')">Finalizadas</button>
+            </div>
+            <div class="tabs-block-contents">
+              <div id="pending-bets" class="tab-content bets-inner-tabs-content bets-inner-tabs-group active">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Código</th>
+                      <th>Fecha</th>
+                      <th>Importe</th>
+                      <th>Detalle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>AP002</strong></td>
+                      <td>30/03/2002</td>
+                      <td><span class="with-coin">500</span></td>
+                      <td><a href="#" class="btn btn-view" aria-label="Ver"></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="closed-bets" class="tab-content bets-inner-tabs-content bets-inner-tabs-group">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Código</th>
+                      <th>Fecha</th>
+                      <th>Importe</th>
+                      <th>Detalle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>AP001</strong></td>
+                      <td>30/03/2002</td>
+                      <td><span class="with-coin">100</span></td>
+                      <td><a href="#" class="btn btn-view" aria-label="Ver"></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Código</th>
+                      <th>Fecha</th>
+                      <th>Importe</th>
+                      <th>Detalle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>AP000</strong></td>
+                      <td>30/03/2002</td>
+                      <td><span class="with-coin">495</span></td>
+                      <td><a href="#" class="btn btn-view" aria-label="Ver"></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div><!-- .tab-content.#your-bets -->
         </div>
       </div>

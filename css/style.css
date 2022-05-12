@@ -662,6 +662,18 @@ button {
   transform: scale(1.2);
 }
 
+.btn-view {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1rem;
+  background: url(../img/icon-eye.svg) no-repeat;
+  background-position: center;
+  background-size: 17px 12px;
+}
+.btn-view:hover {
+  transform: scale(1.2);
+}
+
 .bet-value {
   display: flex;
   justify-content: center;
@@ -728,6 +740,50 @@ button {
 }
 .notice a:hover {
   color: #fff;
+}
+
+.table {
+  font-style: normal;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table thead {
+  border-bottom: 1px solid #1f2535;
+}
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table th {
+  font-weight: 600;
+  padding: 0.55rem;
+  border: none !important;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table td {
+  font-weight: 500;
+  padding: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.table td:not(:last-child) {
+  border-right: 1px solid #1f2535;
+}
+.table .with-coin {
+  position: relative;
+  top: -0.25em;
+}
+.table .with-coin:after {
+  font-size: 0.85em;
+  width: 1em;
+  top: 0.8em;
 }
 
 #header {
@@ -1219,6 +1275,52 @@ ul.social-menu li a:hover {
   display: none;
 }
 
+/*---- BLOCK TABS ----*/
+.tabs-block {
+  display: flex;
+}
+.tabs-block .tab {
+  width: 100%;
+  padding: 1rem;
+  color: #53638e;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+}
+.tabs-block .tab:hover {
+  color: #06e8d2;
+}
+.tabs-block .tab.active {
+  color: #fff;
+  background-color: #252c40;
+}
+.tabs-block .tab.active:first-child:before, .tabs-block .tab.active:last-child:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  top: 100%;
+}
+.tabs-block .tab.active:first-child:before {
+  left: 0;
+}
+.tabs-block .tab.active:last-child:before {
+  right: 0;
+}
+
+.tabs-block-contents {
+  background-color: #252c40;
+  padding: 0.65rem 0.65rem 1rem 0.65rem;
+  border-radius: 10px;
+  min-height: 3rem;
+}
+.tabs-block-contents .tab-content {
+  display: none;
+}
+.tabs-block-contents .tab-content.active {
+  display: block;
+}
+
 #bets.modal-wrapper .btn-close-popup {
   margin-bottom: 0.1rem;
 }
@@ -1355,6 +1457,10 @@ ul.social-menu li a:hover {
   width: 0.94rem;
   height: 0.94rem;
   top: 0;
+}
+
+#your-bets .table:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 ul.bet-list {

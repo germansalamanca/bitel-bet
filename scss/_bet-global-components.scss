@@ -71,3 +71,50 @@
     }
   }
 }
+
+// TABLES 
+.table{
+  font-style: normal;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  thead{
+    border-bottom: 1px solid #1f2535;
+  }
+  tbody{
+  }
+  th, td{
+    text-align: center;
+    vertical-align: middle;
+  }
+  th{
+    font-weight: 600;
+    padding: .55rem;
+    border: none !important;
+    border-collapse: collapse;
+    background-color: rgba($white, .2);
+  }
+  td{
+    font-weight: 500;
+    padding: .3rem;
+    background-color: rgba($white, .1);
+    &:not(:last-child){
+      border-right: 1px solid #1f2535;
+    }
+  }
+  .with-coin{
+    position: relative;
+    top: -.25em;
+    &:after{
+      font-size: .85em;
+      width: 1em;
+      top: .8em;
+    }
+  }
+}

@@ -77,6 +77,7 @@ function closePopup(element, e){
 function showTabContent(tabButton, tabContentSelector, tabsGroupClass){
   if(!tabButton.classList.contains('active')){
     const tabButtons = document.querySelectorAll(`.tab.${tabsGroupClass}`)
+    console.log(tabButtons)
     for(let button of Object.values(tabButtons)){
       button.classList.remove('active')
       tabButton.classList.add('active')

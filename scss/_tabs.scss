@@ -215,3 +215,48 @@
     }
   }
 }
+
+/*---- BLOCK TABS ----*/
+.tabs-block{
+  display: flex;
+  .tab{
+    width: 100%;
+    padding: 1rem;
+    color: #53638e;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    &:hover{
+      color: $teal;
+    }
+    &.active{
+      color: $white;
+      background-color: #252c40;
+      &:first-child:before, &:last-child:before{
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: inherit;
+        top: 100%;
+      }
+      &:first-child:before{
+        left: 0;
+      }
+      &:last-child:before{
+        right: 0;
+      }
+    }
+  }
+}
+.tabs-block-contents{
+  background-color: #252c40;
+  padding: .65rem .65rem 1rem .65rem;
+  border-radius: $br-md;
+  min-height: 3rem;
+  .tab-content{
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+}

@@ -330,3 +330,14 @@
     transform: scale(1.2);
   }
 }
+.btn-view{
+  display: inline-block;
+  width: 1.5rem;
+  height: 1rem;
+  background: url(../img/icon-eye.svg) no-repeat;
+  background-position: center;
+  background-size: 17px 12px;
+  &:hover{
+    transform: scale(1.2);
+  }
+}
