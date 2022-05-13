@@ -23,9 +23,8 @@
 
 .slider-ring, .slider-circle{
   .slick-arrow{
-
     z-index: 6;
-    left: calc(100% - 1.5rem);
+    left: calc(100% - 1.8rem);
     &:before{
       content: '';
       background-color: red;
@@ -38,8 +37,7 @@
       background-size: cover;
     }
     &.slick-prev{
-
-      left: 0.1rem;
+      left: -.03rem;
       transform: scaleX(-1);
     }
   }
@@ -80,7 +78,7 @@
 }
 
 .slider-circle{
-  max-width: 240px;
+  max-width: 250px;
   margin: 0 auto;
   .slide{
   }
@@ -98,5 +96,88 @@
     &.slick-prev{
       top: 6.38rem;
     }
+  }
+  &.slider-plans{
+    .circle-plan{
+      margin-bottom: 1.5rem;
+    }
+  }
+  &.slider-packs{
+    .circle-pack{
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+.circle-plan{
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:240px;
+  height:240px;
+  text-align: center;
+  padding: 2.3rem 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  font-size: 1.3125rem;
+  .title{
+    font-size: 1.3125rem;
+    margin: 0 0 16px;
+  }
+  .ammount{
+    font-size: 1.3125rem;
+    margin-bottom: 4px;
+    &:after{
+      width: 1.3em;
+      height: 1.3em;
+      margin-left: .5em;
+    }
+  }
+  .time{
+    font-weight: 500;
+    margin-bottom: 27px;
+  }
+  .price{
+    color: $yellow;
+    .tax{
+      display: block;
+      color: $white;
+    }
+  }
+  &.plan-day{
+    background-image: url(../img/bg-plan-day.png);
+  }
+  &.plan-week{
+    background-image: url(../img/bg-plan-week.png);
+  }
+  &.plan-month{
+    background-image: url(../img/bg-plan-month.png);
+  }
+}
+
+.circle-pack{
+  background-repeat: no-repeat;
+  background-size: contain;
+  width:240px;
+  height:240px;
+  text-align: center;
+  padding: 42px 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  background-image: url(../img/bg-pack-coins.png);
+  .title{
+    font-size: 1.3125rem;
+    margin: 0 0 29px;
+  }
+  .ammount{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    &:after{
+      width: 1.3em;
+      height: 1.3em;
+      margin-left: .5em;
+    }
+  }
+  .price{
+    font-size: 1.75rem;
+    color: $yellow;
   }
 }

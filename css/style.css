@@ -988,7 +988,7 @@ ul.social-menu li a:hover {
 
 .slider-ring .slick-arrow, .slider-circle .slick-arrow {
   z-index: 6;
-  left: calc(100% - 1.5rem);
+  left: calc(100% - 1.8rem);
 }
 .slider-ring .slick-arrow:before, .slider-circle .slick-arrow:before {
   content: "";
@@ -1002,7 +1002,7 @@ ul.social-menu li a:hover {
   background-size: cover;
 }
 .slider-ring .slick-arrow.slick-prev, .slider-circle .slick-arrow.slick-prev {
-  left: 0.1rem;
+  left: -0.03rem;
   transform: scaleX(-1);
 }
 
@@ -1040,7 +1040,7 @@ ul.social-menu li a:hover {
 }
 
 .slider-circle {
-  max-width: 240px;
+  max-width: 250px;
   margin: 0 auto;
 }
 .slider-circle .slide-content {
@@ -1057,6 +1057,86 @@ ul.social-menu li a:hover {
 }
 .slider-circle .slick-arrow.slick-prev {
   top: 6.38rem;
+}
+.slider-circle.slider-plans .circle-plan {
+  margin-bottom: 1.5rem;
+}
+.slider-circle.slider-packs .circle-pack {
+  margin-bottom: 1.5rem;
+}
+
+.circle-plan {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 240px;
+  height: 240px;
+  text-align: center;
+  padding: 2.3rem 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  font-size: 1.3125rem;
+}
+.circle-plan .title {
+  font-size: 1.3125rem;
+  margin: 0 0 16px;
+}
+.circle-plan .ammount {
+  font-size: 1.3125rem;
+  margin-bottom: 4px;
+}
+.circle-plan .ammount:after {
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 0.5em;
+}
+.circle-plan .time {
+  font-weight: 500;
+  margin-bottom: 27px;
+}
+.circle-plan .price {
+  color: #fff200;
+}
+.circle-plan .price .tax {
+  display: block;
+  color: #fff;
+}
+.circle-plan.plan-day {
+  background-image: url(../img/bg-plan-day.png);
+}
+.circle-plan.plan-week {
+  background-image: url(../img/bg-plan-week.png);
+}
+.circle-plan.plan-month {
+  background-image: url(../img/bg-plan-month.png);
+}
+
+.circle-pack {
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 240px;
+  height: 240px;
+  text-align: center;
+  padding: 42px 0 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-weight: 800;
+  background-image: url(../img/bg-pack-coins.png);
+}
+.circle-pack .title {
+  font-size: 1.3125rem;
+  margin: 0 0 29px;
+}
+.circle-pack .ammount {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+.circle-pack .ammount:after {
+  width: 1.3em;
+  height: 1.3em;
+  margin-left: 0.5em;
+}
+.circle-pack .price {
+  font-size: 1.75rem;
+  color: #fff200;
 }
 
 .main-tabs-wrapper {
