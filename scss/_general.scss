@@ -169,9 +169,9 @@ button{
 .container{
   max-width: $md;
   margin: 0 auto;
-  padding: 0 .7rem;
+  padding: 0 1.5rem;
   &.container-alt{
-    max-width: 320px;
+    //max-width: 320px;
     @media (min-width: $md){
       max-width: $md;
     }

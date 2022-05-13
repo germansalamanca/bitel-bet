@@ -178,10 +178,7 @@ button {
 .container {
   max-width: 768px;
   margin: 0 auto;
-  padding: 0 0.7rem;
-}
-.container.container-alt {
-  max-width: 320px;
+  padding: 0 1.5rem;
 }
 @media (min-width: 768px) {
   .container.container-alt {
@@ -2459,4 +2456,19 @@ section#recompensas button.tab {
 .card-reward .price .coins {
   font-size: 10px;
   font-weight: 500;
+}
+
+section#tyc {
+  padding: 3rem 0;
+}
+section#tyc h2 {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+section#tyc p {
+  font-size: 0.9375rem;
+  line-height: 1.6em;
+  font-style: italic;
 }
