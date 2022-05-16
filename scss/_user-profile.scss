@@ -92,16 +92,12 @@ table.user-info{
 }
 
 #user-profile{
-  .content-wrapper{
-    & > .content{
-      max-width: 260px;
-      width: 100%;
-    }
-  }
-  .title{
+  .page-title{
     color: $yellow;
     font-size: 20px;
     font-weight: 500;
+    font-style: italic;
+    margin-bottom: 1.2rem;
   }
   .user-name{
     font-style: normal;

@@ -12,8 +12,8 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <title>Perfil de usuario - Free</title>
 </head>
-<body class="overlayed">
-  <div class="page" style="">
+<body>
+  <div id="user-profile" class="page">
     <header id="header" class="header-transparent">
       <div class="header-content">
         <button id="menu-toggler" class="btn" aria-label="Menú principal" onclick="openPopup('#main-menu-wrapper')"></button>
@@ -27,77 +27,42 @@
         </a>
       </div>
     </header>
-    <main>
-
+    <main class="pt-2 pb-2">
+      <div class="container container-sm">
+        <h1 class="page-title">¡Bienvenido!</h1>
+        <figure class="profile-picture">
+          <img src="./img/demo/slide-promo.png" alt="Foto de perfil">
+          <button class="btn btn-change-picture" aria-label="Cambiar imagen de perfil"></button>
+        </figure>
+        <h3 class="user-name">Enrique Santillana S.</h3>
+        <table class="user-info">
+          <tr>
+            <th>Número</th>
+            <td>987 654 321</td>
+          </tr>
+          <tr>
+            <th>Contraseña</th>
+            <td>*******</td>
+          </tr>
+        </table>
+        <div class="user-coins tip">
+          <h4 class="coins-title">Monedas acumuladas</h4>
+          <span class="ammount with-coin">95,000</span>
+        </div>
+        <div class="buttons">
+          <h4>¿Quieres apostar sin límites?</h4>
+          <button class="btn btn-cta btn-cta-icon btn-icon-premium btn-cta-fill">
+            <span class="text">Vuélvete Premium</span>
+          </button>
+          <button class="btn btn-cta btn-cta-icon btn-icon-view btn-cta-view btn-teal btn-cta-outline">
+            <span class="text">Ver mis apuestas</span>
+          </button>
+        </div>
+        <div class="logout text-center">
+          <a href="#">Cerrar sesión</a>
+        </div>
+      </div>
     </main>
-    <div  id="user-profile" class="modal-wrapper" style="display: flex; opacity: 1">
-      <div class="modal bitel-bg has-footer user-profile-free">
-        <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#user-profile')"></button>
-        <div class="content-wrapper">
-          <div class="content">
-            <h2 class="title">¡Bienvenido!</h2>
-            <figure class="profile-picture">
-              <img src="./img/demo/slide-promo.png" alt="Foto de perfil">
-              <button class="btn btn-change-picture" aria-label="Cambiar imagen de perfil"></button>
-            </figure>
-            <h3 class="user-name">Enrique Santillana S.</h3>
-            <table class="user-info">
-              <tr>
-                <th>Número</th>
-                <td>987 654 321</td>
-              </tr>
-              <tr>
-                <th>Contraseña</th>
-                <td>*******</td>
-              </tr>
-            </table>
-            <div class="user-coins tip">
-              <h4 class="coins-title">Monedas acumuladas</h4>
-              <span class="ammount with-coin">95,000</span>
-            </div>
-            <div class="buttons">
-              <h4>¿Quieres apostar sin límites?</h4>
-              <button class="btn btn-cta btn-cta-icon btn-icon-premium btn-cta-fill">
-                <span class="text">Vuélvete Premium</span>
-              </button>
-              <button class="btn btn-cta btn-cta-icon btn-icon-view btn-cta-view btn-teal btn-cta-outline">
-                <span class="text">Ver mis apuestas</span>
-              </button>
-            </div>
-            <div class="logout text-center">
-              <a href="#">Cerrar sesión</a>
-            </div>
-          </div>
-          <footer class="page-footer">
-            <div class="content">
-              <div class="top">
-                <figure class="footer-logo">
-                  <a href="#">
-                    <img src="./img/logo-bitel-bet.png" alt="Inicio">
-                  </a>
-                </figure>
-                <nav class="social-nav">
-                  <ul class="menu social-menu">
-                    <li>
-                      <a href="#" class="icon icon-social icon-fb" aria-label="Facebook"></a>
-                    </li>
-                    <li>
-                      <a href="#" class="icon icon-social icon-ig" aria-label="Instagram"></a>
-                    </li>
-                    <li>
-                      <a href="#" class="icon icon-social icon-yt" aria-label="Youtube"></a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-              <div class="bottom">
-                <a href="#" class="arrow-link">Términos y condiciones</a>
-              </div>
-            </div>
-          </footer>
-        </div><!-- .content-wrapper -->
-      </div><!-- .modal -->
-    </div><!-- .modal-wrapper -->
     <footer id="footer" class="page-footer">
       <div class="content">
         <div class="top">

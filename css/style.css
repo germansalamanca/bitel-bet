@@ -185,6 +185,9 @@ button {
     max-width: 768px;
   }
 }
+.container.container-sm {
+  max-width: 400px;
+}
 
 .mb-1 {
   margin-bottom: 1rem !important;
@@ -2312,14 +2315,12 @@ table.user-info td.suscription a {
   max-width: 200px;
 }
 
-#user-profile .content-wrapper > .content {
-  max-width: 260px;
-  width: 100%;
-}
-#user-profile .title {
+#user-profile .page-title {
   color: #fff200;
   font-size: 20px;
   font-weight: 500;
+  font-style: italic;
+  margin-bottom: 1.2rem;
 }
 #user-profile .user-name {
   font-style: normal;

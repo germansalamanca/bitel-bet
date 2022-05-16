@@ -176,6 +176,9 @@ button{
       max-width: $md;
     }
   }
+  &.container-sm{
+    max-width: 400px;
+  }
 }
 
 .mb-1{
