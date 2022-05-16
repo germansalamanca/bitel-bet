@@ -233,21 +233,3 @@
     }
   }
 }
-#buy-coins{
-  .title{
-    color: $yellow;
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-  p{
-    text-align: center;
-    margin-bottom: 1.4rem;
-  }
-  .buttons{
-    max-width: 300px;
-    margin: 0 auto;
-    .btn-next-step{
-      margin-bottom: 1.3rem;
-    }
-  }
-}

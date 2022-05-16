@@ -12,8 +12,8 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <title>Comprar paquetes de monedas</title>
 </head>
-<body class="overlayed">
-  <div class="page" style="min-height: 100vh;">
+<body>
+  <div id="buy-coins" class="page">
     <header id="header" class="header-transparent">
       <div class="header-content">
         <button id="menu-toggler" class="btn" aria-label="Menú principal" onclick="openPopup('#main-menu-wrapper')"></button>
@@ -27,63 +27,57 @@
         </a>
       </div>
     </header>
-    <main>
- 
-    </main>
-    <div id="buy-coins" class="modal-wrapper" style="display: flex; opacity: 1">
-      <div class="modal bitel-bg">
-        <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#buy-coins')"></button>
-        <div class="content">
-          <h2 class="title">¡Compra nuestro paquete de monedas!</h2>
-          <div class="buttons">
-            <a href="#" class="btn btn-buy-pack">
-              <div class="left">
-                <span class="oval">
-                  <span class="name">BT 1</span>
-                  <span class="price"><span>S/1</span></span>
-                </span>
-              </div>
-              <div class="center">=</div>
-              <div class="right">
-                <span class="oval">
-                  <span class="ammount with-coin">100</span>
-                </span>
-              </div>
-            </a>
-            <a href="#" class="btn btn-buy-pack">
-              <div class="left">
-                <span class="oval">
-                  <span class="name">BT 1</span>
-                  <span class="price"><span>S/5</span></span>
-                </span>
-              </div>
-              <div class="center">=</div>
-              <div class="right">
-                <span class="oval">
-                  <span class="ammount with-coin">500</span>
-                </span>
-              </div>
-            </a>
-            <a href="#" class="btn btn-buy-pack">
-              <div class="left">
-                <span class="oval">
-                  <span class="name">BT 1</span>
-                  <span class="price"><span>S/8</span></span>
-                </span>
-              </div>
-              <div class="center">=</div>
-              <div class="right">
-                <span class="oval">
-                  <span class="ammount with-coin">1000</span>
-                </span>
-              </div>
-            </a>
-          </div>
-          <p>Sigue simulando  apuestas  en BITEL BET y que nunca acabe la diversión 🎉</p>
-          <p>*Vigencia de monedas: 12 meses.</p>
+    <main class="pt-2 pb-2">
+      <div class="container container-sm">
+        <h2 class="page-title">¡Compra nuestro paquete de monedas!</h2>
+        <div class="buttons">
+          <a href="#" class="btn btn-buy-pack">
+            <div class="left">
+              <span class="oval">
+                <span class="name">BT 1</span>
+                <span class="price"><span>S/1</span></span>
+              </span>
+            </div>
+            <div class="center">=</div>
+            <div class="right">
+              <span class="oval">
+                <span class="ammount with-coin">100</span>
+              </span>
+            </div>
+          </a>
+          <a href="#" class="btn btn-buy-pack">
+            <div class="left">
+              <span class="oval">
+                <span class="name">BT 1</span>
+                <span class="price"><span>S/5</span></span>
+              </span>
+            </div>
+            <div class="center">=</div>
+            <div class="right">
+              <span class="oval">
+                <span class="ammount with-coin">500</span>
+              </span>
+            </div>
+          </a>
+          <a href="#" class="btn btn-buy-pack">
+            <div class="left">
+              <span class="oval">
+                <span class="name">BT 1</span>
+                <span class="price"><span>S/8</span></span>
+              </span>
+            </div>
+            <div class="center">=</div>
+            <div class="right">
+              <span class="oval">
+                <span class="ammount with-coin">1000</span>
+              </span>
+            </div>
+          </a>
         </div>
+        <p>Sigue simulando  apuestas  en BITEL BET y que nunca acabe la diversión 🎉</p>
+        <p>*Vigencia de monedas: 12 meses.</p>
       </div>
-    </div>
+    </main>
     <footer id="footer" class="page-footer">
       <div class="content">
         <div class="top">
