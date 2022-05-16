@@ -118,23 +118,40 @@
           </div>
           <div id="esports" class="tab-content main-tabs-content main-tabs-group active">
             <div class="esports-tabs">
-              <button class="tab btn active" aria-label="Name of te esport 1">
+              <button class="tab btn active esports-tabs-group"
+                aria-label="Name of te esport 1"
+                onclick="showTabContent(this, '#esport-1-content', 'esports-tabs-group')"  
+              >
                 <span class="icon icon-1"></span>
               </button>
-              <button class="tab btn" aria-label="Name of te esport 2">
+              <button class="tab btn esports-tabs-group"
+                aria-label="Name of te esport 2"
+                onclick="showTabContent(this, '#esport-2-content', 'esports-tabs-group')" 
+              >
                 <span class="icon icon-2"></span>
               </button>
-              <button class="tab btn" aria-label="Name of te esport 3">
+              <button class="tab btn esports-tabs-group"
+                aria-label="Name of te esport 3"
+                onclick="showTabContent(this, '#esport-3-content', 'esports-tabs-group')" 
+              >
                 <span class="icon icon-3"></span>
               </button>
-              <button class="tab btn" aria-label="Name of te esport 4">
+              <button class="tab btn esports-tabs-group"
+                aria-label="Name of te esport 4"
+                onclick="showTabContent(this, '#esport-4-content', 'esports-tabs-group')" 
+              >
                 <span class="icon icon-4"></span>
               </button>
-              <button class="tab btn" aria-label="Name of te esport 5">
+              <button class="tab btn esports-tabs-group"
+                aria-label="Name of te esport 5"
+                onclick="showTabContent(this, '#esport-5-content', 'esports-tabs-group')" 
+              >
                 <span class="icon icon-5"></span>
               </button>
             </div>
-            <div id="esport-1-content" class="esports-tabs-content">
+            <div id="esport-1-content"
+              class="tab-content esports-tabs-content esports-tabs-group active"
+            >
               <ul class="bet-list bet-list-esports">
                 <li class="bet-item status-closed">
                   <header class="bet-heading">
@@ -209,7 +226,127 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div><!-- #esport-1-content -->
+            <div id="esport-2-content"
+              class="tab-content esports-tabs-content esports-tabs-group"
+            >
+              <ul class="bet-list bet-list-esports">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <h3 class="bet-title">Free Fire</h3>
+                    <span class="bet-status">En vivo - <strong>Apuesta cerrada</strong></span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <h4 class="name">Nemiga</h4>
+                        <div class="bet-value">
+                          <span class="number">1</span>
+                        </div>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <div class="bet-value">
+                          <span class="number">0</span>
+                        </div>
+                        <h4 class="name">Monaco Gambit</h4>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #esport-2-content-->
+            <div id="esport-3-content"
+              class="tab-content esports-tabs-content esports-tabs-group"
+            >
+              <ul class="bet-list bet-list-esports">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <h3 class="bet-title">Esport 3</h3>
+                    <span class="bet-status">En vivo - <strong>Apuesta cerrada</strong></span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <h4 class="name">Nemiga</h4>
+                        <div class="bet-value">
+                          <span class="number">1</span>
+                        </div>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <div class="bet-value">
+                          <span class="number">0</span>
+                        </div>
+                        <h4 class="name">Monaco Gambit</h4>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #esport-3-content-->
+            <div id="esport-4-content"
+              class="tab-content esports-tabs-content esports-tabs-group"
+            >
+              <ul class="bet-list bet-list-esports">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <h3 class="bet-title">Esport 4</h3>
+                    <span class="bet-status">En vivo - <strong>Apuesta cerrada</strong></span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <h4 class="name">Nemiga</h4>
+                        <div class="bet-value">
+                          <span class="number">1</span>
+                        </div>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <div class="bet-value">
+                          <span class="number">0</span>
+                        </div>
+                        <h4 class="name">Monaco Gambit</h4>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #esport-4-content-->
+            <div id="esport-5-content"
+              class="tab-content esports-tabs-content esports-tabs-group"
+            >
+              <ul class="bet-list bet-list-esports">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <h3 class="bet-title">Esport 5</h3>
+                    <span class="bet-status">En vivo - <strong>Apuesta cerrada</strong></span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <h4 class="name">Nemiga</h4>
+                        <div class="bet-value">
+                          <span class="number">1</span>
+                        </div>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="content">
+                        <div class="bet-value">
+                          <span class="number">0</span>
+                        </div>
+                        <h4 class="name">Monaco Gambit</h4>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #esport-5-content-->
           </div><!-- #esports -->
           <div id="futbol" class="tab-content main-tabs-content main-tabs-group">
             <div class="futbol-tabs tab-list tab-list-slider">
