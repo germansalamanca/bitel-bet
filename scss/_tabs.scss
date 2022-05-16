@@ -248,15 +248,15 @@
     }
   }
 }
+.tab-content{
+  display: none;
+  &.active{
+    display: block;
+  }
+}
 .tabs-block-contents{
   background-color: #252c40;
   padding: .65rem .65rem 1rem .65rem;
   border-radius: $br-md;
   min-height: 3rem;
-  .tab-content{
-    display: none;
-    &.active{
-      display: block;
-    }
-  }
 }

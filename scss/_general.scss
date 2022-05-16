@@ -246,6 +246,16 @@ button{
   padding-top: 6rem !important;
 }
 
+//GRIDS
+
+.grid{
+  display: grid;
+  &.rewards-grid{
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-gap: 1.3rem;
+  }
+}
+
 // CTA 
 .cta-fixed{
   position: fixed;
@@ -282,11 +292,4 @@ button{
   bottom: 0;
   z-index: 40;
   pointer-events: none;
-}
-.grid{
-  display: grid;
-  &.rewards-grid{
-    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-    grid-gap: 1.3rem;
-  }
 }

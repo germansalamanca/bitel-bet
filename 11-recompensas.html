@@ -35,29 +35,91 @@
           </div>
           <div id="tabs-rewards-filter" class="tab-list">
               <div class="options-wrapper">
-              <button class="tab btn active">Ver todo</button>
-              <button class="tab btn">Accesorios</button>
-              <button class="tab btn">Tecnología</button>
-              <button class="tab btn">Sonido</button>
+              <button class="tab btn rwds-tabs-group active " onclick="showTabContent(this, '#all-rwds', 'rwds-tabs-group')">Ver todo</button>
+              <button class="tab btn rwds-tabs-group" onclick="showTabContent(this, '#rwds-accesorios', 'rwds-tabs-group')">Accesorios</button>
+              <button class="tab btn rwds-tabs-group" onclick="showTabContent(this, '#rwds-tecnologia', 'rwds-tabs-group')">Tecnología</button>
+              <button class="tab btn rwds-tabs-group" onclick="showTabContent(this, '#rwds-sonido', 'rwds-tabs-group')">Sonido</button>
             </div>
           </div>
-          <div class="grid rewards-grid">
-            <a href="#" class="card card-reward">
-              <figure><img src="./img/demo/img-mobile.png" alt="iPhone 12 Pro Max"></figure>
-              <h3 class="title-bar">iPhone 12 Pro Max</h3>
-              <span class="price">
-                <span class="ammount">878,577</span>
-                <span class="coins">MONEDAS</span>
-              </span>
-            </a>
-            <a href="#" class="card card-reward">
-              <figure><img src="./img/demo/img-laptop.png" alt="Lenovo Portatil Ideapad 5"></figure>
-              <h3 class="title-bar">Lenovo Portatil Ideapad 5</h3>
-              <span class="price">
-                <span class="ammount">821,000</span>
-                <span class="coins">MONEDAS</span>
-              </span>
-            </a>
+          <div id="all-rwds" class="tab-content rwds-tabs-group active">
+            <div class="grid rewards-grid">
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-mobile.png" alt="iPhone 12 Pro Max"></figure>
+                <h3 class="title-bar">iPhone 12 Pro Max all</h3>
+                <span class="price">
+                  <span class="ammount">878,577</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-laptop.png" alt="Lenovo Portatil Ideapad 5"></figure>
+                <h3 class="title-bar">Lenovo Portatil Ideapad 5 all</h3>
+                <span class="price">
+                  <span class="ammount">821,000</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div id="rwds-accesorios" class="tab-content rwds-tabs-group">
+            <div class="grid rewards-grid">
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-mobile.png" alt="iPhone 12 Pro Max"></figure>
+                <h3 class="title-bar">iPhone 12 Pro Max acc</h3>
+                <span class="price">
+                  <span class="ammount">878,577</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-laptop.png" alt="Lenovo Portatil Ideapad 5"></figure>
+                <h3 class="title-bar">Lenovo Portatil Ideapad 5 acc</h3>
+                <span class="price">
+                  <span class="ammount">821,000</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div id="rwds-tecnologia" class="tab-content rwds-tabs-group">
+            <div class="grid rewards-grid">
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-mobile.png" alt="iPhone 12 Pro Max"></figure>
+                <h3 class="title-bar">iPhone 12 Pro Max tecno</h3>
+                <span class="price">
+                  <span class="ammount">878,577</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-laptop.png" alt="Lenovo Portatil Ideapad 5"></figure>
+                <h3 class="title-bar">Lenovo Portatil Ideapad 5 tecno</h3>
+                <span class="price">
+                  <span class="ammount">821,000</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div id="rwds-sonido" class="tab-content rwds-tabs-group">
+            <div class="grid rewards-grid">
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-mobile.png" alt="iPhone 12 Pro Max"></figure>
+                <h3 class="title-bar">iPhone 12 Pro Max tecno sonido</h3>
+                <span class="price">
+                  <span class="ammount">878,577</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+              <a href="#" class="card card-reward">
+                <figure><img src="./img/demo/img-laptop.png" alt="Lenovo Portatil Ideapad 5"></figure>
+                <h3 class="title-bar">Lenovo Portatil Ideapad 5 tecno sonido</h3>
+                <span class="price">
+                  <span class="ammount">821,000</span>
+                  <span class="coins">MONEDAS</span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

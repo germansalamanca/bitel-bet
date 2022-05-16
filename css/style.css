@@ -272,6 +272,14 @@ button {
   padding-top: 6rem !important;
 }
 
+.grid {
+  display: grid;
+}
+.grid.rewards-grid {
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 1.3rem;
+}
+
 .cta-fixed {
   position: fixed;
   padding: 0rem 1rem 1rem;
@@ -307,14 +315,6 @@ button {
   bottom: 0;
   z-index: 40;
   pointer-events: none;
-}
-
-.grid {
-  display: grid;
-}
-.grid.rewards-grid {
-  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
-  grid-gap: 1.3rem;
 }
 
 .icon {
@@ -1388,17 +1388,18 @@ ul.social-menu li a:hover {
   right: 0;
 }
 
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+
 .tabs-block-contents {
   background-color: #252c40;
   padding: 0.65rem 0.65rem 1rem 0.65rem;
   border-radius: 10px;
   min-height: 3rem;
-}
-.tabs-block-contents .tab-content {
-  display: none;
-}
-.tabs-block-contents .tab-content.active {
-  display: block;
 }
 
 #bets.modal-wrapper .btn-close-popup {
