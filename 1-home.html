@@ -351,17 +351,42 @@
           <div id="futbol" class="tab-content main-tabs-content main-tabs-group">
             <div class="futbol-tabs tab-list tab-list-slider">
               <div class="options-wrapper">
-                <button class="tab btn active">Eventos de hoy</button>
-                <button class="tab btn">Fútbol Peruano</button>
-                <button class="tab btn">Liga Inglesa</button>
-                <button class="tab btn">Otra pestaña</button>
-                <button class="tab btn">Una más</button>
+                <button
+                  class="tab btn futbol-tabs-group active"
+                  onclick="showTabContent(this, '#eventos', 'futbol-tabs-group')"
+                >
+                  Eventos de hoy
+                </button>
+                <button
+                  class="tab btn futbol-tabs-group"
+                  onclick="showTabContent(this, '#futbol-peruano', 'futbol-tabs-group')"
+                >
+                  Fútbol-peruano
+                </button>
+                <button
+                  class="tab btn futbol-tabs-group"
+                  onclick="showTabContent(this, '#liga-inglesa', 'futbol-tabs-group')"
+                >
+                  Liga Inglesa
+                </button>
+                <button
+                  class="tab btn futbol-tabs-group"
+                  onclick="showTabContent(this, '#futbol-4-content', 'futbol-tabs-group')"
+                >
+                  Otra pestaña
+                </button>
+                <button
+                  class="tab btn futbol-tabs-group"
+                  onclick="showTabContent(this, '#futbol-5-content', 'futbol-tabs-group')"
+                >
+                  Una más
+                </button>
               </div>
               <div class="more">
                 <button class="btn" aria-label="más"></button>
               </div>
             </div><!-- .futbol-tabs -->
-            <div id="futbol-tbs-content-events" class="futbol-tabs-content">
+            <div id="eventos" class="tab-content futbol-tabs-content futbol-tabs-group active">
               <ul class="bet-list bet-list-futbol">
                 <li class="bet-item status-closed">
                   <header class="bet-heading">
@@ -479,7 +504,163 @@
                   </div>
                 </li>
               </ul>
-            </div><!-- #futbol-tbs-content-events -->
+            </div><!-- #eventos -->
+            <div id="futbol-peruano" class="tab-content futbol-tabs-content futbol-tabs-group">
+              <ul class="bet-list bet-list-futbol">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <div class="league">
+                      <img src="./img/logos/logo-spain.svg" alt="La Liga - España">
+                      <h3 class="bet-title">Fútbol Peruano</h3>
+                    </div>
+                    <span class="bet-status">*Apuesta cerrada</span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <img src="./img/logos/logo-team-alianza.svg" alt="Alianza Lima">
+                        <h4 class="name">Alianza Lima</h4>
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">2.8</span>
+                      </div>
+                    </button>
+                    <button class="bet-tie bet-team btn">
+                      <h4 class="name">Empate</h4>
+                      <div class="bet-value">
+                        <span class="number">3.4</span>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <h4 class="name">Universitario de deportes</h4>
+                        <img src="./img/logos/logo-team-u.svg" alt="Universitario de deportes">
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #futbol-peruano-->
+            <div id="liga-inglesa" class="tab-content futbol-tabs-content futbol-tabs-group">
+              <ul class="bet-list bet-list-futbol">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <div class="league">
+                      <img src="./img/logos/logo-spain.svg" alt="La Liga - España">
+                      <h3 class="bet-title">Liga Inglesa</h3>
+                    </div>
+                    <span class="bet-status">*Apuesta cerrada</span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <img src="./img/logos/logo-team-alianza.svg" alt="Alianza Lima">
+                        <h4 class="name">Alianza Lima</h4>
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">2.8</span>
+                      </div>
+                    </button>
+                    <button class="bet-tie bet-team btn">
+                      <h4 class="name">Empate</h4>
+                      <div class="bet-value">
+                        <span class="number">3.4</span>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <h4 class="name">Universitario de deportes</h4>
+                        <img src="./img/logos/logo-team-u.svg" alt="Universitario de deportes">
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #liga-inglesa-->
+            <div id="futbol-4-content" class="tab-content futbol-tabs-content futbol-tabs-group">
+              <ul class="bet-list bet-list-futbol">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <div class="league">
+                      <img src="./img/logos/logo-spain.svg" alt="La Liga - España">
+                      <h3 class="bet-title">Fútbol 4</h3>
+                    </div>
+                    <span class="bet-status">*Apuesta cerrada</span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <img src="./img/logos/logo-team-alianza.svg" alt="Alianza Lima">
+                        <h4 class="name">Alianza Lima</h4>
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">2.8</span>
+                      </div>
+                    </button>
+                    <button class="bet-tie bet-team btn">
+                      <h4 class="name">Empate</h4>
+                      <div class="bet-value">
+                        <span class="number">3.4</span>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <h4 class="name">Universitario de deportes</h4>
+                        <img src="./img/logos/logo-team-u.svg" alt="Universitario de deportes">
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #futbol-4-content -->
+            <div id="futbol-5-content" class="tab-content futbol-tabs-content futbol-tabs-group">
+              <ul class="bet-list bet-list-futbol">
+                <li class="bet-item status-closed">
+                  <header class="bet-heading">
+                    <div class="league">
+                      <img src="./img/logos/logo-spain.svg" alt="La Liga - España">
+                      <h3 class="bet-title">Fútbol 5</h3>
+                    </div>
+                    <span class="bet-status">*Apuesta cerrada</span>
+                  </header>
+                  <div class="bet-options">
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <img src="./img/logos/logo-team-alianza.svg" alt="Alianza Lima">
+                        <h4 class="name">Alianza Lima</h4>
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">2.8</span>
+                      </div>
+                    </button>
+                    <button class="bet-tie bet-team btn">
+                      <h4 class="name">Empate</h4>
+                      <div class="bet-value">
+                        <span class="number">3.4</span>
+                      </div>
+                    </button>
+                    <button class="bet-team btn">
+                      <div class="logo-name">
+                        <h4 class="name">Universitario de deportes</h4>
+                        <img src="./img/logos/logo-team-u.svg" alt="Universitario de deportes">
+                      </div>
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div><!-- #futbol-5-content -->
           </div><!-- #futbol -->
         </div><!-- .main-tabs-wrapper -->
       </div><!-- .container -->
