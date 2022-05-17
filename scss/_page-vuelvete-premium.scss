@@ -1,6 +1,23 @@
 @import'variables';
 
 #vuelvete-premium{
+  h1{
+    margin-bottom: 1rem;
+  }
+  .subscribe{
+    color: $yellow;
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  .get-coins{
+    margin-bottom: 2rem;
+    .with-coin{
+      &:after{
+        margin-right: .4rem;
+      }
+    }
+  }
   .buttons{
     position: relative;
     right: .35rem;

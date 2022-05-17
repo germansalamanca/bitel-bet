@@ -2434,6 +2434,21 @@ section#canjear-monedas p {
   max-width: 20rem;
 }
 
+#vuelvete-premium h1 {
+  margin-bottom: 1rem;
+}
+#vuelvete-premium .subscribe {
+  color: #fff200;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+#vuelvete-premium .get-coins {
+  margin-bottom: 2rem;
+}
+#vuelvete-premium .get-coins .with-coin:after {
+  margin-right: 0.4rem;
+}
 #vuelvete-premium .buttons {
   position: relative;
   right: 0.35rem;
