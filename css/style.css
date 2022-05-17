@@ -1273,6 +1273,7 @@ ul.social-menu li a:hover {
   color: #54648f;
   font-weight: 600;
   font-size: 14px;
+  margin: 0;
   padding: 1rem 0.7rem;
   border-bottom: 1px solid transparent;
   border-bottom: 1px solid #54648f;
@@ -1305,10 +1306,11 @@ ul.social-menu li a:hover {
 
 .tab-list-slider {
   position: relative;
+  transition: all ease 0.3s;
 }
 .tab-list-slider .more {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: flex-end;
   align-items: center;
   pointer-events: none;
@@ -1344,15 +1346,18 @@ ul.social-menu li a:hover {
 .tab-list-slider .more .btn:hover:after {
   border-color: #fff200;
 }
-.tab-list-slider .options-wrapper {
+.tab-list-slider .tabs-scroll {
   overflow-x: scroll;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
 }
-.tab-list-slider .options-wrapper::-webkit-scrollbar {
+.tab-list-slider .tabs-scroll::-webkit-scrollbar {
   display: none;
+}
+.tab-list-slider .options-wrapper {
+  width: max-content;
 }
 
 /*---- BLOCK TABS ----*/

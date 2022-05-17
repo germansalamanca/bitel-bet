@@ -48,11 +48,7 @@ function closePopup(element, e){
     document.querySelector('body').classList.remove('overlayed')
     popup.classList.remove('active')
     popup.style.opacity = 0
-    // setTimeout(()=>{
-    //   console.log('is: ' + popup.style.opacity)
-    // }, 100)
     let interval = setInterval(()=>{
-      console.log(window.getComputedStyle(popup).opacity)
       if(window.getComputedStyle(popup).opacity <= 0){
         popup.style.display = 'none'
         clearInterval(interval)
@@ -77,7 +73,6 @@ function closePopup(element, e){
 function showTabContent(tabButton, tabContentSelector, tabsGroupClass){
   if(!tabButton.classList.contains('active')){
     const tabButtons = document.querySelectorAll(`.tab.${tabsGroupClass}`)
-    console.log(tabButtons)
     for(let button of Object.values(tabButtons)){
       button.classList.remove('active')
       tabButton.classList.add('active')
@@ -91,3 +86,61 @@ function showTabContent(tabButton, tabContentSelector, tabsGroupClass){
   }
 }
 
+window.onload = ()=>{
+  if(document.querySelector('.tab-list-slider')){
+    const menu = document.querySelector('.tab-list-slider'),
+    menuScroll = menu.querySelector('.tabs-scroll'),
+    buttonsWrapper = menu.querySelector('.options-wrapper'),
+    more = menu.querySelector('.more')
+    btnMore = more.querySelector('button')
+    let viewportWidth,
+    containerWidth,
+    itemsWidth,
+    maxScroll
+    
+    function updateSize(){
+      viewportWidth = window.innerWidth
+      containerWidth = menuScroll.offsetWidth
+      itemsWidth = menuScroll.scrollWidth
+      if(itemsWidth > containerWidth){
+        more.style.display = 'flex';
+        buttonsWrapper.style.paddingRight = '24px';
+      }else{
+        more.style.display = 'none';
+        buttonsWrapper.style.paddingRight = '0';
+      }
+      maxScroll = itemsWidth - menuScroll.offsetWidth
+    }
+
+    updateSize()
+
+    btnMore.addEventListener('click', ()=>{
+      //console.log(`Scroll actual: ${menuScroll.scrollLeft} - Máximo scroll: ${maxScroll}`)
+      let scrollAmount = 0
+      let distance = 100
+      let step = 10
+      var slideTimer = setInterval(function(){
+        menuScroll.scrollLeft += step;
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+      }, 25);
+    })
+
+    menuScroll.addEventListener('scroll', ()=>{
+      //console.log(`Scroll actual: ${menuScroll.scrollLeft} - Máximo scroll: ${maxScroll}`)
+      if(menuScroll.scrollLeft >= (maxScroll - 10)){
+        more.style.opacity = 0
+        btnMore.style.pointerEvents = 'none'
+      }else{
+        more.style.opacity = 1
+        btnMore.style.pointerEvents = 'auto'
+      }
+    })
+  }
+  window.addEventListener("resize", function () {
+      updateSize()
+    },true
+  );
+}

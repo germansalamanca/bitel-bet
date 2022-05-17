@@ -131,6 +131,7 @@
     color: $metallic-blue;
     font-weight: 600;
     font-size: 14px;
+    margin: 0;
     padding: 1rem .7rem;
     border-bottom: 1px solid transparent;
     border-bottom: 1px solid $metallic-blue;
@@ -163,9 +164,10 @@
 }
 .tab-list-slider{
   position: relative;
+  transition: all ease .3s;
   .more{
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: flex-end;
     align-items: center;
     pointer-events: none;
@@ -204,7 +206,7 @@
       }
     }
   }
-  .options-wrapper{
+  .tabs-scroll{
     overflow-x: scroll;
     -ms-overflow-style: none;
     /* IE and Edge */
@@ -213,6 +215,9 @@
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+  .options-wrapper{
+    width: max-content;
   }
 }
 
