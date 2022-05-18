@@ -19,8 +19,10 @@
       content: '';
       width: .9rem;
       height: .9rem;
+      background: url(../img/icon-bet-coin.svg) no-repeat;
+      background-size: 100%;
+      background-position: center;
       display: inline-block;
-      border: 1px solid $dark;
       border-radius: 1rem;
       margin-left: .2rem;
       margin-right: -.25rem;
