@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Detalles de apuesta</title>
+</head>
+<body class="overlayed">
+  <div class="page">
+    <header id="header" class="header-transparent">
+      <div class="header-content">
+        <button id="menu-toggler" class="btn" aria-label="Menú principal" onclick="openPopup('#main-menu-wrapper')"></button>
+        <figure class="logo">
+          <a href="#">
+            <img src="./img/logo-bitel-bet.png" alt="Inicio">
+          </a>
+        </figure>
+        <a href="#" class="user-link user-link-premium btn">
+          <div class="user-icon"></div>
+        </a>
+      </div>
+    </header>
+    <main style="min-height: 100vh;">
+ 
+    </main>
+    <!-- Remove inline display flex -->
+    <div id="detalles-de-apuesta" class="overlay popup-overlay" onclick="closePopup(this, event)" style="display: flex; opacity: 1">
+      <div class="popup">
+        <button class="btn btn-close-popup" aria-label="cerrar"></button>
+        <div class="popup-box popup-with-header popup-scroll no-bg">
+          <header class="popup-header">
+            <h3 class="title tip">Detalle de apuesta</h3>
+          </header>
+          <div class="content text-left">
+            <table class="table table-bet-details mb-1">
+              <tbody>
+                <tr>
+                  <td>Código</td>
+                  <td><strong>AP001</strong></td>
+                </tr>
+                <tr>
+                  <td>Estado</td>
+                  <td><span class="teal">Abierto</span></td>
+                </tr>
+                <tr>
+                  <td>Fecha</td>
+                  <td>30/03/2002</td>
+                </tr>
+                <tr>
+                  <td>Importe</td>
+                  <td><span class="with-coin">500</span></td>
+                </tr>
+                <tr>
+                  <td>Ganancia total</td>
+                  <td><span class="with-coin yellow">2,500</span></td>
+                </tr>
+                <tr>
+                  <td>Mondedas adicionales <br>Si aciertas al marcador</td>
+                  <td><span class="with-coin">35</span></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="fake-tab mb-2">
+              <header class="ft-header">Evento</header>
+              <div class="ft-content">
+                <div class="logoname">
+                  <figure class="logo">
+                    <img src="./img/logos/logo-esport-dota.svg" alt="Dota">
+                  </figure>
+                  <h3 class="name">
+                    <span class="league">Dota 2  Champion League</span>
+                    Nemiga Vs. Monaco Gambit
+                  </h3>
+                </div>
+                <div class="game-results">
+                  <div class="name">
+                    <strong>Monaco Gambit</strong>
+                    <span class="result teal">Winner</span>
+                  </div>
+                  <div class="ammount">
+                    <span class="yellow with-coin">100</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="mb-2">¡Sigue apostando! - Eventos sugeridos</p>
+            <ul class="bet-list bet-list-esports">
+              <li class="bet-item status-closing">
+                <header class="bet-heading">
+                  <h3 class="bet-title">Dota 2 Champion League</h3>
+                  <span class="bet-status">24/03/2022 - 15:30PM</span>
+                </header>
+                <div class="bet-options">
+                  <button class="bet-team btn">
+                    <div class="content">
+                      <h4 class="name">Nemiga</h4>
+                      <div class="bet-value">
+                        <span class="number">2.4</span>
+                      </div>
+                    </div>
+                  </button>
+                  <button class="bet-team btn">
+                    <div class="content">
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                      <h4 class="name">Monaco Gambit</h4>
+                    </div>
+                  </button>
+                </div>
+              </li>
+              <li class="bet-item status-open">
+                <header class="bet-heading">
+                  <h3 class="bet-title">Dota 2 Champion League</h3>
+                  <span class="bet-status">24/03/2022 - 15:30PM</span>
+                </header>
+                <div class="bet-options">
+                  <button class="bet-team btn selected">
+                    <div class="content">
+                      <h4 class="name">Nemiga</h4>
+                      <div class="bet-value">
+                        <span class="number">2.4</span>
+                      </div>
+                    </div>
+                  </button>
+                  <button class="bet-team btn">
+                    <div class="content">
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                      <h4 class="name">Monaco Gambit</h4>
+                    </div>
+                  </button>
+                </div>
+              </li>
+              <li class="bet-item status-open">
+                <header class="bet-heading">
+                  <h3 class="bet-title">Dota 2 Champion League</h3>
+                  <span class="bet-status">24/03/2022 - 15:30PM</span>
+                </header>
+                <div class="bet-options">
+                  <button class="bet-team btn selected">
+                    <div class="content">
+                      <h4 class="name">Nemiga</h4>
+                      <div class="bet-value">
+                        <span class="number">2.4</span>
+                      </div>
+                    </div>
+                  </button>
+                  <button class="bet-team btn">
+                    <div class="content">
+                      <div class="bet-value">
+                        <span class="number">1.5</span>
+                      </div>
+                      <h4 class="name">Monaco Gambit</h4>
+                    </div>
+                  </button>
+                </div>
+              </li>
+            </ul><!-- .bet-ist -->
+          </div>
+        </div><!-- .popup-box -->
+      </div>
+    </div><!-- #detalles-de-apuesta -->
+    <footer id="footer" class="page-footer">
+      <div class="content">
+        <div class="top">
+          <figure class="footer-logo">
+            <a href="#">
+              <img src="./img/logo-bitel-bet.png" alt="Inicio">
+            </a>
+          </figure>
+          <nav class="social-nav">
+            <ul class="menu social-menu">
+              <li>
+                <a href="#" class="icon icon-social icon-fb" aria-label="Facebook"></a>
+              </li>
+              <li>
+                <a href="#" class="icon icon-social icon-ig" aria-label="Instagram"></a>
+              </li>
+              <li>
+                <a href="#" class="icon icon-social icon-yt" aria-label="Youtube"></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bottom">
+          <a href="#" class="arrow-link">Términos y condiciones</a>
+        </div>
+        <button id="btn-btt" class="btn" aria-label="Volver arriba"></button>
+      </div>
+    </footer>
+  </div><!-- .page -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/functions.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

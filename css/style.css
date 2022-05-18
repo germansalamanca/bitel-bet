@@ -38,6 +38,19 @@ img {
   width: 100%;
 }
 
+/*---- COLORS -----*/
+.teal {
+  color: #06e8d2;
+}
+
+.yellow {
+  color: #fff200;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .text-center {
   text-align: center;
 }
@@ -787,6 +800,62 @@ button {
   width: 1em;
   top: 0.8em;
 }
+.table.table-bet-details {
+  border-radius: 0;
+  border-spacing: 0px 2px;
+  border-collapse: separate;
+}
+.table.table-bet-details td {
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+}
+.table.table-bet-details td:not(:last-child) {
+  border: none;
+}
+
+.logoname {
+  color: #687eb9;
+  display: flex;
+  align-items: center;
+}
+.logoname .logo {
+  width: 1.4375rem;
+  height: 1.4375rem;
+  flex-shrink: 0;
+  margin-right: 0.8rem;
+}
+.logoname .name {
+  margin: 0;
+  text-align: left;
+  font-size: 0.8125rem;
+}
+.logoname .name .league {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  display: block;
+}
+
+.game-results {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 2.3rem;
+  margin-top: 0.45rem;
+}
+.game-results .name {
+  padding-right: 1rem;
+}
+.game-results .result {
+  display: block;
+}
+.game-results .ammount .with-coin {
+  font-size: 0.8125rem;
+}
+.game-results .ammount .with-coin:after {
+  font-size: 0.7rem;
+  top: 0.55em;
+}
 
 #header {
   padding: 0.53rem 0.6rem;
@@ -1409,6 +1478,26 @@ ul.social-menu li a:hover {
   min-height: 3rem;
 }
 
+.fake-tab {
+  text-align: left;
+}
+.fake-tab header.ft-header {
+  padding: 0.5rem 0.6rem;
+  border-radius: 8px 8px 0 0;
+  background-color: #252c40;
+  font-size: 0.875rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  min-width: 5.625rem;
+  display: inline-block;
+}
+.fake-tab .ft-content {
+  padding: 0.8rem 1rem 1.1rem;
+  border-radius: 0 8px 8px 8px;
+  background-color: #252c40;
+}
+
 #bets.modal-wrapper .btn-close-popup {
   margin-bottom: 0.1rem;
 }
@@ -1451,27 +1540,6 @@ ul.social-menu li a:hover {
   padding: 0.9rem 0 0.7rem;
   justify-content: space-between;
   align-items: center;
-}
-.game-info header .logoname {
-  color: #687eb9;
-  display: flex;
-  align-items: center;
-}
-.game-info header .logoname .logo {
-  width: 1.4375rem;
-  height: 1.4375rem;
-  flex-shrink: 0;
-  margin-right: 0.8rem;
-}
-.game-info header .logoname .name {
-  margin: 0;
-  text-align: left;
-  font-size: 0.8125rem;
-}
-.game-info header .logoname .name .league {
-  font-size: 0.6875rem;
-  font-weight: 500;
-  display: block;
 }
 .game-info header .btn-remove {
   flex-shrink: 0;
@@ -1846,7 +1914,6 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 
 .popup-overlay {
-  overflow-y: scroll;
   display: none;
   flex-direction: column;
   justify-content: flex-end;
@@ -1854,13 +1921,16 @@ ul.bet-list-futbol button.bet-tie .name {
   transition: all ease 0.5s;
   padding: 0 1rem;
 }
+@media (min-width: 768px) {
+  .popup-overlay {
+    justify-content: center;
+  }
+}
 .popup {
   text-align: center;
   color: white;
   z-index: 50;
-  height: 100%;
-  margin-top: 100%;
-  padding: 1.2rem 0 1.2rem;
+  padding: 1.2rem 0 1.4rem;
 }
 .popup .btn-close-popup {
   margin-bottom: 1rem;
@@ -1869,7 +1939,9 @@ ul.bet-list-futbol button.bet-tie .name {
 .popup-box {
   position: relative;
   min-height: 16rem;
-  background: #2a3248 url(../img/bg-popup.png) no-repeat;
+  max-height: calc(100vh - 100px);
+  background-color: #2a3248;
+  background-repeat: no-repeat;
   background-size: contain;
   background-position: center bottom;
   padding: 2.7rem 1.2rem 2.5rem;
@@ -1879,6 +1951,9 @@ ul.bet-list-futbol button.bet-tie .name {
   margin: 0 auto;
   overflow: hidden;
   /*---- INFO POPUPS ----*/
+}
+.popup-box:not(.no-bg) {
+  background-image: url(../img/bg-popup.png);
 }
 .popup-box:before {
   pointer-events: none;
@@ -1892,6 +1967,30 @@ ul.bet-list-futbol button.bet-tie .name {
   background: url(../img/bg-hl-popup.png) no-repeat;
   background-size: contain;
   background-position: center top;
+}
+.popup-box.popup-with-header {
+  padding-top: 1rem;
+}
+.popup-box header.popup-header {
+  padding: 0.6rem 0 1.3rem;
+}
+.popup-box header.popup-header .title {
+  font-size: 0.88rem;
+  padding-bottom: 1rem;
+  margin: 0;
+  border-bottom: 1px dotted #54648f;
+}
+.popup-box header.popup-header .title.tip {
+  position: relative;
+}
+.popup-box header.popup-header .title.tip:after {
+  font-size: 0.75rem;
+  bottom: -0.58em;
+  top: auto;
+}
+.popup-box .content {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 .popup-box .content figure.popup-icon {
   max-width: 50px;
@@ -1913,6 +2012,9 @@ ul.bet-list-futbol button.bet-tie .name {
 .popup-box .content small {
   font-style: italic;
 }
+.popup-box .content p {
+  font-size: 0.9rem;
+}
 .popup-box .btn-cta {
   max-width: 260px;
   width: 100%;
@@ -1925,6 +2027,45 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 .popup-box .options.two .btn-cta:first-child {
   margin-right: 0.6rem;
+}
+.popup-box.popup-scroll {
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.popup-box.popup-scroll:after {
+  content: "";
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 100%);
+  z-index: 20;
+  pointer-events: none;
+  border-radius: 0 0 18px 18px;
+}
+.popup-box.popup-scroll .content {
+  padding-right: 0.4rem;
+  padding-bottom: 2.5rem;
+  /* Handle */
+}
+.popup-box.popup-scroll .content::-webkit-scrollbar {
+  width: 4px;
+  transition: all ease 0.4s;
+  border-radius: 2px;
+}
+.popup-box.popup-scroll .content::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.17);
+}
+.popup-box.popup-scroll .content::-webkit-scrollbar-thumb {
+  background: rgba(6, 232, 210, 0.8);
+  border-radius: 10px;
+  transition: all ease 0.4s;
+}
+.popup-box.popup-scroll .content::-webkit-scrollbar-thumb:hover {
+  background: #06e8d2;
 }
 
 .table-purchase-info {

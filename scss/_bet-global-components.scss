@@ -119,4 +119,61 @@
       top: .8em;
     }
   }
+  &.table-bet-details{
+    border-radius: 0;
+    border-spacing: 0px 2px;
+    border-collapse: separate;
+    td{
+      text-align: left;
+      padding: .55rem .8rem;
+      &:not(:last-child){
+        border: none;
+      }
+    }
+  }
+}
+
+.logoname{
+  color: #687eb9;
+  display: flex;
+  align-items: center;
+  .logo{
+    width: 1.4375rem;
+    height: 1.4375rem;
+    flex-shrink: 0;
+    margin-right: .8rem;
+  }
+  .name{
+    margin: 0;
+    text-align: left;
+    font-size: .8125rem;
+    .league{
+      font-size: .6875rem;
+      font-weight: 500;
+      display: block;
+    }
+  }
+}
+.game-results{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 2.3rem;
+  margin-top: .45rem;
+  .name{
+    padding-right: 1rem;
+  }
+  .result{
+    display: block;
+  }
+  .ammount{
+    .with-coin{
+      font-size: .8125rem;
+      &:after{
+        font-size: .7rem;
+        top: .55em;
+      }
+    }
+  }
 }

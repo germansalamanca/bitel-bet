@@ -265,3 +265,23 @@
   border-radius: $br-md;
   min-height: 3rem;
 }
+
+.fake-tab{
+  text-align: left;
+  header.ft-header{
+    padding: .5rem .6rem;
+    border-radius: 8px 8px 0 0;
+    background-color: #252c40;
+    font-size: .875rem;
+    color: $white;
+    font-weight: 600;
+    text-align: center;
+    min-width: 5.625rem;
+    display: inline-block;
+  }
+  .ft-content{
+    padding: .8rem 1rem 1.1rem;
+    border-radius: 0 8px 8px 8px;
+    background-color: #252c40;
+  }
+}
