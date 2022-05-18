@@ -2432,6 +2432,7 @@ section#canjear-monedas figure figcaption {
 section#canjear-monedas p {
   margin: 0 auto;
   max-width: 20rem;
+  font-style: italic;
 }
 
 #vuelvete-premium h1 {
