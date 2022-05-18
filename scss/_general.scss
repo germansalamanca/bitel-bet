@@ -17,6 +17,7 @@ body{
 a{
   text-decoration: none;
   transition: all ease .4s;
+  color: $teal;
   &:hover{
     color: $teal;
   }

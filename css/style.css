@@ -19,6 +19,7 @@ body.overlayed {
 a {
   text-decoration: none;
   transition: all ease 0.4s;
+  color: #06e8d2;
 }
 a:hover {
   color: #06e8d2;
