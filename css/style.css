@@ -1647,11 +1647,13 @@ header.bet-heading .bet-title {
   margin: 0;
   color: white;
   font-weight: 500;
+  text-align: left;
 }
 header.bet-heading .bet-status {
   font-size: 12px;
   font-weight: 500;
   color: white;
+  text-align: right;
 }
 
 .bet-item.status-closing header.bet-heading .bet-status {
