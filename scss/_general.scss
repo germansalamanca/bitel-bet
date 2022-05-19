@@ -90,7 +90,12 @@ h1, h2, h3, h4, h5, h6{
   font-size: 1.31rem;
   margin: 0 auto 1rem;
 }
-
+ul{
+  padding-left: 1.5rem;
+  li{
+    margin-bottom: .4rem;
+  }
+}
 ul.list-bitel{
   list-style: none;
   padding: 0;
@@ -114,6 +119,25 @@ ul.list-bitel{
 button{
   cursor: pointer;
   font-family: $font-family;
+}
+
+table.article-table{
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: .85rem;
+  border-radius: 4px;
+  border: 1px solid $metallic-blue;
+  th{
+    border: 1px solid $metallic-blue;
+    padding: .3rem;
+    text-align: left;
+    background-color: $metallic-blue;
+  }
+  td{
+    border: 1px solid $metallic-blue;
+    padding: .4rem .3rem;
+  }
 }
 
 

@@ -2,16 +2,21 @@
 
 section#tyc{
   padding: 3rem 0;
+  h1{
+    margin-bottom: .5rem;
+  }
   h2{
     text-align: left;
     font-size: 1.1rem;
     font-weight: 400;
     margin-bottom: 0;
+    margin-top: 2rem;
   }
   p{
     font-size: .9375rem;
     line-height: 1.6em;
     font-style: italic;
+    margin: .7rem 0;
   }
   a{
     white-space: pre-wrap; /* CSS3 */    
@@ -19,5 +24,8 @@ section#tyc{
     white-space: -pre-wrap; /* Opera 4-6 */    
     white-space: -o-pre-wrap; /* Opera 7 */    
     word-wrap: break-word; /* Internet Explorer 5.5+ */
+  }
+  ul{
+    font-size: .9375rem;
   }
 }

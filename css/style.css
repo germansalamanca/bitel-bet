@@ -99,6 +99,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 auto 1rem;
 }
 
+ul {
+  padding-left: 1.5rem;
+}
+ul li {
+  margin-bottom: 0.4rem;
+}
+
 ul.list-bitel {
   list-style: none;
   padding: 0;
@@ -122,6 +129,25 @@ ul.list-bitel li:before {
 button {
   cursor: pointer;
   font-family: "Exo 2", sans-serif;
+}
+
+table.article-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  border: 1px solid #54648f;
+}
+table.article-table th {
+  border: 1px solid #54648f;
+  padding: 0.3rem;
+  text-align: left;
+  background-color: #54648f;
+}
+table.article-table td {
+  border: 1px solid #54648f;
+  padding: 0.4rem 0.3rem;
 }
 
 /*---- LAYOUT -----*/
@@ -2753,16 +2779,21 @@ section#recompensas button.tab {
 section#tyc {
   padding: 3rem 0;
 }
+section#tyc h1 {
+  margin-bottom: 0.5rem;
+}
 section#tyc h2 {
   text-align: left;
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 0;
+  margin-top: 2rem;
 }
 section#tyc p {
   font-size: 0.9375rem;
   line-height: 1.6em;
   font-style: italic;
+  margin: 0.7rem 0;
 }
 section#tyc a {
   white-space: pre-wrap;
@@ -2775,6 +2806,9 @@ section#tyc a {
   /* Opera 7 */
   word-wrap: break-word;
   /* Internet Explorer 5.5+ */
+}
+section#tyc ul {
+  font-size: 0.9375rem;
 }
 
 #buy-coins .page-title {
