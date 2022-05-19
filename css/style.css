@@ -2626,29 +2626,32 @@ section#canjear-monedas p {
   font-style: italic;
 }
 
-#vuelvete-premium h1 {
+#page-vuelvete-premium section#vuelvete-premium {
+  font-style: italic;
+}
+#page-vuelvete-premium section#vuelvete-premium h1 {
   margin-bottom: 1rem;
 }
-#vuelvete-premium .subscribe {
+#page-vuelvete-premium section#vuelvete-premium .subscribe {
   color: #fff200;
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 1.5rem;
 }
-#vuelvete-premium .get-coins {
+#page-vuelvete-premium section#vuelvete-premium .get-coins {
   margin-bottom: 2rem;
 }
-#vuelvete-premium .get-coins .with-coin:after {
+#page-vuelvete-premium section#vuelvete-premium .get-coins .with-coin:after {
   margin-right: 0.4rem;
 }
-#vuelvete-premium .buttons {
+#page-vuelvete-premium section#vuelvete-premium .buttons {
   position: relative;
   right: 0.35rem;
 }
-#vuelvete-premium .btn-plan {
+#page-vuelvete-premium section#vuelvete-premium .btn-plan {
   margin: 0 auto 2rem;
 }
-#vuelvete-premium small {
+#page-vuelvete-premium section#vuelvete-premium small {
   max-width: 280px;
   display: block;
   text-align: center;

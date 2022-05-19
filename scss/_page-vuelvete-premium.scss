@@ -1,34 +1,37 @@
 @import'variables';
 
-#vuelvete-premium{
-  h1{
-    margin-bottom: 1rem;
-  }
-  .subscribe{
-    color: $yellow;
-    font-size: 1rem;
+#page-vuelvete-premium{
+  section#vuelvete-premium{
     font-style: italic;
-    margin-bottom: 1.5rem;
-  }
-  .get-coins{
-    margin-bottom: 2rem;
-    .with-coin{
-      &:after{
-        margin-right: .4rem;
+    h1{
+      margin-bottom: 1rem;
+    }
+    .subscribe{
+      color: $yellow;
+      font-size: 1rem;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    .get-coins{
+      margin-bottom: 2rem;
+      .with-coin{
+        &:after{
+          margin-right: .4rem;
+        }
       }
     }
-  }
-  .buttons{
-    position: relative;
-    right: .35rem;
-  }
-  .btn-plan{
-    margin: 0 auto 2rem;
-  }
-  small{
-    max-width: 280px;
-    display: block;
-    text-align: center;
-    margin: 2rem auto 0;
+    .buttons{
+      position: relative;
+      right: .35rem;
+    }
+    .btn-plan{
+      margin: 0 auto 2rem;
+    }
+    small{
+      max-width: 280px;
+      display: block;
+      text-align: center;
+      margin: 2rem auto 0;
+    }
   }
 }
