@@ -335,6 +335,12 @@ button {
   pointer-events: none;
 }
 
+/*---- Ads ----*/
+.bet-list .ad {
+  margin-top: 1.5rem;
+  margin-bottom: -0.6rem;
+}
+
 .icon {
   display: inline-block;
   background-size: contain;
