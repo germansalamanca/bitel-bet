@@ -2786,6 +2786,7 @@ section#tyc a {
 #buy-coins p {
   text-align: center;
   margin-bottom: 1.4rem;
+  font-style: italic;
 }
 #buy-coins .buttons {
   max-width: 300px;
