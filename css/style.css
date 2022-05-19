@@ -1993,10 +1993,6 @@ ul.bet-list-futbol button.bet-tie .name {
   bottom: -0.58em;
   top: auto;
 }
-.popup-box .content {
-  max-height: calc(100vh - 200px);
-  overflow-y: auto;
-}
 .popup-box .content figure.popup-icon {
   max-width: 50px;
   margin: 0 auto;
@@ -2053,6 +2049,8 @@ ul.bet-list-futbol button.bet-tie .name {
 .popup-box.popup-scroll .content {
   padding-right: 0.4rem;
   padding-bottom: 2.5rem;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
   /* Handle */
 }
 .popup-box.popup-scroll .content::-webkit-scrollbar {

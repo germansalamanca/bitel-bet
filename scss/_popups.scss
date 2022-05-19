@@ -78,8 +78,6 @@
   }
   /*---- INFO POPUPS ----*/
   .content{
-    max-height: calc(100vh - 200px);
-    overflow-y: auto;
     figure.popup-icon{
       max-width: 50px;
       margin: 0 auto;
@@ -138,6 +136,8 @@
     .content{
       padding-right: .4rem;
       padding-bottom: 2.5rem;
+      max-height: calc(100vh - 200px);
+      overflow-y: auto;
       &::-webkit-scrollbar {
         width: 4px;
         transition: all ease .4s;
