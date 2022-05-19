@@ -18,11 +18,11 @@ body.overlayed {
 
 a {
   text-decoration: none;
-  transition: all ease 0.4s;
+  transition: all ease 0.9s;
   color: #06e8d2;
 }
 a:hover {
-  color: #06e8d2;
+  color: #72fae8;
 }
 
 p {
