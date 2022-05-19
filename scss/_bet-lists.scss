@@ -182,6 +182,9 @@ ul.bet-list-futbol{
         img{
           margin-right: .4rem;
         }
+        .name{
+          text-align: left;
+        }
       }
     }
     &:last-child{
@@ -192,6 +195,9 @@ ul.bet-list-futbol{
       .logo-name{
         img{
           margin-left: .4rem;
+        }
+        .name{
+          text-align: right;
         }
       }
     }
