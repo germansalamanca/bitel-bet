@@ -2215,6 +2215,49 @@ ul.bet-list-futbol button.bet-tie .name {
   margin-bottom: 1.3rem;
 }
 
+#como-apostar {
+  position: fixed;
+  width: 5.25rem;
+  height: 5.25rem;
+  top: calc(50vh - 2.1rem);
+  right: 1rem;
+  z-index: 20;
+  transition: all ease 0.23s;
+}
+#como-apostar a {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bg-como-apostar.png) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+}
+#como-apostar a:hover {
+  transform: scale(110%);
+}
+#como-apostar .btn-close-popup {
+  position: absolute;
+  z-index: 20;
+  right: 0;
+  top: 0.6rem;
+  font-size: 0.55rem;
+}
+#como-apostar .btn-close-popup:hover {
+  transform: scale(120%) rotate(45deg);
+}
+#como-apostar .text {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #202f44;
+  text-align: center;
+  font-style: italic;
+  line-height: 1em;
+  margin-bottom: 0.2em;
+}
+
 .form ::placeholder {
   color: rgba(210, 210, 210, 0.5);
   font-size: 14px;
