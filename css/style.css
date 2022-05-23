@@ -1145,6 +1145,8 @@ ul.social-menu li a:hover {
 }
 .slider-ring .slick-arrow {
   top: 7.8rem;
+  left: auto;
+  right: 2.6rem;
 }
 .slider-ring .slick-arrow.slick-prev {
   top: 7.1rem;
@@ -2294,6 +2296,57 @@ ul.bet-list-futbol button.bet-tie .name {
   font-style: italic;
   line-height: 1em;
   margin-bottom: 0.2em;
+}
+
+#popup-como-apostar .popup {
+  padding-bottom: 1rem;
+}
+#popup-como-apostar .btn-close-popup {
+  margin-bottom: 0.8rem;
+}
+#popup-como-apostar .popup-box {
+  padding-top: 1.8rem;
+  padding-bottom: 1rem;
+}
+#popup-como-apostar .content .popup-title {
+  color: #fff200;
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  position: relative;
+}
+#popup-como-apostar .content .number {
+  width: 45px;
+  margin-bottom: 0.6rem;
+}
+#popup-como-apostar .content p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  max-width: 240px;
+  font-size: 0.9rem;
+  min-height: 70px;
+}
+#popup-como-apostar .content .step-figure {
+  margin: 0 auto;
+  width: 200px;
+}
+#popup-como-apostar .content .slick-dots {
+  bottom: -18px;
+}
+#popup-como-apostar .slider-ring .slick-arrow {
+  top: auto;
+  bottom: 6.8rem;
+  left: auto;
+  right: 2.2rem;
+}
+#popup-como-apostar .slider-ring .slick-arrow.slick-prev {
+  bottom: 7.4rem;
+  right: auto;
+  left: 2.2rem;
+}
+#popup-como-apostar .slider-ring .slick-arrow:before {
+  width: 1.87rem;
+  height: 1.87rem;
 }
 
 .form ::placeholder {

@@ -20,6 +20,7 @@ $(document).on('ready', function() {
     slidesToScroll: 1,
     arrows: true,
     dots: true,
+    infinite: false
   });
   $(".slider-circle").slick({
     dots: false,
@@ -27,6 +28,7 @@ $(document).on('ready', function() {
     slidesToScroll: 1,
     arrows: true,
     dots: true,
+    infinite: false
   });
 });
 

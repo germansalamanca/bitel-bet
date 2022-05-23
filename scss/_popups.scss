@@ -347,5 +347,61 @@
     line-height: 1em;
     margin-bottom: .2em;
   }
+}
 
+#popup-como-apostar{
+  .popup{
+    padding-bottom: 1rem;
+  }
+  .btn-close-popup {
+    margin-bottom: .8rem;
+  }
+  .popup-box{
+    padding-top: 1.8rem;
+    padding-bottom: 1rem;
+  }
+  .content{
+    .popup-title{
+      color: $yellow;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin: 0 0 1rem;
+      position: relative;
+    }
+    .number{
+      width: 45px;
+      margin-bottom: .6rem;
+    }
+    p{
+      font-style: italic;
+      margin-bottom: 1rem;
+      max-width: 240px;
+      font-size: .9rem;
+      min-height: 70px;
+    }
+    .step-figure{
+      margin: 0 auto;
+      width: 200px;
+    }
+    .slick-dots{
+      bottom: -18px;
+    }
+  }
+  .slider-ring{
+    .slick-arrow{
+      top: auto;
+      bottom: 6.8rem;
+      left: auto; 
+      right: 2.2rem;
+      &.slick-prev{
+        bottom: 7.4rem;
+        right: auto; 
+        left: 2.2rem;
+      }
+      &:before{
+        width: 1.87rem;
+        height: 1.87rem;
+      }
+    }
+  }
 }
