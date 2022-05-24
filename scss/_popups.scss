@@ -405,3 +405,44 @@
     }
   }
 }
+#popup-como-canjear{
+  .popup-box{
+    padding-bottom: 1.5rem;
+  }
+  .popup-title{
+    color: $white;
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .content{
+    .number{
+      margin-bottom: .8rem;
+    }
+    p{
+      min-height: 50px;
+    }
+    .step-figure{
+      margin-bottom: 1rem;
+    }
+    .btn-cta{
+      font-weight: 700;
+      width: 158px;
+      .content{
+        padding: .6rem;
+      }
+    }
+  }
+
+  .slider-ring{
+    .slick-arrow{
+      bottom: 10.4rem;
+      &.slick-prev{
+        bottom: 11rem;
+      }
+    }
+    .slick-dots{
+      bottom: -18px;
+    }
+  }
+}

@@ -424,6 +424,7 @@ table.article-table td {
   transition: all ease 0.4s;
 }
 .btn-cta:hover {
+  color: #202f44;
   border-color: #fff;
 }
 .btn-cta:hover .content {
@@ -2347,6 +2348,41 @@ ul.bet-list-futbol button.bet-tie .name {
 .popup-slider .slider-ring .slick-arrow:before {
   width: 1.87rem;
   height: 1.87rem;
+}
+
+#popup-como-canjear .popup-box {
+  padding-bottom: 1.5rem;
+}
+#popup-como-canjear .popup-title {
+  color: #fff;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#popup-como-canjear .content .number {
+  margin-bottom: 0.8rem;
+}
+#popup-como-canjear .content p {
+  min-height: 50px;
+}
+#popup-como-canjear .content .step-figure {
+  margin-bottom: 1rem;
+}
+#popup-como-canjear .content .btn-cta {
+  font-weight: 700;
+  width: 158px;
+}
+#popup-como-canjear .content .btn-cta .content {
+  padding: 0.6rem;
+}
+#popup-como-canjear .slider-ring .slick-arrow {
+  bottom: 10.4rem;
+}
+#popup-como-canjear .slider-ring .slick-arrow.slick-prev {
+  bottom: 11rem;
+}
+#popup-como-canjear .slider-ring .slick-dots {
+  bottom: -18px;
 }
 
 .form ::placeholder {

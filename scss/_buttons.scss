@@ -27,6 +27,7 @@
     transition: all ease .4s;
   }
   &:hover{
+    color: #202f44;
     border-color: $white;
     .content{
       background-color: $white;
