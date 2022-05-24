@@ -430,6 +430,13 @@ table.article-table td {
 .btn-cta:hover .content {
   background-color: #fff;
 }
+.btn-cta:disabled, .btn-cta.disabled {
+  border-color: #54648f;
+  color: rgba(255, 255, 255, 0.5);
+}
+.btn-cta:disabled .content, .btn-cta.disabled .content {
+  background-color: #54648f;
+}
 .btn-cta.btn-cta-outline {
   padding: 1rem;
   color: #fff200;

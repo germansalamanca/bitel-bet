@@ -33,6 +33,13 @@
       background-color: $white;
     }
   }
+  &:disabled, &.disabled{
+    border-color: $metallic-blue;
+    color: rgba($white, .5);
+    .content{
+      background-color: $metallic-blue;
+    }
+  }
   &.btn-cta-outline{
     padding: 1rem;
     color: $yellow;
