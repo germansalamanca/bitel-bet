@@ -293,6 +293,10 @@ table.article-table{
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     grid-gap: 1.3rem;
   }
+  &.news-grid{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: .35rem;
+  }
 }
 
 // CTA 

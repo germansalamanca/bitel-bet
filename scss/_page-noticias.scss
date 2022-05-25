@@ -1,0 +1,114 @@
+@import 'variables';
+
+section#noticias{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  .tab-list{
+    margin-bottom: 1.3rem;
+  }
+  button.tab{
+    padding: .9rem .3rem;
+    flex-grow: 1;
+  }
+}
+.card-news{
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+  .text{
+    padding: 1.5rem;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 65%);
+  }
+  .category-link{
+    display: block;
+    max-width: max-content;
+    color: #202f44;
+    font-size: 0.69rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: $teal;
+    padding: .3rem .6rem;
+    border-radius: 3rem;
+    margin-bottom: .7rem;
+    &:hover{
+      background-color: white;
+    }
+  }
+  a.post-link{
+    &:hover{
+      .post-title{
+        color: $teal;
+      }
+    }
+  }
+  .post-title{
+    font-size: 18px;
+    font-style: normal;
+    color: $white;
+    font-weight: 700;
+    max-width: 241px;
+    text-align: left;
+    margin: 0 0 1rem;
+    transition: all ease .4s;
+  }
+  .date{
+    font-size: .75rem;
+    color: $white;
+    font-weight: 500;
+  }
+  &.card-featured{
+    margin-bottom: .35rem;
+    @media (min-width: $xs){
+      min-height: 220px;
+    }
+    @media (min-width: $sm){
+      min-height: 350px;
+    }
+  }
+}
+.container-news{
+  padding: 0;
+  @media (min-width: 450px){
+    padding: 0 1.5rem;
+  }
+}
+
+.slider-news{
+  margin-bottom: .35rem;
+  .slide{
+    &:not(:last-child){
+      margin-right: .35rem;
+    }
+  }
+  .card-news{
+    min-height: 115px;
+    @media (min-width: $xs){
+      min-height: 160px;
+    }
+    .post-title{
+      font-size: .75rem;
+    }
+    .text{
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+      @media (min-width: $xs){
+        padding-bottom: 1rem;
+      }
+    }
+  }
+  .slick-track{
+    //left: -2rem;
+  }
+  .slide{
+    width: 300px;
+    @media (min-width: $sm){
+      width: 280px;
+    }
+    &:first-child{
+      //width: 90%;
+    }
+  }
+}

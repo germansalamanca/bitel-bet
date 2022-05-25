@@ -30,6 +30,16 @@ $(document).on('ready', function() {
     dots: true,
     infinite: false
   });
+  $(".slider-news").slick({
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    infinite: true,
+    centerMode: false,
+    variableWidth: true
+  });
 });
 
 function openPopup(popupSelector, display = 'flex'){

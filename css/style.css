@@ -323,6 +323,10 @@ table.article-table td {
   grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 1.3rem;
 }
+.grid.news-grid {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 0.35rem;
+}
 
 .cta-fixed {
   position: fixed;
@@ -2924,4 +2928,119 @@ section#tyc ul {
 }
 #buy-coins .buttons .btn-next-step {
   margin-bottom: 1.3rem;
+}
+
+section#noticias {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+section#noticias .tab-list {
+  margin-bottom: 1.3rem;
+}
+section#noticias button.tab {
+  padding: 0.9rem 0.3rem;
+  flex-grow: 1;
+}
+
+.card-news {
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+.card-news .text {
+  padding: 1.5rem;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7) 65%);
+}
+.card-news .category-link {
+  display: block;
+  max-width: max-content;
+  color: #202f44;
+  font-size: 0.69rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background: #06e8d2;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3rem;
+  margin-bottom: 0.7rem;
+}
+.card-news .category-link:hover {
+  background-color: white;
+}
+.card-news a.post-link:hover .post-title {
+  color: #06e8d2;
+}
+.card-news .post-title {
+  font-size: 18px;
+  font-style: normal;
+  color: #fff;
+  font-weight: 700;
+  max-width: 241px;
+  text-align: left;
+  margin: 0 0 1rem;
+  transition: all ease 0.4s;
+}
+.card-news .date {
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 500;
+}
+.card-news.card-featured {
+  margin-bottom: 0.35rem;
+}
+@media (min-width: 380px) {
+  .card-news.card-featured {
+    min-height: 220px;
+  }
+}
+@media (min-width: 576px) {
+  .card-news.card-featured {
+    min-height: 350px;
+  }
+}
+
+.container-news {
+  padding: 0;
+}
+@media (min-width: 450px) {
+  .container-news {
+    padding: 0 1.5rem;
+  }
+}
+
+.slider-news {
+  margin-bottom: 0.35rem;
+}
+.slider-news .slide:not(:last-child) {
+  margin-right: 0.35rem;
+}
+.slider-news .card-news {
+  min-height: 115px;
+}
+@media (min-width: 380px) {
+  .slider-news .card-news {
+    min-height: 160px;
+  }
+}
+.slider-news .card-news .post-title {
+  font-size: 0.75rem;
+}
+.slider-news .card-news .text {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 380px) {
+  .slider-news .card-news .text {
+    padding-bottom: 1rem;
+  }
+}
+.slider-news .slide {
+  width: 300px;
+}
+@media (min-width: 576px) {
+  .slider-news .slide {
+    width: 280px;
+  }
 }
