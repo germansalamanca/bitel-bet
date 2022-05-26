@@ -32,7 +32,33 @@
     left: 0;
   }
 }
-
+input.score{
+  color: white;
+  padding: .4rem;
+  border-radius: $br-sm;
+  background-color: $metallic-blue;
+  min-width: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+}
+.aditional-coins{
+  border: 1px solid $metallic-blue;
+  background-color: rgba(#252c40, .8);
+  border-radius: $br-sm;
+  padding: .3rem .6rem .5rem;
+  font-size: 0.92rem;
+  font-style: normal;
+  margin: -.7rem 0 2rem;
+  strong{
+    font-size: 1rem;
+    margin-right: .2rem;
+    &:after{
+      top: .2em;
+    }
+  }
+}
 .game-info{
   border: 1px solid $metallic-blue;
   border-radius: $br-md;
@@ -67,6 +93,38 @@
       color: $teal;
       display: block;
       font-weight: 500;
+    }
+  }
+  section.match-score{
+    padding-bottom: 1rem;
+    p{
+      text-align: center;
+      .with-coin{
+        &:after{
+          font-size: .9em;
+        }
+      }
+    }
+    .teams{
+      display: flex;
+      justify-content: center;
+    }
+    .team{
+      display: flex;
+      align-items: center;
+      img.team-logo{
+        object-fit: contain;
+        display: block;
+        width: 1.875rem;
+        height: 1.875rem;
+        margin: 0 .6rem;
+      }
+      .score{
+        width: 3.125rem;
+      }
+      &:first-child{
+        margin-right: 1.1rem;
+      }
     }
   }
 }

@@ -1579,6 +1579,35 @@ ul.social-menu li a:hover {
   left: 0;
 }
 
+input.score {
+  color: white;
+  padding: 0.4rem;
+  border-radius: 5px;
+  background-color: #54648f;
+  min-width: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+}
+
+.aditional-coins {
+  border: 1px solid #54648f;
+  background-color: rgba(37, 44, 64, 0.8);
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem 0.5rem;
+  font-size: 0.92rem;
+  font-style: normal;
+  margin: -0.7rem 0 2rem;
+}
+.aditional-coins strong {
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+.aditional-coins strong:after {
+  top: 0.2em;
+}
+
 .game-info {
   border: 1px solid #54648f;
   border-radius: 10px;
@@ -1615,6 +1644,36 @@ ul.social-menu li a:hover {
   color: #06e8d2;
   display: block;
   font-weight: 500;
+}
+.game-info section.match-score {
+  padding-bottom: 1rem;
+}
+.game-info section.match-score p {
+  text-align: center;
+}
+.game-info section.match-score p .with-coin:after {
+  font-size: 0.9em;
+}
+.game-info section.match-score .teams {
+  display: flex;
+  justify-content: center;
+}
+.game-info section.match-score .team {
+  display: flex;
+  align-items: center;
+}
+.game-info section.match-score .team img.team-logo {
+  object-fit: contain;
+  display: block;
+  width: 1.875rem;
+  height: 1.875rem;
+  margin: 0 0.6rem;
+}
+.game-info section.match-score .team .score {
+  width: 3.125rem;
+}
+.game-info section.match-score .team:first-child {
+  margin-right: 1.1rem;
 }
 
 .your-bet-values {
