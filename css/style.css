@@ -2335,9 +2335,10 @@ ul.bet-list-futbol button.bet-tie .name {
   z-index: 20;
   transition: all ease 0.23s;
 }
-#como-apostar a {
+#como-apostar button:not(.btn-close-popup) {
   position: relative;
   z-index: 10;
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2345,8 +2346,9 @@ ul.bet-list-futbol button.bet-tie .name {
   background-size: 100%;
   width: 100%;
   height: 100%;
+  transition: all ease 0.3s;
 }
-#como-apostar a:hover {
+#como-apostar button:not(.btn-close-popup):hover {
   transform: scale(110%);
 }
 #como-apostar .btn-close-popup {

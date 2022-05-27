@@ -41,6 +41,19 @@ $(document).on('ready', function() {
     variableWidth: true
   });
 });
+function reSlick(selector){
+  $(selector).slick('unslick');
+  setTimeout(()=>{
+    $(selector).slick({
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      infinite: false
+    });
+  }, 10)
+}
 
 function openPopup(popupSelector, display = 'flex'){
   const popup = document.querySelector(popupSelector)

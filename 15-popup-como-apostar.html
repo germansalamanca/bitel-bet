@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <title>Popup Cómo Apostar</title>
 </head>
-<body class="overlayed">
+<body>
   <div class="page">
     <header id="header" class="header-transparent">
       <div class="header-content">
@@ -31,7 +31,7 @@
  
     </main>
     <!-- Remove inline display flex -->
-    <div id="popup-como-apostar" class="overlay popup-overlay popup-slider" onclick="closePopup(this, event)" style="display: flex; opacity: 1">
+    <div id="popup-como-apostar" class="overlay popup-overlay popup-slider" onclick="closePopup(this, event)">
       <div id="" class="popup">
         <button class="btn btn-close-popup" aria-label="cerrar"></button>
         <div class="popup-box">
@@ -66,6 +66,12 @@
         </div>
       </div>
     </div>
+    <div id="como-apostar">
+      <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#como-apostar')"></button>
+      <button onClick="openPopup('#popup-como-apostar', 'flex', reSlick('.slider-ring'))">
+        <div class="text">¿Cómo apostar?</div>
+      </button>
+    </div>
     <footer id="footer" class="page-footer">
       <div class="content">
         <div class="top">
@@ -95,6 +101,7 @@
       </div>
     </footer>
   </div><!-- .page -->
+
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="./js/functions.js" type="text/javascript" charset="utf-8"></script>
