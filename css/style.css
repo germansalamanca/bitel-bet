@@ -1697,21 +1697,18 @@ input.score {
 .your-bet-values .left {
   border-right: 1px dotted #54648f;
 }
-.your-bet-values .left .number {
-  font-size: 1rem;
-  background: #54648f;
-  border-radius: 5px;
-  display: block;
-  padding: 0.4rem 0.3rem;
-  max-width: 50px;
-  margin: 0.4rem auto 0;
+.your-bet-values .left .input-wrapper {
+  display: inline-flex;
+  align-items: center;
 }
-.your-bet-values .left .number:after {
-  position: absolute;
-  width: 0.94rem;
-  height: 0.94rem;
-  top: 0.5em;
-  margin-left: 1.2rem;
+.your-bet-values .left p {
+  margin: 0 0 0.4rem;
+}
+.your-bet-values .left input.score {
+  max-width: 50px;
+}
+.your-bet-values .left .with-coin {
+  top: -0.18em;
 }
 .your-bet-values .right .number {
   display: block;

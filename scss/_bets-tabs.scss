@@ -148,21 +148,18 @@ input.score{
   }
   .left{
     border-right: 1px dotted $metallic-blue;
-    .number{
-      font-size: 1rem;
-      background: $metallic-blue;
-      border-radius: $br-sm;
-      display: block;
-      padding: .4rem .3rem;
+    .input-wrapper{
+      display: inline-flex;
+      align-items: center;
+    }
+    p{
+      margin: 0 0 .4rem;
+    }
+    input.score{
       max-width: 50px;
-      margin: .4rem auto 0;
-      &:after{
-        position: absolute;
-        width: 0.94rem;
-        height: 0.94rem;
-        top: .5em;
-        margin-left: 1.2rem;
-      }
+    }
+    .with-coin{
+      top: -.18em;
     }
   }
   .right{
