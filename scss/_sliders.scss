@@ -4,6 +4,10 @@
   .slide{
     overflow: hidden;
     border-radius: 0 0 46px 46px;
+    display: none;
+    &.slick-slide{
+      display: block;
+    }
     & > a{
       display: block;
       & > img{

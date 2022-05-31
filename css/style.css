@@ -1092,6 +1092,10 @@ ul.social-menu li a:hover {
 .slider .slide {
   overflow: hidden;
   border-radius: 0 0 46px 46px;
+  display: none;
+}
+.slider .slide.slick-slide {
+  display: block;
 }
 .slider .slide > a {
   display: block;
