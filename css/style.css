@@ -1730,6 +1730,13 @@ input.score {
   margin-bottom: 1rem;
 }
 
+.no-bets {
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 1rem 2rem;
+  font-size: 0.8rem;
+}
+
 ul.bet-list {
   list-style: none;
   padding: 0;
