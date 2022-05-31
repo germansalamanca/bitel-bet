@@ -1918,8 +1918,8 @@ ul.bet-list-futbol button.bet-team.selected:after {
   width: 1rem;
   height: 1rem;
   position: absolute;
-  background-color: #202f44;
-  background-image: radial-gradient(circle at 0 0, #fff, #a436ff);
+  background: url(../img/icon-select-bet-option.png) no-repeat;
+  background-size: 100%;
   bottom: -0.5rem;
   left: calc(50% - 0.5rem);
   pointer-events: none;
@@ -1985,15 +1985,8 @@ ul.bet-list-futbol button.bet-tie .name {
   margin-left: 0.3rem;
 }
 .bet-score header p .ammount:after {
-  content: url(../);
-  display: inline-block;
-  position: relative;
-  bottom: -0.14rem;
-  left: 0.32rem;
-  width: 0.9375rem;
-  height: 0.9375rem;
-  background-color: #fff200;
-  border-radius: 1rem;
+  font-size: 0.8rem;
+  top: 0.38em;
 }
 .bet-score .content {
   padding: 0.9rem 1.2rem;

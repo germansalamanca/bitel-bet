@@ -223,8 +223,8 @@ ul.bet-list-futbol{
         width: 1rem;
         height: 1rem;
         position: absolute;
-        background-color: #202f44;
-        background-image: radial-gradient(circle at 0 0, #fff, #a436ff);
+        background: url(../img/icon-select-bet-option.png) no-repeat;
+        background-size: 100%;
         bottom: -.5rem;
         left: calc(50% - .5rem);
         pointer-events: none;
@@ -290,15 +290,8 @@ ul.bet-list-futbol{
         font-size: 1rem;
         margin-left: .3rem;
         &:after{
-          content: url(../);
-          display:inline-block;
-          position: relative;
-          bottom: -0.14rem;
-          left: .32rem;
-          width: .9375rem;
-          height: .9375rem;
-          background-color: $yellow;
-          border-radius: 1rem;
+          font-size: .8rem;
+          top: .38em;
         }
       }
     }
