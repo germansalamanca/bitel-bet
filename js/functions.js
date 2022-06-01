@@ -168,4 +168,31 @@ window.onload = ()=>{
       updateSize()
     },true
   );
+  if(document.querySelector('.bet-team')){
+    const buttons = document.querySelectorAll('.bet-team')
+    for(let button of Object.values(buttons)){
+      button.addEventListener('click', ()=>{
+        let parentItem = button.closest(".bet-item")
+        if(button.classList.contains('selected')){
+          button.classList.remove('selected')
+          // Handle Esports check icon
+          parentItem.classList.remove('has-selected')
+          parentItem.classList.remove('has-selected-right')
+        }else{
+          let parentOptions = button.closest(".bet-options").querySelectorAll('.bet-team')
+          for(let option of Object.values(parentOptions)){
+            option.classList.remove('selected')
+          }
+          button.classList.add('selected')
+          // Handle Esports check icon
+          parentItem.classList.add('has-selected')
+          if(parentItem.querySelector('.bet-team:last-child').classList.contains('selected')){
+            parentItem.classList.add('has-selected-right')
+          }else{
+            parentItem.classList.remove('has-selected-right')
+          }
+        }
+      })
+    }
+  }
 }

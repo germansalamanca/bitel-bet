@@ -1783,6 +1783,22 @@ header.bet-heading .bet-status {
 /*---- ESPORTS BET LIST ----*/
 ul.bet-list-esports .bet-item {
   margin-bottom: 1.8rem;
+  position: relative;
+}
+ul.bet-list-esports .bet-item.has-selected:after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  background: url(../img/icon-select-bet-option.png) no-repeat;
+  background-size: 100%;
+  bottom: -0.5rem;
+  left: calc(25% - 0.5rem);
+  pointer-events: none;
+  border-radius: 1rem;
+}
+ul.bet-list-esports .bet-item.has-selected.has-selected-right:after {
+  left: calc(75% - 0.5rem);
 }
 ul.bet-list-esports .bet-options {
   display: flex;
@@ -1842,6 +1858,9 @@ ul.bet-list-esports button.bet-team:last-child .content .value {
 }
 ul.bet-list-esports button.bet-team:after {
   transform: skew(30deg);
+}
+ul.bet-list-esports button.bet-team.selected {
+  background: radial-gradient(#d166ff, #a436ff);
 }
 ul.bet-list-esports .bet-item.status-closing .bet-options {
   padding-bottom: 1px;
