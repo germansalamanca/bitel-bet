@@ -168,6 +168,8 @@ window.onload = ()=>{
       updateSize()
     },true
   );
+
+  // Set selected status on bet buttons
   if(document.querySelector('.bet-team')){
     const buttons = document.querySelectorAll('.bet-team')
     for(let button of Object.values(buttons)){

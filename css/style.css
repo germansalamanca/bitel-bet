@@ -363,6 +363,7 @@ table.article-table td {
   bottom: 0;
   z-index: 40;
   pointer-events: none;
+  opacity: 0.6;
 }
 
 /*---- Ads ----*/
@@ -2768,6 +2769,20 @@ table.user-info td.suscription a {
   background: #fff url(../img/icon-user-premium.svg);
   position: absolute;
   border-radius: 2rem;
+}
+
+.cta-bet-now {
+  position: sticky;
+  width: 210px;
+  bottom: 1rem;
+  left: calc(50% - 105px);
+  z-index: 40;
+  margin-bottom: -1.6rem;
+}
+
+.overlay-bet-now {
+  width: 100vw;
+  left: 0;
 }
 
 #page-que-es-bitel {
