@@ -1,0 +1,14 @@
+@import 'variables';
+
+.cta-bet-now{
+  position: sticky;
+  width: 210px;
+  bottom: 1rem;
+  left: calc(50% - 105px);
+  z-index: 40;
+  margin-bottom: -1.6rem;
+}
+.overlay-bet-now{
+  width: 100vw;
+  left: 0;
+}
