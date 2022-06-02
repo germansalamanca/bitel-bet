@@ -737,6 +737,42 @@ table.article-table td {
   transform: scale(1.2);
 }
 
+.btn-grad {
+  background-image: radial-gradient(circle at 50% 0, #06e8d2, #00a5b1 60%), linear-gradient(100deg, #06e8d2, rgba(255, 255, 255, 0));
+  border: 1px solid #10cab8;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  overflow: hidden;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+}
+.btn-grad:hover {
+  filter: brightness(1.15);
+}
+
+.btn-icon {
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 0.8125rem;
+}
+.btn-icon .text {
+  margin-right: 1rem;
+}
+.btn-icon .icon {
+  flex-shrink: 0;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1rem;
+}
+.btn-icon .icon.icon-arrow-left {
+  background-image: url(../img/icon-arrow-circle.png);
+}
+
 .bet-value {
   display: flex;
   justify-content: center;
@@ -905,6 +941,24 @@ table.article-table td {
 .game-results .ammount .with-coin:after {
   font-size: 0.7rem;
   top: 0.55em;
+}
+
+input.score {
+  color: white;
+  padding: 0.4rem;
+  border-radius: 5px;
+  background-color: #54648f;
+  min-width: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+}
+input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 #header {
@@ -1275,6 +1329,9 @@ ul.social-menu li a:hover {
   padding: 0.4rem;
   box-shadow: 0 16px 70px rgba(0, 0, 0, 0.9411764706);
 }
+.main-tabs-wrapper.cyr-tabs-wrapper {
+  box-shadow: none;
+}
 
 .main-tabs {
   display: flex;
@@ -1486,6 +1543,12 @@ ul.social-menu li a:hover {
 .tab-list-slider .options-wrapper {
   width: max-content;
 }
+.tab-list-slider.date-tabs .more {
+  background-image: linear-gradient(to right, rgba(42, 50, 72, 0), #2a3248 78%) !important;
+}
+.tab-list-slider.date-tabs .tab span {
+  display: block;
+}
 
 /*---- BLOCK TABS ----*/
 .tabs-block {
@@ -1532,6 +1595,10 @@ ul.social-menu li a:hover {
   padding: 0.65rem 0.65rem 1rem 0.65rem;
   border-radius: 10px;
   min-height: 3rem;
+}
+
+.event-tabs-content {
+  padding-top: 0.8rem;
 }
 
 .fake-tab {
@@ -1582,18 +1649,6 @@ ul.social-menu li a:hover {
 }
 .bets-tabs-content .cta-fixed {
   left: 0;
-}
-
-input.score {
-  color: white;
-  padding: 0.4rem;
-  border-radius: 5px;
-  background-color: #54648f;
-  min-width: 50px;
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  border: none;
 }
 
 .aditional-coins {
@@ -2038,18 +2093,103 @@ ul.bet-list-futbol button.bet-tie .name {
     max-width: 210px;
   }
 }
-.bet-score .content input[type=text] {
+.bet-score .content input {
   flex-shrink: 0;
-  color: #fff;
   max-width: 3rem;
-  font-size: 16px;
-  font-weight: 700;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+ul.event-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.event-list li.event-item {
+  display: block;
+}
+ul.event-list li.event-item header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-style: italic;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+ul.event-list li.event-item header .event-title {
+  margin-right: 0.6rem;
+}
+ul.event-list li.event-item header .event-date {
+  color: #06e8d2;
+  text-align: right;
+  margin-left: auto;
+}
+ul.event-list li.event-item:not(:last-child) {
+  margin-bottom: 1.3rem;
+}
+
+button.btn-event {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0.5rem 0.6rem;
+}
+button.btn-event .team {
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+button.btn-event .team .text {
+  margin-left: 0.5rem;
+}
+button.btn-event .team .score {
+  display: block;
+  max-width: max-content;
+  min-width: 3rem;
+  border: 1px solid #fff;
+  border-radius: 1rem;
+  padding: 0.1rem 0.2rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
   text-align: center;
-  padding: 0.3rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #54648f;
+  margin-top: 0.4rem;
+  text-shadow: none;
+}
+button.btn-event .team:last-child {
+  text-align: right;
+}
+button.btn-event .team:last-child .text {
+  margin: 0 0.5rem 0 0;
+  text-align: right;
+}
+button.btn-event .team:last-child .score {
+  margin-left: auto;
+}
+button.btn-event .team img.team-logo {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+button.btn-event .center {
+  flex-shrink: 0;
+  margin: 0 0.7rem;
+}
+button.btn-event .center .date {
+  display: block;
+  font-size: 12px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  margin-bottom: 0.25rem;
+}
+button.btn-event .center .hourdate {
+  background: #fff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  color: #323d59;
+  display: block;
+  text-shadow: none;
+  font-size: 0.77rem;
+  font-weight: 700;
 }
 
 .popup-overlay {
@@ -2267,7 +2407,7 @@ ul.bet-list-futbol button.bet-tie .name {
   width: 100%;
   height: 100%;
   z-index: 50;
-  overflow-y: scroll;
+  overflow-y: auto;
   opacity: 0;
   display: none;
   transition: all ease 0.5s;
@@ -2299,6 +2439,12 @@ ul.bet-list-futbol button.bet-tie .name {
   font-weight: 500;
   font-size: 1rem;
   margin: 0 0 1.5rem 0;
+}
+.modal .modal-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin: 0 0 2rem;
 }
 .modal > .content {
   max-width: 500px;
@@ -2509,6 +2655,55 @@ ul.bet-list-futbol button.bet-tie .name {
 }
 #login-form input.number {
   margin-bottom: 1rem;
+}
+
+.date-filter {
+  background: rgba(31, 37, 53, 0.48);
+  border: solid 1px #54648f;
+  border-radius: 10px;
+  padding: 0.8rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-filter form {
+  display: flex;
+  width: 100%;
+}
+.date-filter form .from {
+  margin-right: 1rem;
+  width: 50%;
+}
+.date-filter form .to {
+  width: 50%;
+}
+.date-filter form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  font-style: normal;
+}
+.date-filter form input {
+  background: #54648f;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.4rem 0.4rem 0.4rem;
+  border-radius: 5px;
+  font-family: "Exo 2", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  -webkit-appearance: none;
+}
+.date-filter form input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.date-filter .icon {
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../img/icon-calendar.svg);
+  flex-shrink: 0;
+  display: none;
 }
 
 ul.menu {
@@ -3139,4 +3334,37 @@ section#noticias button.tab {
   .slider-news .slide {
     width: 280px;
   }
+}
+#page-cronogramas-y-rankings .cyr-tabs-wrapper {
+  padding-bottom: 1.3rem;
+}
+#page-cronogramas-y-rankings .cyr-tabs-wrapper .btn-icon:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+
+.league-name {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+.league-name img.league-logo {
+  margin-right: 0.6rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: block;
+  object-fit: contain;
+}
+
+#cronogramas .content {
+  padding-top: 0.2rem;
+}
+#cronogramas .date-filter {
+  margin: 0 auto 1.5rem;
+}
+#cronogramas .current-date {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.1rem;
 }
