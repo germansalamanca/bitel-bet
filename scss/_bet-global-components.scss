@@ -177,3 +177,20 @@
     }
   }
 }
+input.score{
+  color: white;
+  padding: .4rem;
+  border-radius: $br-sm;
+  background-color: $metallic-blue;
+  min-width: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}

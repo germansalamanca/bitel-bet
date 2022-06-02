@@ -5,6 +5,9 @@
   border-radius: $br-lg;
   padding: .4rem;
   box-shadow: 0 16px 70px #000000f0;
+  &.cyr-tabs-wrapper{
+    box-shadow: none;
+  }
 }
 .main-tabs{
   display: flex;
@@ -219,7 +222,18 @@
   .options-wrapper{
     width: max-content;
   }
+  &.date-tabs{
+    .more{
+      background-image: linear-gradient(to right, rgba($dark, 0), $dark 78%) !important;
+    }
+    .tab{
+      span{
+        display: block;
+      }
+    }
+  }
 }
+
 
 /*---- BLOCK TABS ----*/
 .tabs-block{
@@ -264,6 +278,9 @@
   padding: .65rem .65rem 1rem .65rem;
   border-radius: $br-md;
   min-height: 3rem;
+}
+.event-tabs-content{
+  padding-top: .8rem;
 }
 
 .fake-tab{

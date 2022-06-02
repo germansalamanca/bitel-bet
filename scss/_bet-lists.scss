@@ -338,18 +338,10 @@ ul.bet-list-futbol{
         max-width: 210px;
       }
     }
-    input[type=text]{
+    input{
       flex-shrink: 0;
-      color: $white;
       max-width: 3rem;
-      font-size: 16px;
-      font-weight: 700;
       text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-      text-align: center;
-      padding: .3rem;
-      border-radius: $br-sm;
-      border: none;
-      background-color: $metallic-blue;
     }
   }
 }

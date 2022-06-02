@@ -1,0 +1,29 @@
+@import 'variables';
+
+.league-name{
+  display: flex;
+  align-items: center;
+  font-size: .875rem;
+  font-style: normal;
+  margin-bottom: 1rem;
+  img.league-logo{
+    margin-right: .6rem;
+    width: 1.875rem;
+    height: 1.875rem;
+    display: block;
+    object-fit: contain;
+  }
+}
+#cronogramas{
+  .content{
+    padding-top: .2rem;
+  }
+  .date-filter{
+    margin: 0 auto 1.5rem;
+  }
+  .current-date{
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 1.1rem;
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,500;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <title>Cronogramas Esports</title>
+</head>
+<body class="overlayed">
+  <div class="page" style="min-height: 100vh;">
+    <header id="header" class="header-transparent">
+      <div class="header-content">
+        <button id="menu-toggler" class="btn" aria-label="Menú principal" onclick="openPopup('#main-menu-wrapper')"></button>
+        <figure class="logo">
+          <a href="#">
+            <img src="./img/logo-bitel-bet.png" alt="Inicio">
+          </a>
+        </figure>
+        <a href="#" class="user-link user-link-premium btn">
+          <div class="user-icon"></div>
+        </a>
+      </div>
+    </header>
+    <main>
+ 
+    </main>
+    <div id="cronogramas" class="modal-wrapper" style="display: flex; opacity: 1">
+      <div class="modal bitel-bg-topglow">
+        <button class="btn btn-close-popup sm" aria-label="cerrar" onclick="closePopup('#cronogramas')"></button>
+        <div class="content pb-1">
+          <h2 class="modal-title">Cronogramas</h2>
+          <div class="date-filter">
+            <form action="">
+              <div class="from">
+                <label for="date-from">Fecha desde</label>
+                <input type="date" id="date-from">
+              </div>
+              <div class="to">
+                <label for="date-to">Fecha hasta:</label>
+                <input type="date" id="date-to">
+              </div>
+            </form>
+            <span class="icon"></span>
+          </div>
+          <div class="current-date">09 de Abril, 2022 - 14 de Abril, 2022</div>
+
+          <div class="date-tabs tab-list tab-list-slider">
+            <div class="tabs-scroll">
+              <div class="options-wrapper">
+                <button class="tab btn date-tabs-group active" onclick="showTabContent(this, '#day-1', 'date-tabs-group')">
+                  SÁB<span>09</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-2', 'date-tabs-group')">
+                  DOM<span>10</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-3', 'date-tabs-group')">
+                  LUN<span>11</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-4', 'date-tabs-group')">
+                  MAR<span>12</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-5', 'date-tabs-group')">
+                  MIÉ<span>13</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-6', 'date-tabs-group')">
+                  JUE<span>14</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-7', 'date-tabs-group')">
+                  VIE<span>15</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-8', 'date-tabs-group')">
+                  SÁB<span>16</span>
+                </button>
+              </div>
+            </div>
+            <div class="more">
+              <button class="btn" aria-label="más"></button>
+            </div>
+          </div><!-- .date-tabs -->
+          <div id="day-1" class="tab-content event-tabs-content date-tabs-group active">
+            <ul class="event-list">
+              <li class="event-item">
+                <header>
+                  <div class="event-title">PGL Major Antwerp 2022: European RM </div>
+                  <div class="event-date">Jornada 7 de 12</div>
+                </header>
+                <button class="btn btn-event btn-grad">
+                  <div class="team left">
+                    <img src="./img/logos/logo-team-alianza.svg" alt="Team Name" class="team-logo">
+                    <div class="text">Invictus Gaming</div>
+                  </div>
+                  <div class="center">
+                    <span class="date">17/04</span>
+                    <span class="hourdate">11:00 PM</span>
+                  </div>
+                  <div class="team right">
+                    <div class="text">Invictus Gam</div>
+                    <img src="./img/logos/logo-invictus.png" alt="Invictus Gaming" class="team-logo">
+                  </div>
+                </button>
+              </li>
+              <li class="event-item">
+                <header>
+                  <div class="event-title">PGL Major Antwerp 2022: European RM </div>
+                  <div class="event-date">Jornada 7 de 12</div>
+                </header>
+                <button class="btn btn-event btn-grad">
+                  <div class="team left">
+                    <img src="./img/logos/logo-invictus.png" alt="Team Name" class="team-logo">
+                    <div class="text">Invictus Gaming
+                      <span class="score">9</span>
+                    </div>
+                  </div>
+                  <div class="center">
+                    <span class="hourdate">09/04</span>
+                  </div>
+                  <div class="team right">
+                    <div class="text">Team liquid
+                      <span class="score">12</span>
+                    </div>
+                    <img src="./img/logos/logo-team-u.svg" alt="Invictus Gaming" class="team-logo">
+                  </div>
+                </button>
+              </li>
+              <li class="event-item">
+                <header>
+                  <div class="event-title">PGL Major Antwerp 2022: European RM </div>
+                  <div class="event-date">Jornada 7 de 12</div>
+                </header>
+                <button class="btn btn-event btn-grad">
+                  <div class="team left">
+                    <img src="./img/logos/logo-team-u.svg" alt="Team Name" class="team-logo">
+                    <div class="text">Invictus Gaming</div>
+                  </div>
+                  <div class="center">
+                    <span class="date">17/04</span>
+                    <span class="hourdate">11:00 PM</span>
+                  </div>
+                  <div class="team right">
+                    <div class="text">Invictus Gam</div>
+                    <img src="./img/logos/logo-invictus.png" alt="Invictus Gaming" class="team-logo">
+                  </div>
+                </button>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="page-footer">
+      <div class="content">
+        <div class="top">
+          <figure class="footer-logo">
+            <a href="#">
+              <img src="./img/logo-bitel-bet.png" alt="Inicio">
+            </a>
+          </figure>
+          <nav class="social-nav">
+            <ul class="menu social-menu">
+              <li>
+                <a href="#" class="icon icon-social icon-fb" aria-label="Facebook"></a>
+              </li>
+              <li>
+                <a href="#" class="icon icon-social icon-ig" aria-label="Instagram"></a>
+              </li>
+              <li>
+                <a href="#" class="icon icon-social icon-yt" aria-label="Youtube"></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="bottom">
+          <a href="#" class="arrow-link">Términos y condiciones</a>
+        </div>
+        <button id="btn-btt" class="btn" aria-label="Volver arriba"></button>
+      </div>
+    </footer>
+  </div><!-- .page -->
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="./assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="./js/functions.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
