@@ -268,9 +268,26 @@
   }
 }
 .tab-content{
-  display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  display: block;
+  position: relative;
+  z-index: -9999;
+  pointer-events: none;
+  //display: none;
+  overflow: hidden;
+  content-visibility: nnone;
   &.active{
-    display: block;
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+    pointer-events: all;
+    transform: none;
+    //display: block;
   }
 }
 .tabs-block-contents{

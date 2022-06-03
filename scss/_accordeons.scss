@@ -1,0 +1,111 @@
+@import 'variables';
+
+ul.accordeon{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li.accord-item{
+    margin-bottom: 0;
+    display: block;
+    &:not(:last-child){
+      margin-bottom: 1.2rem;
+    }
+    &.active{
+      .accord-btn{
+        .icon{
+          transform: rotate(180deg);
+        }
+      }
+      .accord-content{
+        margin-top: -$br-md;
+        .flow{
+          margin-top: 0 !important;
+        }
+      }
+    }
+  }
+  .accord-btn{
+    position: relative;
+    z-index: 2;
+    padding: .7rem;
+    margin-bottom: 0 !important;
+    .left{
+      display: flex;
+      align-items: center;
+    }
+    .flag{
+      flex-shrink: 0;
+      margin-right: .8rem;
+      width: 2.1875rem;
+      height: 2.1875rem;
+      display: block;
+      object-fit: contain;
+    }
+    .icon{
+      transition: all ease .4s;
+      background-color: $white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:after{
+        content: '';
+        display: block;
+        width: .6rem;
+        height: .6rem;
+        border: 2px solid #1e9ca4;
+        border-top: none;
+        border-left: none;
+        transform: rotate(45deg) scale(.7);
+        position: relative;
+        bottom: .1rem;
+
+      }
+    }
+  }
+  .accord-content{
+    overflow: hidden;
+    position: relative;
+    margin-top: 0;
+    transition: all ease .6s;
+    .flow{
+      transition: all ease .6s;
+    }
+  }
+}
+
+
+ul.options-list{
+  position: relative;
+  z-index: 1;
+  border: 1px dotted rgba(#54648f, 0.8);
+  border-top: none;
+  border-radius: 0 0 $br-md $br-md;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  li.option{
+    margin: 0;
+    &:not(:last-child){
+      border-bottom: 1px dotted rgba(#54648f, 0.8);
+    }
+    &:first-child{
+      .option-btn{
+        padding-top: 1.2rem
+      }
+    }
+    .option-btn{
+      margin: 0;
+      display: block;
+      font-size: 14px;
+      color: $white;
+      background-color: rgba(#202f44, 0.5);
+      width: 100%;
+      padding: .7rem 1rem .7rem;
+      &:hover{
+        background-color: lighten(#202f44, 8);
+      }
+    }
+  }
+}

@@ -1584,10 +1584,25 @@ ul.social-menu li a:hover {
 }
 
 .tab-content {
-  display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+  transform: scaleY(0);
+  display: block;
+  position: relative;
+  z-index: -9999;
+  pointer-events: none;
+  overflow: hidden;
+  content-visibility: nnone;
 }
 .tab-content.active {
-  display: block;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+  pointer-events: all;
+  transform: none;
 }
 
 .tabs-block-contents {
@@ -3341,7 +3356,6 @@ section#noticias button.tab {
 #page-cronogramas-y-rankings .cyr-tabs-wrapper .btn-icon:not(:last-child) {
   margin-bottom: 1.2rem;
 }
-
 .league-name {
   display: flex;
   align-items: center;
@@ -3367,4 +3381,106 @@ section#noticias button.tab {
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 1.1rem;
+}
+
+ul.accordeon {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.accordeon li.accord-item {
+  margin-bottom: 0;
+  display: block;
+}
+ul.accordeon li.accord-item:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+ul.accordeon li.accord-item.active .accord-btn .icon {
+  transform: rotate(180deg);
+}
+ul.accordeon li.accord-item.active .accord-content {
+  margin-top: -10px;
+}
+ul.accordeon li.accord-item.active .accord-content .flow {
+  margin-top: 0 !important;
+}
+ul.accordeon .accord-btn {
+  position: relative;
+  z-index: 2;
+  padding: 0.7rem;
+  margin-bottom: 0 !important;
+}
+ul.accordeon .accord-btn .left {
+  display: flex;
+  align-items: center;
+}
+ul.accordeon .accord-btn .flag {
+  flex-shrink: 0;
+  margin-right: 0.8rem;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  display: block;
+  object-fit: contain;
+}
+ul.accordeon .accord-btn .icon {
+  transition: all ease 0.4s;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.accordeon .accord-btn .icon:after {
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 2px solid #1e9ca4;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) scale(0.7);
+  position: relative;
+  bottom: 0.1rem;
+}
+ul.accordeon .accord-content {
+  overflow: hidden;
+  position: relative;
+  margin-top: 0;
+  transition: all ease 0.6s;
+}
+ul.accordeon .accord-content .flow {
+  transition: all ease 0.6s;
+}
+
+ul.options-list {
+  position: relative;
+  z-index: 1;
+  border: 1px dotted rgba(84, 100, 143, 0.8);
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 0;
+}
+ul.options-list li.option {
+  margin: 0;
+}
+ul.options-list li.option:not(:last-child) {
+  border-bottom: 1px dotted rgba(84, 100, 143, 0.8);
+}
+ul.options-list li.option:first-child .option-btn {
+  padding-top: 1.2rem;
+}
+ul.options-list li.option .option-btn {
+  margin: 0;
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  background-color: rgba(32, 47, 68, 0.5);
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem;
+}
+ul.options-list li.option .option-btn:hover {
+  background-color: #2d4260;
 }

@@ -197,4 +197,30 @@ window.onload = ()=>{
       })
     }
   }
+
+  //Accordeons
+  if(document.querySelector('.accord-btn')){
+    const accordButtons = document.querySelectorAll('.accord-btn')
+    for(let button of Object.values(accordButtons)){
+      button.addEventListener('click', (e)=>{
+        let clickedItem = button.closest('.accord-item')
+        let allItems = button.closest('.accordeon').querySelectorAll('.accord-item')
+        if(clickedItem.classList.contains('active')){
+          clickedItem.classList.remove('active')
+        }else{
+          for(let item of Object.values(allItems)){
+            if(item == clickedItem){
+              item.classList.add('active')
+            }else{
+              item.classList.remove('active')
+            }
+          }
+        }
+      })
+    }
+    const contentFlows = document.querySelectorAll('.accordeon .flow')
+    for(let flow of Object.values(contentFlows)){
+      flow.style.marginTop = `-${flow.offsetHeight}px`
+    }
+  }
 }
