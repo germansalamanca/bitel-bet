@@ -17,6 +17,13 @@
   .slider-circle{
     margin-bottom: 2.6rem;
   }
+  .slider-ring{
+    .slick-arrow{
+      &.slick-next{
+        right: -.03rem;
+      }
+    }
+  }
 }
 section#que-es-bitel{
   padding: 2.4rem 0 3rem;

@@ -3013,6 +3013,9 @@ table.user-info td.suscription a {
 #page-que-es-bitel .slider-circle {
   margin-bottom: 2.6rem;
 }
+#page-que-es-bitel .slider-ring .slick-arrow.slick-next {
+  right: -0.03rem;
+}
 
 section#que-es-bitel {
   padding: 2.4rem 0 3rem;
