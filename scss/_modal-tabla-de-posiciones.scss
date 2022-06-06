@@ -1,7 +1,6 @@
 @import 'variables';
 
-
-#cronogramas{
+.modal-pos-table{
   .content{
     padding-top: .2rem;
   }
@@ -12,5 +11,11 @@
     font-size: 1rem;
     font-style: italic;
     margin-bottom: 1.1rem;
+  }
+  .pos-table{
+    margin-bottom: 1.3rem;
+  }
+  .get-premium-text{
+    font-size: .875rem;
   }
 }

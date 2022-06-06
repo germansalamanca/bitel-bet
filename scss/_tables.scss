@@ -1,0 +1,105 @@
+@import 'variables';
+
+.table-team{
+  display: inline-flex;
+  align-items: center;
+  .pos{
+    margin-right: .5rem;
+    opacity: 0.6;
+    min-width: .4rem;
+  }
+  img{
+    flex-shrink: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .3rem;
+    object-fit: contain;
+  }
+  .text{
+    font-weight: 700;
+  }
+}
+.table-name{
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+}
+
+.table{
+  font-style: normal;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+  thead{
+    border-bottom: 1px solid #1f2535;
+  }
+  tbody{
+  }
+  th, td{
+    text-align: center;
+    vertical-align: middle;
+  }
+  th{
+    font-weight: 600;
+    padding: .55rem;
+    border: none !important;
+    border-collapse: collapse;
+    background-color: rgba($white, .2);
+  }
+  td{
+    font-weight: 500;
+    padding: .3rem;
+    background-color: rgba($white, .1);
+    &:not(:last-child){
+      border-right: 1px solid #1f2535;
+    }
+    &.border-r{
+      border-right: 1px solid #1f2535 !important;
+    }
+  }
+  .with-coin{
+    position: relative;
+    top: -.25em;
+    &:after{
+      font-size: .85em;
+      width: 1em;
+      top: .8em;
+    }
+  }
+  &.table-bet-details{
+    border-radius: 0;
+    border-spacing: 0px 2px;
+    border-collapse: separate;
+    td{
+      text-align: left;
+      padding: .55rem .8rem;
+      &:not(:last-child){
+        border: none;
+      }
+    }
+  }
+  &.pos-table{
+    td{
+      border-right: none;
+      &:first-child{
+        padding-left: .5rem;
+        border-right: 1px solid #1f2535;
+      }
+      &:last-child{
+        border-left: 1px solid #1f2535;
+      }
+    }
+    tbody{
+      &:not(:last-child){
+        border-bottom: 1px solid #1f2535;
+      }
+    }
+  }
+}

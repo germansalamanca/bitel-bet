@@ -48,12 +48,16 @@ img {
   color: #fff200;
 }
 
+.green {
+  color: #a2ff72;
+}
+
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .bg-dark {
@@ -86,6 +90,13 @@ h1, h2, h3, h4, h5, h6 {
   border-left: none;
   padding: 0 1.3rem 1.3rem;
   background-position: right bottom;
+  background-image: linear-gradient(to right, #06e8d2, #fff200 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text {
   background-image: linear-gradient(to right, #06e8d2, #fff200 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -217,6 +228,29 @@ table.article-table td {
   background: #2a3248 url(../img/bg-hl-popup.png) no-repeat;
   background-position: center top;
   background-size: 100%;
+}
+
+.bg-waves-bottom {
+  overflow: hidden;
+}
+.bg-waves-bottom:after {
+  content: "";
+  width: 100%;
+  height: 10rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10vw;
+  pointer-events: none;
+  background: url(../img/bg-page-bottom.png) no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  z-index: 0;
+}
+@media (min-width: 576px) {
+  .bg-waves-bottom:after {
+    display: none;
+  }
 }
 
 .container {
@@ -843,62 +877,6 @@ table.article-table td {
   color: #fff;
 }
 
-.table {
-  font-style: normal;
-  width: 100%;
-  font-size: 12px;
-  border-radius: 4px 4px 0 0;
-  overflow: hidden;
-  border: none;
-  margin: 0;
-  padding: 0;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-.table thead {
-  border-bottom: 1px solid #1f2535;
-}
-.table th, .table td {
-  text-align: center;
-  vertical-align: middle;
-}
-.table th {
-  font-weight: 600;
-  padding: 0.55rem;
-  border: none !important;
-  border-collapse: collapse;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.table td {
-  font-weight: 500;
-  padding: 0.3rem;
-  background-color: rgba(255, 255, 255, 0.1);
-}
-.table td:not(:last-child) {
-  border-right: 1px solid #1f2535;
-}
-.table .with-coin {
-  position: relative;
-  top: -0.25em;
-}
-.table .with-coin:after {
-  font-size: 0.85em;
-  width: 1em;
-  top: 0.8em;
-}
-.table.table-bet-details {
-  border-radius: 0;
-  border-spacing: 0px 2px;
-  border-collapse: separate;
-}
-.table.table-bet-details td {
-  text-align: left;
-  padding: 0.55rem 0.8rem;
-}
-.table.table-bet-details td:not(:last-child) {
-  border: none;
-}
-
 .logoname {
   color: #687eb9;
   display: flex;
@@ -959,6 +937,21 @@ input.score {
 input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.league-name {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+.league-name img.league-logo {
+  margin-right: 0.6rem;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: block;
+  object-fit: contain;
 }
 
 #header {
@@ -2207,6 +2200,105 @@ button.btn-event .center .hourdate {
   font-weight: 700;
 }
 
+.table-team {
+  display: inline-flex;
+  align-items: center;
+}
+.table-team .pos {
+  margin-right: 0.5rem;
+  opacity: 0.6;
+  min-width: 0.4rem;
+}
+.table-team img {
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.3rem;
+  object-fit: contain;
+}
+.table-team .text {
+  font-weight: 700;
+}
+
+.table-name {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+}
+
+.table {
+  font-style: normal;
+  width: 100%;
+  font-size: 12px;
+  border-radius: 4px 4px 0 0;
+  overflow: hidden;
+  border: none;
+  margin: 0;
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.table thead {
+  border-bottom: 1px solid #1f2535;
+}
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
+}
+.table th {
+  font-weight: 600;
+  padding: 0.55rem;
+  border: none !important;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.table td {
+  font-weight: 500;
+  padding: 0.3rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.table td:not(:last-child) {
+  border-right: 1px solid #1f2535;
+}
+.table td.border-r {
+  border-right: 1px solid #1f2535 !important;
+}
+.table .with-coin {
+  position: relative;
+  top: -0.25em;
+}
+.table .with-coin:after {
+  font-size: 0.85em;
+  width: 1em;
+  top: 0.8em;
+}
+.table.table-bet-details {
+  border-radius: 0;
+  border-spacing: 0px 2px;
+  border-collapse: separate;
+}
+.table.table-bet-details td {
+  text-align: left;
+  padding: 0.55rem 0.8rem;
+}
+.table.table-bet-details td:not(:last-child) {
+  border: none;
+}
+.table.pos-table td {
+  border-right: none;
+}
+.table.pos-table td:first-child {
+  padding-left: 0.5rem;
+  border-right: 1px solid #1f2535;
+}
+.table.pos-table td:last-child {
+  border-left: 1px solid #1f2535;
+}
+.table.pos-table tbody:not(:last-child) {
+  border-bottom: 1px solid #1f2535;
+}
+
 .popup-overlay {
   display: none;
   flex-direction: column;
@@ -2469,6 +2561,7 @@ button.btn-event .center .hourdate {
   padding-right: 1rem;
   height: 100%;
   width: 100%;
+  z-index: 1;
 }
 .modal .content-wrapper {
   min-height: calc(100vh - 4rem);
@@ -3359,21 +3452,6 @@ section#noticias button.tab {
 #page-cronogramas-y-rankings .cyr-tabs-wrapper .btn-icon:not(:last-child) {
   margin-bottom: 1.2rem;
 }
-.league-name {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-  font-style: normal;
-  margin-bottom: 1rem;
-}
-.league-name img.league-logo {
-  margin-right: 0.6rem;
-  width: 1.875rem;
-  height: 1.875rem;
-  display: block;
-  object-fit: contain;
-}
-
 #cronogramas .content {
   padding-top: 0.2rem;
 }
@@ -3384,6 +3462,24 @@ section#noticias button.tab {
   font-size: 1rem;
   font-style: italic;
   margin-bottom: 1.1rem;
+}
+
+.modal-pos-table .content {
+  padding-top: 0.2rem;
+}
+.modal-pos-table .date-filter {
+  margin: 0 auto 1.5rem;
+}
+.modal-pos-table .current-date {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 1.1rem;
+}
+.modal-pos-table .pos-table {
+  margin-bottom: 1.3rem;
+}
+.modal-pos-table .get-premium-text {
+  font-size: 0.875rem;
 }
 
 ul.accordeon {
