@@ -1413,7 +1413,6 @@ ul.social-menu li a:hover {
 .esports-tabs button.tab .icon {
   width: 30px;
   height: 30px;
-  background: url(../img/logos-esports.png) no-repeat;
   background-size: cover;
   opacity: 0.25;
   transition: all ease 0.4s;
