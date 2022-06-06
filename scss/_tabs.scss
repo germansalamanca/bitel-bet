@@ -89,7 +89,8 @@
     .icon{
       width: $icon-size;
       height: $icon-size;
-      background-size: cover;
+      background-size: contain;
+      background-position: center;
       opacity: .25;
       transition: all ease .4s;
       filter: sepia(100%) saturate(300%) hue-rotate(191deg);
