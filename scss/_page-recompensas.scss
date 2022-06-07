@@ -1,8 +1,15 @@
 @import 'variables';
 
+#page-recompensas{
+  .cta-fixed{
+    .btn-cta-outline{
+      background-color: rgba($dark, .6);
+    }
+  }
+}
 section#recompensas{
   padding-top: 2rem;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
   .container-alt{
   }
   .tab-list{

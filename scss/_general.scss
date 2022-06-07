@@ -330,7 +330,7 @@ table.article-table{
 
 // CTA 
 .cta-fixed{
-  position: fixed;
+  position: sticky;
   padding: 0rem 1rem 1rem;
   z-index: 50;
   bottom: 0;

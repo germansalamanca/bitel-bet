@@ -363,7 +363,7 @@ table.article-table td {
 }
 
 .cta-fixed {
-  position: fixed;
+  position: sticky;
   padding: 0rem 1rem 1rem;
   z-index: 50;
   bottom: 0;
@@ -3198,9 +3198,13 @@ section#canjear-monedas p {
   margin: 2rem auto 0;
 }
 
+#page-recompensas .cta-fixed .btn-cta-outline {
+  background-color: rgba(42, 50, 72, 0.6);
+}
+
 section#recompensas {
   padding-top: 2rem;
-  padding-bottom: 7rem;
+  padding-bottom: 2rem;
 }
 section#recompensas .tab-list {
   margin-bottom: 1.5rem;
