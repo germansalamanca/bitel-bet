@@ -40,6 +40,23 @@ $(document).on('ready', function() {
     centerMode: false,
     variableWidth: true
   });
+  $(".slider-related-news").slick({
+    dots: false,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    centerMode: false,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
 });
 function reSlick(selector){
   $(selector).slick('unslick');

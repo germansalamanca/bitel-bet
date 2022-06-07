@@ -3587,3 +3587,99 @@ ul.options-list li.option .option-btn {
 ul.options-list li.option .option-btn:hover {
   background-color: #2d4260;
 }
+
+.slider-related-news {
+  padding-bottom: 1.3rem;
+}
+.slider-related-news .slide {
+  margin: 0;
+}
+@media (min-width: 576px) {
+  .slider-related-news .slide {
+    padding: 0 0.3rem;
+  }
+}
+.slider-related-news .card-news {
+  min-height: 170px;
+}
+@media (min-width: 380px) {
+  .slider-related-news .card-news {
+    min-height: 190px;
+  }
+}
+.slider-related-news .card-news .post-title {
+  font-size: 0.75rem;
+}
+.slider-related-news .card-news .text {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 380px) {
+  .slider-related-news .card-news .text {
+    padding-bottom: 1rem;
+  }
+}
+
+section.related-articles {
+  padding: 1.5rem 0;
+}
+section.related-articles .section-title {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.article-content {
+  padding: 1rem 0 2rem;
+  margin: 0 auto;
+}
+.article-content h1 {
+  margin-bottom: 0.5rem;
+}
+.article-content h2 {
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+.article-content p {
+  font-size: 0.9375rem;
+  line-height: 1.6em;
+  font-style: italic;
+  margin: 0.7rem 0;
+}
+.article-content a {
+  white-space: pre-wrap;
+  /* CSS3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */
+}
+.article-content ul {
+  font-size: 0.9375rem;
+}
+.article-content h1 {
+  margin-top: 0;
+  text-align: left;
+}
+
+figure.article-cover {
+  margin-bottom: 0.8rem;
+}
+figure.article-cover img {
+  border-radius: 5px;
+}
+
+.article-from {
+  color: #06e8d2;
+  font-size: 0.81rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
