@@ -2146,7 +2146,6 @@ button.btn-event .team {
   display: flex;
   text-align: left;
   align-items: center;
-  border: 1px solid red;
   width: 100%;
   max-width: 160px;
 }
