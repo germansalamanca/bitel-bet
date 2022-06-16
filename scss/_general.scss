@@ -162,7 +162,7 @@ table.article-table{
   color: $white;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   z-index: 1;
   &:after{
@@ -187,6 +187,9 @@ table.article-table{
       background-position: center top;
       background-image: url(../img/bg-page-top.png);
     }
+  }
+  #footer{
+    margin-top: auto;
   }
 }
 

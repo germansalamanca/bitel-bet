@@ -174,7 +174,7 @@ table.article-table td {
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   position: relative;
   z-index: 1;
 }
@@ -204,6 +204,9 @@ table.article-table td {
     background-position: center top;
     background-image: url(../img/bg-page-top.png);
   }
+}
+.page #footer {
+  margin-top: auto;
 }
 
 .bitel-bg {
