@@ -139,6 +139,9 @@ window.onload = ()=>{
     containerWidth,
     itemsWidth,
     maxScroll
+
+    // Show .btn.active when is hidden by scroll
+    menu.querySelector('.btn.active').scrollIntoView();
     
     function updateSize(){
       viewportWidth = window.innerWidth
