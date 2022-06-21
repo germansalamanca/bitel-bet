@@ -169,6 +169,7 @@
   position: relative;
   transition: all ease .3s;
   .more{
+    z-index: 5;
     position: absolute;
     display: none;
     justify-content: flex-end;
@@ -206,6 +207,17 @@
         &:after{
           border-color: $yellow;
         }
+      }
+    }
+  }
+  .more-left{
+    right: auto;
+    left: 0;
+    transform: scaleX(-1);
+    .btn{
+      &:after{
+        margin-right: 7px;
+        //transform: rotate(-135deg);
       }
     }
   }

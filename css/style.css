@@ -1489,6 +1489,7 @@ ul.social-menu li a:hover {
   transition: all ease 0.3s;
 }
 .tab-list-slider .more {
+  z-index: 5;
   position: absolute;
   display: none;
   justify-content: flex-end;
@@ -1525,6 +1526,14 @@ ul.social-menu li a:hover {
 }
 .tab-list-slider .more .btn:hover:after {
   border-color: #fff200;
+}
+.tab-list-slider .more-left {
+  right: auto;
+  left: 0;
+  transform: scaleX(-1);
+}
+.tab-list-slider .more-left .btn:after {
+  margin-right: 7px;
 }
 .tab-list-slider .tabs-scroll {
   overflow-x: scroll;

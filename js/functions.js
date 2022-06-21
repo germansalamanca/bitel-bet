@@ -133,14 +133,16 @@ window.onload = ()=>{
     const menu = document.querySelector('.tab-list-slider'),
     menuScroll = menu.querySelector('.tabs-scroll'),
     buttonsWrapper = menu.querySelector('.options-wrapper'),
-    more = menu.querySelector('.more')
+    more = menu.querySelector('.more-right')
+    moreLeft = menu.querySelector('.more-left')
     btnMore = more.querySelector('button')
+    btnMoreLeft = moreLeft.querySelector('button')
     let viewportWidth,
     containerWidth,
     itemsWidth,
     maxScroll
 
-    // Show .btn.active when is hidden by scroll
+    // Show tab .btn.active when is hidden by scroll
     menu.querySelector('.btn.active').scrollIntoView();
     
     function updateSize(){
@@ -150,22 +152,43 @@ window.onload = ()=>{
       if(itemsWidth > containerWidth){
         more.style.display = 'flex';
         buttonsWrapper.style.paddingRight = '24px';
+        moreLeft.style.display = 'flex';
       }else{
         more.style.display = 'none';
         buttonsWrapper.style.paddingRight = '0';
+        moreLeft.style.display = 'none';
       }
       maxScroll = itemsWidth - menuScroll.offsetWidth
+      
+      if(menuScroll.scrollLeft > 10){
+        moreLeft.style.opacity = 1
+        btnMoreLeft.style.pointerEvents = 'auto'
+      }else{
+        moreLeft.style.opacity = 0
+        btnMoreLeft.style.pointerEvents = 'none'
+      }
     }
 
     updateSize()
 
     btnMore.addEventListener('click', ()=>{
-      //console.log(`Scroll actual: ${menuScroll.scrollLeft} - Máximo scroll: ${maxScroll}`)
       let scrollAmount = 0
       let distance = 100
       let step = 10
       var slideTimer = setInterval(function(){
         menuScroll.scrollLeft += step;
+        scrollAmount += step;
+        if(scrollAmount >= distance){
+            window.clearInterval(slideTimer);
+        }
+      }, 25);
+    })
+    btnMoreLeft.addEventListener('click', ()=>{
+      let scrollAmount = 0
+      let distance = 100
+      let step = 10
+      var slideTimer = setInterval(function(){
+        menuScroll.scrollLeft -= step;
         scrollAmount += step;
         if(scrollAmount >= distance){
             window.clearInterval(slideTimer);
@@ -181,6 +204,13 @@ window.onload = ()=>{
       }else{
         more.style.opacity = 1
         btnMore.style.pointerEvents = 'auto'
+      }
+      if(menuScroll.scrollLeft <= 10){
+        moreLeft.style.opacity = 0
+        btnMoreLeft.style.pointerEvents = 'none'
+      }else{
+        moreLeft.style.opacity = 1
+        btnMoreLeft.style.pointerEvents = 'auto'
       }
     })
   }
