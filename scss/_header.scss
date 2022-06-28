@@ -6,6 +6,10 @@
   @media (min-width: $md){
     padding: .8rem 1rem;
   }
+  @media (min-width: $lg){
+    background: $dark;
+    padding-left: calc($desk-menu-width + 1.3rem);
+  }
   &.header-transparent{
     background: none;
   }
@@ -25,6 +29,10 @@
       display: block;
     }
   }
+  .content-right{
+    display: flex;
+    align-items: center;
+  }
 }
 #menu-toggler{
   width: 44px;
@@ -33,6 +41,9 @@
   background-size: 22px;
   background-position: center;
   cursor: pointer;
+  @media (min-width: $lg){
+    display: none;
+  }
   &:hover{
     filter: brightness(10); 
   }
@@ -41,10 +52,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
   height: 44px;
   .user-icon{
-
     background-image: url(../img/icon-user.svg);
     width: 22px;
     height: 20px;
@@ -64,6 +73,23 @@
     }
     &:hover{
       transform: scale(1.1);
+    }
+  }
+  &:hover{
+    .text-login{
+      color: $teal;
+    }
+  }
+  .text-login{
+    color: $white;
+    display: none;
+    padding-left: .5rem;
+    flex-shrink: 0;
+    transition: all ease .3s;
+    &:hover{
+    }
+    @media (min-width: $lg){
+      display: block;
     }
   }
 }

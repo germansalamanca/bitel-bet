@@ -810,6 +810,46 @@ table.article-table td {
   background-image: url(../img/icon-arrow-circle.png);
 }
 
+.btn-bitel-id-login {
+  border: 1px solid #fff200;
+  color: #fff200;
+  padding: 0.35rem 0.85rem;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+}
+.btn-bitel-id-login:hover {
+  background-color: #fff200;
+  color: #2a3248;
+}
+
+.btn-user-coins {
+  display: none;
+  margin-right: 1rem;
+  border: 1px dashed #fff200;
+  border-radius: 2rem;
+  padding: 0.25rem 0.8rem 0.25rem 1.1rem;
+  color: #fff200;
+  font-size: 20px;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  .btn-user-coins {
+    display: block;
+  }
+}
+.btn-user-coins:hover {
+  color: #fff;
+}
+.btn-user-coins:hover .with-coin:after {
+  transform: scale(1.1);
+}
+.btn-user-coins .with-coin:after {
+  width: 1em;
+  height: 1em;
+  top: 0.1em;
+  transition: all ease 0.2s;
+}
+
 .bet-value {
   display: flex;
   justify-content: center;
@@ -966,6 +1006,12 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
     padding: 0.8rem 1rem;
   }
 }
+@media (min-width: 992px) {
+  #header {
+    background: #2a3248;
+    padding-left: 6.925rem;
+  }
+}
 #header.header-transparent {
   background: none;
 }
@@ -987,6 +1033,10 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
   width: 100%;
   display: block;
 }
+#header .content-right {
+  display: flex;
+  align-items: center;
+}
 
 #menu-toggler {
   width: 44px;
@@ -996,6 +1046,11 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
   background-position: center;
   cursor: pointer;
 }
+@media (min-width: 992px) {
+  #menu-toggler {
+    display: none;
+  }
+}
 #menu-toggler:hover {
   filter: brightness(10);
 }
@@ -1004,7 +1059,6 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
   height: 44px;
 }
 .user-link .user-icon {
@@ -1029,6 +1083,21 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
 .user-link .user-icon:hover {
   transform: scale(1.1);
 }
+.user-link:hover .text-login {
+  color: #06e8d2;
+}
+.user-link .text-login {
+  color: #fff;
+  display: none;
+  padding-left: 0.5rem;
+  flex-shrink: 0;
+  transition: all ease 0.3s;
+}
+@media (min-width: 992px) {
+  .user-link .text-login {
+    display: block;
+  }
+}
 
 .page-footer {
   bottom: 0;
@@ -1045,7 +1114,7 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
 }
 @media (min-width: 992px) {
   .page-footer .content {
-    padding-left: 6rem;
+    padding-left: 6.125rem;
   }
 }
 .page-footer .top {

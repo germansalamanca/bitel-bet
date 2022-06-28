@@ -9,7 +9,7 @@
       display:flex;
     }
     @media (min-width: $lg){
-      padding-left: calc($desk-menu-width + 1rem);
+      padding-left: calc($desk-menu-width + .5rem);
     }
   }
   .top{

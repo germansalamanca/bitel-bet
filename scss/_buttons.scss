@@ -383,3 +383,43 @@
     }
   }
 }
+.btn-bitel-id-login{
+  border: 1px solid $yellow;
+  color: $yellow;
+  padding: .35rem .85rem;
+  border-radius: 1rem;
+  margin-left: 1.5rem;
+  &:hover{
+    background-color: $yellow;
+    color: $dark;
+  }
+}
+.btn-user-coins{
+  display: none;
+  margin-right: 1rem;
+  border: 1px dashed $yellow;
+  border-radius: 2rem;
+  padding: .25rem .8rem .25rem 1.1rem;
+  color: $yellow;
+  font-size: 20px;
+  font-weight: 700;
+  @media (min-width: $lg){
+    display: block;
+  }
+  &:hover{
+    color: $white;
+    .with-coin{
+      &:after{
+        transform: scale(1.1);
+      }
+    }
+  }
+  .with-coin{
+    &:after{
+      width: 1em;
+      height: 1em;
+      top: 0.1em;
+      transition: all ease .2s;
+    }
+  }
+}
