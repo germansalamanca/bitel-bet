@@ -18,10 +18,21 @@
   }
 }
 .slider-promo{
-  max-width: 800px;
+  // max-width: 800px;
   margin: 0 auto;
   .slick-dots{
     bottom: -2.5rem;
+  }
+  @media (min-width: $lg){
+    // padding-left: $desk-menu-width;
+    .slick-prev{
+      left: 1rem;
+      z-index: 12;
+    }
+    .slick-next{
+      right: .8rem;
+      z-index: 12;
+    }
   }
 }
 

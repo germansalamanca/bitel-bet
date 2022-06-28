@@ -1,5 +1,8 @@
 @import 'variables';
 
+section.promo{
+  padding-left: $desk-menu-width;
+}
 .cta-bet-now{
   position: sticky;
   width: 210px;

@@ -1231,11 +1231,20 @@ ul.social-menu li a:hover {
 }
 
 .slider-promo {
-  max-width: 800px;
   margin: 0 auto;
 }
 .slider-promo .slick-dots {
   bottom: -2.5rem;
+}
+@media (min-width: 992px) {
+  .slider-promo .slick-prev {
+    left: 1rem;
+    z-index: 12;
+  }
+  .slider-promo .slick-next {
+    right: 0.8rem;
+    z-index: 12;
+  }
 }
 
 .slider-ring .slick-arrow, .slider-circle .slick-arrow {
@@ -3267,6 +3276,10 @@ table.user-info td.suscription a {
   background: #fff url(../img/icon-user-premium.svg);
   position: absolute;
   border-radius: 2rem;
+}
+
+section.promo {
+  padding-left: 5.625rem;
 }
 
 .cta-bet-now {
