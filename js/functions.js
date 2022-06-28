@@ -72,6 +72,11 @@ function reSlick(selector){
   }, 10)
 }
 
+function expandDeskMenu(){
+  const menu = document.querySelector('#main-menu-wrapper')
+  menu.classList.toggle('expanded')
+}
+
 function openPopup(popupSelector, display = 'flex'){
   const popup = document.querySelector(popupSelector)
   popup.style.display = display

@@ -8,6 +8,9 @@
     @media (min-width: $md){
       display:flex;
     }
+    @media (min-width: $lg){
+      padding-left: calc($desk-menu-width + 1rem);
+    }
   }
   .top{
     display: flex;
