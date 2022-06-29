@@ -167,6 +167,14 @@ table.article-table{
   z-index: 1;
   @media (min-width: $lg){
     padding-left: $desk-menu-width;
+    background: $dark url(../img/bg-page-desk-left.png) no-repeat;
+    background-position: $desk-menu-width 4rem;
+    background-size: 200px;
+    position: relative;
+    z-index: 0;
+    &:after{
+
+    }
   }
   &:after{
     content: '';
@@ -180,7 +188,15 @@ table.article-table{
     z-index: -1;
     pointer-events: none;
     @media (min-width: $md){
-      display: none;
+      display: block;
+    }
+    @media (min-width: $lg){
+      width: 350px;
+      height: 100px;
+      background: url(../img/bg-page-desk-right.png) no-repeat;
+      background-size: contain;
+      top: 3rem;
+      right: 0;
     }
   }
   &.homepage{

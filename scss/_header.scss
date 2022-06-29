@@ -7,12 +7,18 @@
     padding: .8rem 1rem;
   }
   @media (min-width: $lg){
+    position: relative;
+    z-index: 1;
     background: $dark;
     // padding-left: calc($desk-menu-width + 1.3rem);
     padding-left: 2rem;
+    box-shadow: 1px 12px 46px #0000003b;
   }
   &.header-transparent{
     background: none;
+    @media (min-width: $lg){
+      background: $dark;
+    }
   }
   .header-content{
     display: flex;

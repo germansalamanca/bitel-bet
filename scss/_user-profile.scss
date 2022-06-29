@@ -92,6 +92,22 @@ table.user-info{
 }
 
 #user-profile{
+  .profile-cols{
+    @media (min-width: $lg){
+      padding-top: 1rem;
+      display: flex;
+      .col{
+        width: 50%;
+      }
+      .col-left{
+        padding: 0 2rem;
+        border-right: 1px solid #54648f63;
+      }
+      .col-right{
+        padding: 1rem 2.5rem 0;
+      }
+    }
+  }
   .page-title{
     color: $yellow;
     font-size: 20px;
@@ -108,6 +124,9 @@ table.user-info{
   }
   .user-coins{
     margin-bottom: 2rem;
+    @media (min-width: $lg){
+      margin-bottom: 0;
+    }
   }
   .buttons{
     margin-bottom: 1rem;

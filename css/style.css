@@ -181,6 +181,11 @@ table.article-table td {
 @media (min-width: 992px) {
   .page {
     padding-left: 5.625rem;
+    background: #2a3248 url(../img/bg-page-desk-left.png) no-repeat;
+    background-position: 5.625rem 4rem;
+    background-size: 200px;
+    position: relative;
+    z-index: 0;
   }
 }
 .page:after {
@@ -197,7 +202,17 @@ table.article-table td {
 }
 @media (min-width: 768px) {
   .page:after {
-    display: none;
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .page:after {
+    width: 350px;
+    height: 100px;
+    background: url(../img/bg-page-desk-right.png) no-repeat;
+    background-size: contain;
+    top: 3rem;
+    right: 0;
   }
 }
 .page.homepage {
@@ -1013,12 +1028,20 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
 }
 @media (min-width: 992px) {
   #header {
+    position: relative;
+    z-index: 1;
     background: #2a3248;
     padding-left: 2rem;
+    box-shadow: 1px 12px 46px rgba(0, 0, 0, 0.231372549);
   }
 }
 #header.header-transparent {
   background: none;
+}
+@media (min-width: 992px) {
+  #header.header-transparent {
+    background: #2a3248;
+  }
 }
 #header .header-content {
   display: flex;
@@ -3269,6 +3292,22 @@ table.user-info td.suscription a {
   max-width: 200px;
 }
 
+@media (min-width: 992px) {
+  #user-profile .profile-cols {
+    padding-top: 1rem;
+    display: flex;
+  }
+  #user-profile .profile-cols .col {
+    width: 50%;
+  }
+  #user-profile .profile-cols .col-left {
+    padding: 0 2rem;
+    border-right: 1px solid rgba(84, 100, 143, 0.3882352941);
+  }
+  #user-profile .profile-cols .col-right {
+    padding: 1rem 2.5rem 0;
+  }
+}
 #user-profile .page-title {
   color: #fff200;
   font-size: 20px;
@@ -3285,6 +3324,11 @@ table.user-info td.suscription a {
 }
 #user-profile .user-coins {
   margin-bottom: 2rem;
+}
+@media (min-width: 992px) {
+  #user-profile .user-coins {
+    margin-bottom: 0;
+  }
 }
 #user-profile .buttons {
   margin-bottom: 1rem;
