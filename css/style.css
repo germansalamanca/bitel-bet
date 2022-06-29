@@ -178,6 +178,11 @@ table.article-table td {
   position: relative;
   z-index: 1;
 }
+@media (min-width: 992px) {
+  .page {
+    padding-left: 5.625rem;
+  }
+}
 .page:after {
   content: "";
   width: 100%;
@@ -1009,7 +1014,7 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
 @media (min-width: 992px) {
   #header {
     background: #2a3248;
-    padding-left: 6.925rem;
+    padding-left: 2rem;
   }
 }
 #header.header-transparent {
@@ -1114,7 +1119,7 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
 }
 @media (min-width: 992px) {
   .page-footer .content {
-    padding-left: 6.125rem;
+    padding-left: 1rem;
   }
 }
 .page-footer .top {
@@ -1411,12 +1416,26 @@ ul.social-menu li a:hover {
 .main-tabs-wrapper.cyr-tabs-wrapper {
   box-shadow: none;
 }
+@media (min-width: 992px) {
+  .main-tabs-wrapper {
+    padding-top: 0;
+    margin-top: 1.7rem;
+  }
+}
 
 .main-tabs {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.7rem;
+}
+@media (min-width: 992px) {
+  .main-tabs {
+    position: relative;
+    top: -2.33rem;
+    justify-content: center;
+    margin-bottom: -1.3rem;
+  }
 }
 .main-tabs button.tab {
   display: flex;
@@ -1437,6 +1456,15 @@ ul.social-menu li a:hover {
 }
 .main-tabs button.tab.active {
   background-color: #fff;
+}
+@media (min-width: 992px) {
+  .main-tabs button.tab {
+    border-radius: 0.7rem 0.7rem 0 0;
+    max-width: 14.75rem;
+    width: 100%;
+    margin: 0 0.5rem;
+    padding: 1.1rem 1rem;
+  }
 }
 .main-tabs button.tab .icon {
   margin-right: 0.4rem;
@@ -1459,11 +1487,24 @@ ul.social-menu li a:hover {
 .main-tabs-content.active {
   display: block;
 }
+@media (min-width: 992px) {
+  .main-tabs-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 /*---- ESPORTS TABS ---*/
 .esports-tabs {
   display: flex;
   margin-bottom: 1.4rem;
+}
+@media (min-width: 992px) {
+  .esports-tabs {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .esports-tabs button.tab {
   width: 100%;
@@ -1529,6 +1570,7 @@ ul.social-menu li a:hover {
 .tab-list .options-wrapper {
   display: flex;
   padding-bottom: 6px;
+  margin: 0 auto;
 }
 .tab-list button.tab {
   flex-shrink: 0;
@@ -3278,10 +3320,6 @@ table.user-info td.suscription a {
   border-radius: 2rem;
 }
 
-section.promo {
-  padding-left: 5.625rem;
-}
-
 .cta-bet-now {
   position: sticky;
   width: 210px;
@@ -3294,6 +3332,10 @@ section.promo {
 .overlay-bet-now {
   width: 100vw;
   left: 0;
+}
+
+.page.homepage .container {
+  max-width: 1000px;
 }
 
 #page-que-es-bitel {

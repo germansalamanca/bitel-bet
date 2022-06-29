@@ -8,12 +8,22 @@
   &.cyr-tabs-wrapper{
     box-shadow: none;
   }
+  @media (min-width: $lg){
+    padding-top: 0;
+    margin-top: 1.7rem;
+  }
 }
 .main-tabs{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: .7rem;
+  @media (min-width: $lg){
+    position: relative;
+    top: -2.33rem;
+    justify-content: center;
+    margin-bottom: -1.3rem;
+  }
   button.tab{
     display: flex;
     justify-content: center;
@@ -32,6 +42,13 @@
     }
     &.active{
       background-color: $white;
+    }
+    @media (min-width: $lg){
+      border-radius: .7rem .7rem 0 0;
+      max-width: 14.75rem;
+      width: 100%;
+      margin: 0 .5rem;
+      padding: 1.1rem 1rem;
     }
     .icon{
       margin-right: .4rem;
@@ -54,12 +71,21 @@
   &.active{
     display: block;
   }
+  @media (min-width: $lg){
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /*---- ESPORTS TABS ---*/
 .esports-tabs{
   display: flex;
   margin-bottom: 1.4rem;
+  @media (min-width: $lg){
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   button.tab{
     width: 100%;
     padding: .7rem 0;
@@ -127,6 +153,7 @@
   .options-wrapper{
     display: flex;
     padding-bottom: 6px;
+    margin: 0 auto;
   }
   button.tab{
     flex-shrink: 0;

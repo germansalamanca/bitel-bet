@@ -9,7 +9,8 @@
       display:flex;
     }
     @media (min-width: $lg){
-      padding-left: calc($desk-menu-width + .5rem);
+      //padding-left: calc($desk-menu-width + .5rem);
+      padding-left: 1rem;
     }
   }
   .top{

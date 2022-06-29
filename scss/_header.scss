@@ -8,7 +8,8 @@
   }
   @media (min-width: $lg){
     background: $dark;
-    padding-left: calc($desk-menu-width + 1.3rem);
+    // padding-left: calc($desk-menu-width + 1.3rem);
+    padding-left: 2rem;
   }
   &.header-transparent{
     background: none;

@@ -165,6 +165,9 @@ table.article-table{
   justify-content: flex-start;
   position: relative;
   z-index: 1;
+  @media (min-width: $lg){
+    padding-left: $desk-menu-width;
+  }
   &:after{
     content: '';
     width: 100%;

@@ -1,7 +1,7 @@
 @import 'variables';
 
 section.promo{
-  padding-left: $desk-menu-width;
+  //padding-left: $desk-menu-width;
 }
 .cta-bet-now{
   position: sticky;
@@ -14,4 +14,10 @@ section.promo{
 .overlay-bet-now{
   width: 100vw;
   left: 0;
+}
+
+.page.homepage{
+  .container{
+    max-width: 1000px;
+  }
 }
