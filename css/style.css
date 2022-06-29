@@ -1242,6 +1242,11 @@ ul.social-menu li a:hover {
   bottom: -2.5rem;
 }
 @media (min-width: 992px) {
+  .slider-promo .slick-dots {
+    bottom: 0.7rem;
+  }
+}
+@media (min-width: 992px) {
   .slider-promo .slick-prev {
     left: 1rem;
     z-index: 12;

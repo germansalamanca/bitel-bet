@@ -22,6 +22,9 @@
   margin: 0 auto;
   .slick-dots{
     bottom: -2.5rem;
+    @media (min-width: $lg){
+      bottom: 0.7rem;
+    }
   }
   @media (min-width: $lg){
     // padding-left: $desk-menu-width;
