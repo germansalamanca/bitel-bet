@@ -166,6 +166,21 @@ table.article-table td {
   display: none !important;
 }
 
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none !important;
+  }
+}
+
+.show-lg {
+  display: none !important;
+}
+@media (min-width: 992px) {
+  .show-lg {
+    display: block !important;
+  }
+}
+
 .page {
   background: #2a3248 url(../img/bg-page-top.png) no-repeat;
   background-position: center top;
@@ -283,7 +298,7 @@ table.article-table td {
 }
 @media (min-width: 768px) {
   .container.container-alt {
-    max-width: 768px;
+    max-width: 1100px;
   }
 }
 .container.container-sm {
@@ -1115,6 +1130,7 @@ input.score::-webkit-inner-spin-button, input.score::-webkit-outer-spin-button {
   color: #06e8d2;
 }
 .user-link .text-login {
+  font-style: normal;
   color: #fff;
   display: none;
   padding-left: 0.5rem;
@@ -1305,6 +1321,26 @@ ul.social-menu li a:hover {
   margin: 0 auto;
   padding-bottom: 1.4rem;
 }
+@media (min-width: 992px) {
+  .slider-ring {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1290px) {
+  .slider-ring {
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .slider-ring .slide {
+    padding: 0 1.3rem;
+  }
+}
+@media (min-width: 1290px) {
+  .slider-ring .slide {
+    padding: 0 0.7rem;
+  }
+}
 .slider-ring .step-figure {
   margin: 0 auto 2rem;
 }
@@ -1338,6 +1374,11 @@ ul.social-menu li a:hover {
 .slider-circle {
   max-width: 250px;
   margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .slider-circle {
+    max-width: 800px;
+  }
 }
 .slider-circle .slide-content {
   padding: 0 0 1.5rem;
@@ -3390,6 +3431,14 @@ table.user-info td.suscription a {
 #page-que-es-bitel {
   font-style: italic;
 }
+@media (min-width: 992px) {
+  #page-que-es-bitel .cols {
+    display: flex;
+  }
+  #page-que-es-bitel .col {
+    width: 50%;
+  }
+}
 #page-que-es-bitel p, #page-que-es-bitel ul {
   font-size: 0.94rem;
   line-height: 1.5rem;
@@ -3411,6 +3460,24 @@ table.user-info td.suscription a {
 
 section#que-es-bitel {
   padding: 2.4rem 0 3rem;
+}
+section#que-es-bitel .title {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  section#que-es-bitel .title {
+    text-align: left;
+  }
+}
+@media (min-width: 992px) {
+  section#que-es-bitel {
+    padding-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  section#que-es-bitel .subtitle {
+    text-align: left;
+  }
 }
 
 section#como-funciona {
@@ -3450,6 +3517,20 @@ section#comprar-monedas h3.subtitle {
 section#canjear-monedas {
   padding: 0 0 3rem;
 }
+section#canjear-monedas .container {
+  max-width: 900px;
+}
+@media (min-width: 992px) {
+  section#canjear-monedas .cols-canjear {
+    display: flex;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  section#canjear-monedas h1 br {
+    display: none;
+  }
+}
 section#canjear-monedas figure {
   margin-bottom: 2.4rem;
 }
@@ -3463,6 +3544,18 @@ section#canjear-monedas p {
   margin: 0 auto;
   max-width: 20rem;
   font-style: italic;
+}
+@media (min-width: 992px) {
+  section#canjear-monedas p {
+    margin: 0 0 2rem 0;
+    text-align: left;
+    max-width: 400px;
+  }
+}
+@media (min-width: 992px) {
+  section#canjear-monedas .btn-cta {
+    margin: 0;
+  }
 }
 
 #page-vuelvete-premium section#vuelvete-premium {

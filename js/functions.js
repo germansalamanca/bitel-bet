@@ -16,19 +16,46 @@ $(document).on('ready', function() {
   });
   $(".slider-ring").slick({
     dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 4,
     arrows: true,
-    dots: true,
-    infinite: false
+    dots: false,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1290,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        }
+      }
+    ]
   });
   $(".slider-circle").slick({
     dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: false,
     dots: true,
-    infinite: false
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+        }
+      }
+    ]
   });
   $(".slider-news").slick({
     dots: false,

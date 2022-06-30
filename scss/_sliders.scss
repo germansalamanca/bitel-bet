@@ -64,7 +64,19 @@
   max-width: 17rem;
   margin: 0 auto;
   padding-bottom: 1.4rem;
+  @media (min-width: $lg){
+    max-width: 650px;
+  }
+  @media (min-width: 1290px){
+    max-width: 100%;
+  }
   .slide{
+    @media (min-width: $lg){
+      padding: 0 1.3rem;
+    }
+    @media (min-width: 1290px){
+      padding: 0 .7rem;
+    }
   }
   .slide-content{
   }
@@ -100,6 +112,9 @@
 .slider-circle{
   max-width: 250px;
   margin: 0 auto;
+  @media (min-width: 992px){
+    max-width: 800px;
+  }
   .slide{
   }
   .slide-content{

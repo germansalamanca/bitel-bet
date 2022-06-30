@@ -13,6 +13,62 @@
   <title>Qué es Bitel Bet</title>
 </head>
 <body>
+  <div class="glass" id="main-menu-wrapper">
+    <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#main-menu-wrapper')"></button>
+    <button id="desk-menu-toggler" class="btn" aria-label="Expandir menú" onclick="expandDeskMenu()"></button>
+    <nav class="main-nav">
+      <ul id="main-menu" class="menu">
+        <li class="current">
+          <a href="#">
+            <span class="icon icon-menu-home"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-user"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-bitel"></span>
+            <span class="text">Qué es Bitel Bet</span>
+          </a>
+        </li>
+        <li class="featured">
+          <a href="#">
+            <span class="icon icon-menu-premium"></span>
+            <span class="text">Vuélvete Premium</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-coin"></span>
+            <span class="text">Comprar monedas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-reward"></span>
+            <span class="text">Recompensas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-calendar"></span>
+            <span class="text">Cronogramas y Rankings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-news"></span>
+            <span class="text">Noticias</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- .main-menu-wrapper -->
   <div id="page-que-es-bitel" class="page">
     <header id="header" class="header-transparent">
       <div class="header-content">
@@ -22,24 +78,37 @@
             <img src="./img/logo-bitel-bet.png" alt="Inicio">
           </a>
         </figure>
-        <a href="#" class="user-link user-link-premium btn">
-          <div class="user-icon"></div>
-        </a>
+        <div class="content-right">
+          <!-- <a href="#" class="btn btn-user-coins"><span class="with-coin">95,000</span></a> -->
+          <a href="#" class="user-link btn" onclick="openPopup('#login')">
+            <!-- icon options: -->
+            <div class="user-icon"></div>
+            <!-- <div class="user-icon user-premium"></div> -->
+            <!-- <div class="user-icon user-free"></div> -->
+            <!-- Desktop version: -->
+            <div class="text-login">Iniciar sesión</div>
+          </a>
+          <a href="#" class="btn btn-bitel-id-login">Registrarte con Bitel ID</a>
+        </div>
       </div>
     </header>
     <main>
       <section id="que-es-bitel">
-        <div class="container container-alt">
-          <div class="text-center">
-            <h1 class="featured-title framed"><span>¿Qué es Bitel Bet?</span></h1>
+        <div class="container container-alt cols">
+          <div class="col col-left">
+            <div class="title">
+              <h1 class="featured-title framed"><span>¿Qué es Bitel Bet?</span></h1>
+            </div>
+            <h2 class="subtitle">¡Es el simulador de apuestas de Bitel!</h2>
+            <ul class="list-bitel">
+              <li>Diviértete simulando apuestas en las mejores ligas de Esports y Fútbol. </li>
+              <li>Recibe un bono de bienvenida para tu primera apuesta </li>
+              <li>Con las apuestas ganadas, podrás acumular monedas Bitel y canjear increíbles premios</li>
+            </ul>
           </div>
-          <h2 class="subtitle">¡Es el simulador de apuestas de Bitel!</h2>
-          <ul class="list-bitel">
-            <li>Diviértete simulando apuestas en las mejores ligas de Esports y Fútbol. </li>
-            <li>Recibe un bono de bienvenida para tu primera apuesta </li>
-            <li>Con las apuestas ganadas, podrás acumular monedas Bitel y canjear increíbles premios</li>
-          </ul>
-          <figure><img src="./img/img-que-es-bitel.png" alt="Bitel Bet"></figure>
+          <div class="col col-right">
+            <figure><img src="./img/img-que-es-bitel.png" alt="Bitel Bet"></figure>
+          </div>
         </div><!-- .container-alt -->
       </section>
       <section id="como-funciona">
@@ -175,16 +244,25 @@
       </section><!-- #comprar-monedas -->
       <section id="canjear-monedas">
         <div class="container container-alt">
-          <div class="text-center">
+          <div class="title text-center">
             <h1 class="featured-title framed"><span>¡Canjea tus monedas <br>por premios!</span></h1>
-            <p>Con las monedas obtenidas en tus apuestas, podrás canjear increíbles premios en la tienda de Regalos Bitel.<br>¡No te olvides volverte PREMIUM para acumular más monedas!</p>
-            <figure>
-              <img src="./img/img-canjear.png" alt="Canjea tus monedas">
-              <figcaption>*Imágenes referenciales</figcaption>
-            </figure>
-            <button class="btn btn-cta">
-              <span class="content">Canjea Aquí</span>
-            </button>
+          </div>
+          <div class="cols-canjear">
+            <div class="col col-left">
+              <p>Con las monedas obtenidas en tus apuestas, podrás canjear increíbles premios en la tienda de Regalos Bitel.<br><br>¡No te olvides volverte PREMIUM para acumular más monedas!</p>
+              <button class="btn btn-cta show-lg">
+                <span class="content">Canjea Aquí</span>
+              </button>
+            </div>
+            <div class="col col-right">
+              <figure class="text-center">
+                <img src="./img/img-canjear.png" alt="Canjea tus monedas">
+                <figcaption>*Imágenes referenciales</figcaption>
+              </figure>
+              <button class="btn btn-cta hide-lg">
+                <span class="content">Canjea Aquí</span>
+              </button>
+            </div>
           </div>
         </div>
       </section><!-- #canjear-monedas -->

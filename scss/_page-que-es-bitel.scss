@@ -2,6 +2,19 @@
 
 #page-que-es-bitel{
   font-style: italic;
+  @media (min-width: $lg){
+    .cols{
+      display: flex;
+    }
+    .col{
+      width: 50%;
+    }
+    .col-left{
+      
+    }
+  }
+
+
   p, ul{
     font-size: 0.94rem;
     line-height: 1.5rem;
@@ -26,7 +39,21 @@
   }
 }
 section#que-es-bitel{
+  .title{
+    text-align: center;
+    @media (min-width: $lg){
+      text-align: left;
+    }
+  }
   padding: 2.4rem 0 3rem;
+  @media (min-width: $lg){
+    padding-bottom: 0;
+  }
+  .subtitle{
+    @media (min-width: $lg){
+      text-align: left;
+    }
+  }
 }
 
 // Section Cómo funciona
@@ -67,6 +94,22 @@ section#comprar-monedas{
 
 section#canjear-monedas{
   padding: 0 0 3rem;
+  .container{
+    max-width: 900px;
+  }
+  .cols-canjear{
+    @media (min-width: $lg){
+      display: flex;
+      align-items: center;
+    }
+  }
+  h1{
+    br{
+      @media (min-width: $lg){
+        display: none;
+      }
+    }
+  }
   figure{
     margin-bottom: 2.4rem;
     img{
@@ -80,5 +123,15 @@ section#canjear-monedas{
     margin: 0 auto;
     max-width: 20rem;
     font-style: italic;
+    @media (min-width: $lg){
+      margin: 0 0 2rem 0;
+      text-align: left;
+      max-width: 400px;
+    }
+  }
+  .btn-cta{
+    @media (min-width: $lg){
+      margin: 0;
+    }
   }
 }

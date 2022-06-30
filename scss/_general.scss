@@ -154,6 +154,17 @@ table.article-table{
 .hide{
   display: none !important;
 }
+.hide-lg{
+  @media (min-width: $lg){
+    display: none !important;
+  }
+}
+.show-lg{
+  display: none !important;
+  @media (min-width: $lg){
+    display: block !important;
+  }
+}
 .page{
   background: $dark url(../img/bg-page-top.png) no-repeat;
   background-position: center top;
@@ -263,7 +274,8 @@ table.article-table{
   &.container-alt{
     //max-width: 320px;
     @media (min-width: $md){
-      max-width: $md;
+      //max-width: $md;
+      max-width: 1100px;
     }
   }
   &.container-sm{
