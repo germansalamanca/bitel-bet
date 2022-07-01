@@ -2113,6 +2113,9 @@ ul.bet-list-esports button.bet-team:first-child .content {
 ul.bet-list-esports button.bet-team:first-child .content .value {
   margin: 0 0 0 0.4rem;
 }
+ul.bet-list-esports button.bet-team:first-child .content .name {
+  text-align: left;
+}
 ul.bet-list-esports button.bet-team:last-child {
   margin: 0 -2rem 0 0;
   margin-left: 0.15rem;
