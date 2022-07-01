@@ -13,6 +13,62 @@
   <title>Recompensas</title>
 </head>
 <body>
+  <div class="glass" id="main-menu-wrapper">
+    <button class="btn btn-close-popup" aria-label="cerrar" onclick="closePopup('#main-menu-wrapper')"></button>
+    <button id="desk-menu-toggler" class="btn" aria-label="Expandir menú" onclick="expandDeskMenu()"></button>
+    <nav class="main-nav">
+      <ul id="main-menu" class="menu">
+        <li class="current">
+          <a href="#">
+            <span class="icon icon-menu-home"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-user"></span>
+            <span class="text">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-bitel"></span>
+            <span class="text">Qué es Bitel Bet</span>
+          </a>
+        </li>
+        <li class="featured">
+          <a href="#">
+            <span class="icon icon-menu-premium"></span>
+            <span class="text">Vuélvete Premium</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-coin"></span>
+            <span class="text">Comprar monedas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-reward"></span>
+            <span class="text">Recompensas</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-calendar"></span>
+            <span class="text">Cronogramas y Rankings</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon icon-menu-news"></span>
+            <span class="text">Noticias</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div><!-- .main-menu-wrapper -->
   <div id="page-recompensas" class="page">
     <header id="header" class="header-transparent">
       <div class="header-content">
@@ -22,9 +78,18 @@
             <img src="./img/logo-bitel-bet.png" alt="Inicio">
           </a>
         </figure>
-        <a href="#" class="user-link user-link-premium btn">
-          <div class="user-icon"></div>
-        </a>
+        <div class="content-right">
+          <!-- <a href="#" class="btn btn-user-coins"><span class="with-coin">95,000</span></a> -->
+          <a href="#" class="user-link btn" onclick="openPopup('#login')">
+            <!-- icon options: -->
+            <div class="user-icon"></div>
+            <!-- <div class="user-icon user-premium"></div> -->
+            <!-- <div class="user-icon user-free"></div> -->
+            <!-- Desktop version: -->
+            <div class="text-login">Iniciar sesión</div>
+          </a>
+          <a href="#" class="btn btn-bitel-id-login">Registrarte con Bitel ID</a>
+        </div>
       </div>
     </header>
     <main class="pb-2">
@@ -152,36 +217,6 @@
       </div>
     </main>
 
-
-    <div id="popup-como-canjear" class="overlay popup-overlay popup-slider" onclick="closePopup(this, event)">
-      <div id="" class="popup">
-        <button class="btn btn-close-popup" aria-label="cerrar"></button>
-        <div class="popup-box">
-          <div class="content">
-            <h3 class="popup-title">¿Cómo canjear?</h3>
-            <div class="slider-ring">
-              <div class="slide">
-                <div class="slide-content">
-                  <img class="number" src="./img/number-1.svg" alt="1">
-                  <p><strong>Ingresa a la Tienda de Regalos Bitel</strong> <a href="#">(regalos.bitel.com.pe)</a> e inicia sesión con tu cuenta MiBitel.</p>
-                  <figure class="step-figure"><img src="./img/slide-redeem-1.png" alt="Paso 1"></figure>
-                </div>
-              </div><!-- .slide-->
-              <div class="slide">
-                <div class="slide-content">
-                  <img class="number" src="./img/number-2.svg" alt="2">
-                  <p><strong>Selecciona el producto</strong> que deseas canjear y ¡Listo!</p>
-                  <figure class="step-figure"><img src="./img/slide-redeem-2.png" alt="Paso 1"></figure>
-                  <a href="#" class="btn btn-cta">
-                    <span class="content">Canjea aquí</span>
-                  </a>
-                </div>
-              </div><!-- .slide-->
-            </div><!-- .slider-ring -->
-          </div>
-        </div>
-      </div>
-    </div>
     <footer id="footer" class="page-footer">
       <div class="content">
         <div class="top">
@@ -210,6 +245,35 @@
       </div>
     </footer>
   </div><!-- .page -->
+  <div id="popup-como-canjear" class="overlay popup-overlay popup-slider" onclick="closePopup(this, event)">
+    <div id="" class="popup">
+      <button class="btn btn-close-popup" aria-label="cerrar"></button>
+      <div class="popup-box">
+        <div class="content">
+          <h3 class="popup-title">¿Cómo canjear?</h3>
+          <div class="slider-ring">
+            <div class="slide">
+              <div class="slide-content">
+                <img class="number" src="./img/number-1.svg" alt="1">
+                <p><strong>Ingresa a la Tienda de Regalos Bitel</strong> <a href="#">(regalos.bitel.com.pe)</a> e inicia sesión con tu cuenta MiBitel.</p>
+                <figure class="step-figure"><img src="./img/slide-redeem-1.png" alt="Paso 1"></figure>
+              </div>
+            </div><!-- .slide-->
+            <div class="slide">
+              <div class="slide-content">
+                <img class="number" src="./img/number-2.svg" alt="2">
+                <p><strong>Selecciona el producto</strong> que deseas canjear y ¡Listo!</p>
+                <figure class="step-figure"><img src="./img/slide-redeem-2.png" alt="Paso 1"></figure>
+                <a href="#" class="btn btn-cta">
+                  <span class="content">Canjea aquí</span>
+                </a>
+              </div>
+            </div><!-- .slide-->
+          </div><!-- .slider-ring -->
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="./assets/slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="./js/functions.js" type="text/javascript" charset="utf-8"></script>
