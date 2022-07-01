@@ -3593,10 +3593,24 @@ section#canjear-monedas p {
 #page-recompensas .cta-fixed .btn-cta-outline {
   background-color: rgba(42, 50, 72, 0.6);
 }
+@media (min-width: 992px) {
+  #page-recompensas .cta-fixed {
+    position: relative;
+  }
+}
+@media (min-width: 992px) {
+  #page-recompensas .gradient-overlay {
+    display: none;
+  }
+}
 
 section#recompensas {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+section#recompensas .heading p {
+  font-style: italic;
+  margin: 0 0 3rem;
 }
 section#recompensas .tab-list {
   margin-bottom: 1.5rem;

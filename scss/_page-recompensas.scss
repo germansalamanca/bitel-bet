@@ -6,10 +6,26 @@
       background-color: rgba($dark, .6);
     }
   }
+  .cta-fixed{
+    @media (min-width: $lg){
+      position: relative;
+    }
+  }
+  .gradient-overlay{
+    @media (min-width: $lg){
+      display: none;
+    }
+  }
 }
 section#recompensas{
   padding-top: 2rem;
   padding-bottom: 2rem;
+  .heading{
+    p{
+      font-style: italic;
+      margin: 0 0 3rem;
+    }
+  }
   .container-alt{
   }
   .tab-list{
