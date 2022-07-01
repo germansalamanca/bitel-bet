@@ -846,6 +846,7 @@ table.article-table td {
 }
 
 .btn-bitel-id-login {
+  display: none;
   border: 1px solid #fff200;
   color: #fff200;
   padding: 0.35rem 0.85rem;
@@ -855,6 +856,11 @@ table.article-table td {
 .btn-bitel-id-login:hover {
   background-color: #fff200;
   color: #2a3248;
+}
+@media (min-width: 992px) {
+  .btn-bitel-id-login {
+    display: block;
+  }
 }
 
 .btn-user-coins {

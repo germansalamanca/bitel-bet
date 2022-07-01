@@ -384,6 +384,7 @@
   }
 }
 .btn-bitel-id-login{
+  display: none;
   border: 1px solid $yellow;
   color: $yellow;
   padding: .35rem .85rem;
@@ -392,6 +393,9 @@
   &:hover{
     background-color: $yellow;
     color: $dark;
+  }
+  @media (min-width: $lg){
+    display: block;
   }
 }
 .btn-user-coins{
