@@ -229,6 +229,9 @@
   opacity: 0;
   display: none;
   transition: all ease .5s;
+  @media (min-width: $lg){
+    width: calc(100% - $desk-menu-width);
+  }
 }
 .modal{
   z-index: 50;

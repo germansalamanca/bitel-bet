@@ -2737,6 +2737,11 @@ button.btn-event .center .hourdate {
   display: none;
   transition: all ease 0.5s;
 }
+@media (min-width: 992px) {
+  .modal-wrapper {
+    width: calc(100% - 5.625rem);
+  }
+}
 
 .modal {
   z-index: 50;
