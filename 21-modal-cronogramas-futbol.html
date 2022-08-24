@@ -30,7 +30,8 @@
     <main>
  
     </main>
-    <div id="cronogramas" class="modal-wrapper" style="display: flex; opacity: 1">
+    <button class="btn btn-cta mt-3" style="color: white;" onclick="openPopup('#cronogramas')">Abrir popup</button>
+    <div id="cronogramas" class="modal-wrapper has-dynamic-content" style="">
       <div class="modal bitel-bg-topglow">
         <button class="btn btn-close-popup sm" aria-label="cerrar" onclick="closePopup('#cronogramas')"></button>
         <div class="content pb-1">
@@ -63,8 +64,18 @@
                 <button class="tab btn date-tabs-group active" onclick="showTabContent(this, '#day-1', 'date-tabs-group')">
                   SÁB<span>09</span>
                 </button>
+                
                 <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-2', 'date-tabs-group')">
                   DOM<span>10</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-3', 'date-tabs-group')">
+                  LUN<span>11</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-3', 'date-tabs-group')">
+                  LUN<span>11</span>
+                </button>
+                <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-3', 'date-tabs-group')">
+                  LUN<span>11</span>
                 </button>
                 <button class="tab btn date-tabs-group" onclick="showTabContent(this, '#day-3', 'date-tabs-group')">
                   LUN<span>11</span>

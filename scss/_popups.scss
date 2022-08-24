@@ -229,9 +229,25 @@
   opacity: 0;
   display: none;
   transition: all ease .5s;
+  &.has-dynamic-content{
+    visibility: hidden;
+    display: flex;
+    pointer-events: none;
+    transform: scale(0);
+    transition: opacity ease .5s, transform ease 0s;
+    transition-delay: 0s, .5s;
+    &.active{
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+      transform: none; 
+      transition-delay: 0s;
+    }
+  }
   @media (min-width: $lg){
     width: calc(100% - $desk-menu-width);
   }
+
 }
 .modal{
   z-index: 50;
